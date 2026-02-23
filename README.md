@@ -129,7 +129,7 @@ Test all items above aside from Mobile when logged in as admin.
 - Test saving a page
 
 ## Test an update
-- Get another version of PulseCMS or make a new one and use CLI to build it.
+- Get another version of ChampionCMS or make a new one and use CLI to build it.
 - Test updating the CMS.
 
 ## Test forms
@@ -149,7 +149,7 @@ Dec 6, 2020
 
 ## Logged-In Operations:
 	This is about whether the template/page works when you are logged
-	in to the Pulse administration. (Ie, you should be able to edit it.)
+	in to the Champion administration. (Ie, you should be able to edit it.)
 
 - Did you include {{navigation_logged_in}}? Does it look OK when logged in
 	or does it break the template?
