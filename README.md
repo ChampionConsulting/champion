@@ -48,6 +48,20 @@ For optimal performance, ensure your host supports PHP 8+ and URL rewriting (for
 # Testing Guide
 Use these test whenever you are writing code, after you made a change.
 
+# How to install Champion
+
+UPLOAD CHAMPION TO YOUR REMOTE SERVER
+
+- Go to yoursite.com/admin/install.php
+- Go to yoursite.com/admin and login with username "administrator" and password "demo"
+- You’re in and installed!
+
+DONE
+
+Next, go to "settings" and change the password! 
+
+Then have fun setting up your site. You can do all this from the Champion admin. Installing in the root or a sub-folder should be auto-detected by running this install command.
+
 # Quick Test aka "Sanity Check" - 180 seconds to complete
 
 ## General

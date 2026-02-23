@@ -1,58 +1,36 @@
-
-*************** License ***************
-
-Copyright (c) 2017 Championcms.com
-
-End User License Agreement
-
-This End User License Agreement (the "Agreement") is a binding legal agreement between you and ChampionCMS.com (the "Author"). By installing or using Champion (the "Software"), you agree to be bound by the terms of this Agreement. If you do not agree to the Agreement, do not download, install, or use the Software. Installation or use of the Software signifies that you have read, understood, and agreed to be bound by the Agreement.
-
-Usage
-
-This Agreement grants a license to install and use the Software on a single Website. Additional Software licenses must be purchased in order to install and use the Software on additional Websites. The Author reserves the right to determine whether use of the Software qualifies under this Agreement. The Author owns all rights, title and interest to the Software (including all intellectual property rights) and reserves all rights to the Software that are not expressly granted in this Agreement.
-
-Trial Version
-
-Until a license has been purchased from the Author (championcms.com), this software is considered a trial version and may only be used for testing and development purposes. You may not use the software on a live website without a license.
-
-Champion License
-
-A Champion license can be bought from the Championcms.com website. All installations of Champion 5 require a Champion membership and can be bought from here: https://championcms.com/signup.php Installing Champion on a site without being a member is violation of these terms.
-
-Backups
-
-You may make copies of the Software in any machine readable form solely for back-up purposes, provided that you reproduce the Software in its original form and with all proprietary notices on the back-up copy. All rights to the Software not expressly granted herein are reserved by the Author.
-
-Restrictions
-
-You understand and agree that you shall only use the Software in a manner that complies with any and all applicable laws in the jurisdictions in which you use the Software. Your use shall be in accordance with applicable restrictions concerning privacy and intellectual property rights.
-
-Re-Branding
-
-You may remove the logo and links to ChampionCMS.com and replace with your own or your clients logo.  However, you must have a license for each domain you install it on.
-
-Addons
-
-You may use any free or premium addons for personal or professional projects. However, for premium addons, you must have a license for each domain you install it on.
-
-You may not:
-
-Distribute derivative works based on the Software;
-Reproduce the Software except as described in this Agreement;
-Sell, market, advertise, assign, license, disclose, distribute, or otherwise transfer or make available the Software or its Source Code, in whole or in part, in any form to any third parties;
-Remove or alter any proprietary notices on the Software.
-THE SOFTWARE IS OFFERED ON AN "AS-IS" BASIS AND NO WARRANTY, EITHER EXPRESSED OR IMPLIED, IS GIVEN. THE AUTHOR EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. YOU ASSUME ALL RISK ASSOCIATED WITH THE QUALITY, PERFORMANCE, INSTALLATION AND USE OF THE SOFTWARE INCLUDING, BUT NOT LIMITED TO, THE RISKS OF PROGRAM ERRORS, DAMAGE TO EQUIPMENT, LOSS OF DATA OR SOFTWARE PROGRAMS, OR UNAVAILABILITY OR INTERRUPTION OF OPERATIONS. YOU ARE SOLELY RESPONSIBLE FOR DETERMINING THE APPROPRIATENESS OF USE THE SOFTWARE AND ASSUME ALL RISKS ASSOCIATED WITH ITS USE.
-
-Term, Termination, and Modification.
-
-You may use the Software under this Agreement until either party terminates this Agreement as set forth in this paragraph. Either party may terminate the Agreement at any time, upon written notice to the other party. Upon termination, all licenses granted to you will terminate, and you will immediately uninstall and cease all use of the Software. The Sections entitled "No Warranty," "Indemnification," and "Limitation of Liability" will survive any termination of this Agreement.
-
-The Author may modify the Software and this Agreement with notice to you either in email or by publishing content on the Software website, including but not limited to changing the functionality or appearance of the Software, and such modification will become binding on you unless you terminate this Agreement.
-
-Indemnification.
-
-By accepting the Agreement, you agree to indemnify and otherwise hold harmless the Author, its officers, employers, agents, subsidiaries, affiliates and other partners from any direct, indirect, incidental, special, consequential or exemplary damages arising out of, relating to, or resulting from your use of the Software or any other matter relating to the Software.
-
-Limitation of Liability.
-
-YOU EXPRESSLY UNDERSTAND AND AGREE THAT THE AUTHOR SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES (EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES). SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES. ACCORDINGLY, SOME OF THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU. IN NO EVENT WILL THE AUTHORS'S TOTAL CUMULATIVE DAMAGES EXCEED THE FEES YOU PAID TO THE AUTHOR UNDER THIS AGREEMENT IN THE MOST RECENT TWELVE-MONTH PERIOD.
+Champion Consulting END USER LICENSE AGREEMENT
+ 
+Copyright (c)2000-2026 Champion Consulting, LLC. All Rights Reserved. 
+		
+        ATTENTION: YOU MAY NEED TO SCROLL DOWN TO THE END OF THIS EULA BEFORE YOU CAN AGREE TO THE EULA AND CONTINUE WITH THE SOFTWARE INSTALLATION. 
+        
+		IMPORTANT: THIS SOFTWARE END USER LICENSE AGREEMENT(hereinafter "EULA") IS A LEGAL AGREEMENT BETWEEN PHPKODE AND THE END-USER OF THE INCLUDED SOFTWARE AND SOURCE FILES(TOGETHER THE "SOFTWARE"). YOU MUST READ THIS EULA CAREFULLY AND ACCEPT ALL THE TERMS AND CONDITIONS SET OUT BELOW BEFORE YOU ARE ENTITLED TO DOWNLOAD, INSTALL AND USE THE SOFTWARE. IT PROVIDES A LICENSE TO USE THE SOFTWARE AND CONTAINS WARRANTY INFORMATION AND LIABILITY DISCLAIMERS. BY DOWNLOADING THE SOFTWARE, YOU AGREE TO BECOME THE LICENSEE TO THIS EULA AND CONSENT TO BE BOUND BY ALL OF ITS TERMS. IF YOU DO NOT AGREE TO BE BOUND BY ALL SUCH TERMS, CLICK THE "CANCEL" BUTTON AND DO NOT DOWNLOAD THE SOFTWARE.
+            
+        THIS EULA SHALL APPLY ONLY TO THE PHPKODE HELPDESK X SOFTWARE HEREWITH REGARDLESS OF WHETHER OTHER SOFTWARE IS REFERRED TO OR DESCRIBED HEREIN. CHAMPION CONSULTING, LLC RETAINS OWNERSHIP OF THE SOFTWARE AND ANY COPIES OF IT, REGARDLESS OF THE FORM IN WHICH THE COPIES MAY EXIST. 
+        1. Definitions
+            (a) "Champion Consulting CMS" is a PHP Content Mangement software which is developed by Champion Consulting, LLC.
+            (b) "the Software" means "Champion Consulting CMS".
+            (c) "Champion Consulting, LLC" is the enterprise being responsible for Champion Consulting product. 
+        
+		2. Grants of License
+            (a) You may modify the source code(if being provided) or interface of the Software to fit your website under the License Restrictions.
+            (b) You have property of all submitter' information in the control panel powered by the Software; meanwhile, you need assume all relevant legal duty by yourself.
+            (c) You may use the Software for commercial use after purchasing the commercial license. Moreover, according to the license you purchased you may get specified term, manner and content of technical support from Champion Consulting. Commercial users are prior to submiting ideas and opinions to Champion Consulting, but without any guarantee of acceptance. 
+        
+		3. License Restrictions
+            (a) You may not use the Software for commercial use or profit use, unless you have been licensed to. To purchase the license, please visit http://www.championconsulting.com or email us at sales@championconsulting.com for more information.
+            (b) You may not rent, lease, sublicense, sell, assign, pledge the Software and its services.
+            (c) You may not remove or modify the copyright information and relevant links, such as http://www.championconsulting.com, in the pages without the prior written consent of Champion Consulting, no matter how heavily you modified the Software.
+            (d) You may not modify the Software to create derivative works for redistribution based upon the software.
+            (e) In the event that you fail to comply with this EULA, you license will be terminated. 
+        
+		4. LIMITED WARRANTY AND DISCLAIMER
+            (a) THE SOFTWARE AND THE ACCOMPANYING FILES ARE SOLD &"AS IS" AND WITHOUT WARRANTIES AS TO PERFORMANCE OF MERCHANTABILITY OR ANY OTHER WARRANTIED WHETHER EXPRESSED OR IMPLIED.
+            (b) Champion Consulting is not liable for the usage of the software.
+            (c) You must assume the entire risk(including without limitation the loss of data) of using the Software. ANY LIABILITY OF CHAMPION CONSULTING WILL BE LIMITED EXCLUSIVELY TO PRODUCT REPLACEMENT, REFUND OF PURCHASE PRICE BOFORE YOUR FIRST INSTALLATION. 
+        
+		5. Official Websites
+            (a) URL of Champion Consulting is http://www.championconsulting.com.
+            (b) URL of Champion Consulting CMS Home is http://cms.championconsulting.com.
+			
+        Champion Consulting reserves the right to modify this EULA. Champion Consulting CMS Home provides offical information on license and price, Champion Consulting may modify them without notice. Modified license and price list will apply to new licensed users. 

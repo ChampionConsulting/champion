@@ -1,24 +1,24 @@
-# Pulse 5
+# Champion 6
 
 The simplest flat-file CMS just got a hell of a lot better.
 
 
 # DISTRIBUTION WORKFLOW:
 
-* The Cache (x3) directories in pulsecore/storage needs to be set to 777 writable permissions (pulsecore/storage/cache, pulsecore/storage/log and pulsecore/storage)
-* Delete pulsecore/storage/config.json (the config.json can be removed for the distribution. The installer does create it from scratch)
+* The Cache (x3) directories in championcore/storage needs to be set to 777 writable permissions (championcore/storage/cache, championcore/storage/log and championcore/storage)
+* Delete championcore/storage/config.json (the config.json can be removed for the distribution. The installer does create it from scratch)
 * Delete backups
 * Delete sitemap
 * ZIP REPO minus readme.md
-* Upload to P5 distribution
+* Upload to P6 distribution
 * Update version history
-* Upload P5 ZIP to free trial server
+* Upload P6 ZIP to free trial server
 * Upload latest manual PDF
 
 
 
 # Tag notes for now
-* See official docs at: [https://docs.pulsecms.com/]
+* See official docs at: [https://cms.championconsulting.com/docs/]
 {media_player}
 {navigation}
 {thumbs:"gallery"}
@@ -71,7 +71,7 @@ Use these test whenever you are writing code, after you made a change.
 - Open site in incognito window
 - Click at least 2 other pages (ex: about page, portfolio page)
 - Try sub-navigation in navigation menu
-- **Do entire Full test as both a subpage (ex: mydomain.com/my_pulse_page) and a root page (ex: mydomain.com).** It is __very__ common that people forget to adjust paths for root pages or subpages.
+- **Do entire Full test as both a subpage (ex: mydomain.com/my_champion_page) and a root page (ex: mydomain.com).** It is __very__ common that people forget to adjust paths for root pages or subpages.
 
 ## Blog
 - Click the blog page. Ensure it loads. 
@@ -103,7 +103,7 @@ Test all items above aside from Mobile when logged in as admin.
 - Test saving a page
 
 ## Test an update
-- Get another version of PulseCMS or make a new one and use CLI to build it.
+- Get another version of ChampionCMS or make a new one and use CLI to build it.
 - Test updating the CMS.
 
 ## Test forms
