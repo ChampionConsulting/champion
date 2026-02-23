@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Champion CMS</title>
+	</head>
+	<body>
+		<h1>Champion CMS</h1>
+		
+		<p>
+			This document documents the architectture of Champion CMS. It covers 
+			functionality by directory.
+		</p>
+		
+		<p>
+			The champion codebase started as an old school PHP codebase (PHP 5). The updates
+			have been to the championcore directory and is more object oriented
+			with unit tests. The idea there was to add functionality in 
+			code that was easier to test and debug.
+		</p>
+		
+		<p>The configuration, admin area and user areas are described.
+		</p>
+		
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<h2>Configuration</h2>
+		
+		<p>
+			This is split into the old config.php in the root and championcore/storage/config.json
+			The old config.php is kept around for the older code and should be deprecated at some point.
+			The config.json file is meant for user configurable options.
+			The championcore/bootstrap.php is for settings that are not meant to be
+			changed by the user.
+		</p>
+		
+		<p>
+			The actual config loading is a two step one. The first is to load
+			the defaults and then overwrite with the config.json settings. This
+			allows for adding options in subsequent Champion CMS releases. This
+			code is in championcore/wedge/config.php
+		</p>
+		
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<h2>Admin</h2>
+		<p>
+			This is the admin area. It has some similarities with how the user
+			area is structured.
+		</p>
+		
+		<h3>index.php</h3>
+		<p>
+			Its pretty monolithic. The admin pages are routed here and the
+			basic assets and page layout done. This should really be refactored
+			into an admin layout and a standard championcore page.
+		</p>
+		
+		<h3>The inc directory</h3>
+		<p>This is used for anything admin page or even tag related for admins.
+		 The translation files (plain PHP) are in the lang sub directory
+		</p>
+		
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<h2>Content</h2>
+		<p>
+			All user added content is stored here. The format (except for media
+			files) is a combination of newline separated text and JSON. Ideally
+			this would be pure JSON.
+		</p>
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<h2>Inc</h2>
+		<p>
+			All tags and plugins are implemented here. Tag PHP is loaded on demand as tags
+			are parsed in the content. Theres not much consistency here. Some
+			plugins are in the global scope. Others load from championcore/tags.
+		</p>
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<h2>Championcore</h2>
+		
+		<p>This is for new functionality</p>
+		
+		<h3>championcore/asset</h3>
+		<p>The Vue.js scripts and any assets that the tags or pages need is placed here.
+			dependencies are either managed from node or as needed.
+		</p>
+		
+		<h3>championcore/cache</h3>
+		<p>This is cached management code</p>
+		
+		<h3>championcore/cli</h3>
+		<p>This is all the CLI based scripts to create a release, or a set of 
+			update files in zip format
+		</p>
+		
+		<h3>championcore/docs</h3>
+		<p>This is the api and overview docs</p>
+		
+		<h3>championcore/install<h3>
+		<p>This should be be merged into championcore/src/install at some point.</p>
+		
+		<h3>championcore/logic</h3>
+		<p>Higher level reuseable logic is abstracted out here. The idea is to
+		have testable chunks of code that do as little as possible for easier
+		reuse.
+		</p>
+		
+		<h3>championcore/page</h3>
+		<p>This is for the page handling code. Most of this is for the admin area.
+		</p>
+		
+		<h3>championcore/src</h3>
+		<p>
+			This is a longer term effort to move the championcore source into 
+			this directory, so its easier to search without running into the 
+			storage or composer dependencies.
+		</p>
+		
+		<p>
+			The installer, tag parsing and page routing code is here.
+		</p>
+		
+		<h4>Routing</h4>
+		<p>
+			Routing is handled in championcore/dispatch.php. The idea is to have
+			a list of route objects which are then matched by HTTP method. The
+			route objects do the URL matching via a class method for flexibility.
+		</p>
+		
+		<p>Its broken up into legacy routing which is routes from the .htaccess
+		file and newer route objects around api, admin and general user
+		routes
+		</p>
+		
+		<h4>Tag parsing</h4>
+		<p>This is a new implentation of the tag parsing. The old version used
+			regex to identify tags and extract attributes. This would then
+			be used to include a tag implementation from the inc directory
+		</p>
+		<p>
+			The new code has a lexer and parser. This allows for embedded tags.
+			This is used for more configurable blog displays. Its pretty ugly
+			code, since PHP does'nt have something like lex/yacc or flex/bison.
+		</p>
+		
+		<h3>championcore/standalone<h3>
+		<p>
+			This is more for plugin type content eg see the sb login.
+		</p>
+		
+		<h3>championcore/storage</h3>
+		<p>This holds the config, cache and log files. Update zips are also
+		moved here before processing. This directory and contents needs to be
+		writable by the web server.
+		</p>
+		
+		<h3>championcore/store</h3>
+		<p>This is to manage the files in /content
+			The blog, page, block files have some text and JSON content. This
+			allows that to be handled properly. Media items have a gallery.txt
+			file which is handled here as well.
+		</p>
+		
+		<h3>pulscore/tags</h3>
+		<p>
+			Tags are defined here. Some tags from /inc have been rewritten and
+			moved here. The legacy tag interface is a bit kludgy and relies on 
+			some global variables for the tag parameters.
+		</p>
+		
+		<h3>championcore/template</h3>
+		<p>
+			This is for the view template files. This includes page and tags.
+			This is different from the layouts which is done in the root template
+			directory.
+		</p>
+		
+		<h3>championcore/tests</h3>
+		<p>
+			The PHPUnit tests and test files are defined here. Code coverage is
+			mixed. The idea is for lower level code to be properly tested.
+			Functional tests are a bit lacking since those are hard to define.
+		</p>
+		
+		<h3>championcore/vendor</h3>
+		<p>This is for all the composer dependencies</p>
+		
+		<h3>championcore/view</h3>
+		<p>This holds all the view helper classes that are loaded on demand in the view</p>
+		
+		<h3>championcore/wedge</h3>
+		
+		<p>
+			This has the config loading (config.php) and config editing code (config_edit.php).
+			The storage classes are used in a few places but has been superceded by the code in championcode/store.
+			It would be fair to say that most of the code here should be refactored.
+		<p>
+		
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<h2>Miscellaneous files in the site root</h2>
+		<p>
+			Theres quite a bit going on in these files:
+		</p>
+		
+		<dl>
+			<dd>config.php</dd>
+			<dt>
+				This is the deprecated config file. Its still used by the
+				legacy code and some user tags/plugins expect it to be present
+			</dt>
+			
+			<dd>dropzone_upload_handler.php</dd>
+			<dt>
+				This is for uploads via dropzone library. It should really be
+				moved into the standard page routing. This file just forwards
+				onto the controller.
+			</dt>
+			
+			<dd>end_point.php</dd>
+			<dt>
+				This is used to embed champion content onto non-champion pages. It
+				should be moved onto the standard page routing.
+			</dt>
+			
+			<dd>index.php</dd>
+			<dt>
+				This is the site root. Its more complex than it needs to be,
+				since it has to handle inline editing widget loading, editor
+				options and the rest of the tag/page/content display.
+			</dt>
+			
+			<dd>rss.php</dd>
+			<dt>
+				This is for the RSS feed generation.
+			</dt>
+			
+			<dd>symlink_safe.php</dd>
+			<dt>
+				This detects the champion base directory when loaded from symlinked
+				directories.
+			</dt>
+			
+			<dd></dd>
+			<dt></dt>
+		</dl>
+		
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<!-- =============================================================== -->
+		<h2>Template</h2>
+		<p>
+			The page layouts are stored here.
+		</p>
+	</body>
+</html>

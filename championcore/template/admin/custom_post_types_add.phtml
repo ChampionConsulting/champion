@@ -1,0 +1,49 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<div class="championcore">
+	<h1><?php echo $GLOBALS['lang_settings_custompostaddentry'];?> <?php echo $this->escape($view_model->post_type_name); ?></h1>
+	
+	<p>
+		<a href="index.php?p=custom_post_types&post_type_name=<?php echo $this->escape($view_model->post_type_name); ?>&method=get"><?php echo $GLOBALS['lang_settings_custompostback'];?></a>
+	</p>
+
+	<form class="animated zoomIn"
+				name="textfile"
+				method="post"
+				action="index.php?p=custom_post_types&post_type_name=<?php echo $this->escape($view_model->post_type_name); ?>&method=post">
+				
+		<div class="form-row row-break">
+			<label for="post_name"><?php echo $GLOBALS['lang_settings_custompostname'];?></label>
+			<input type="text" placeholder="post name" value="<?php echo $this->escape($view_model->store->location); ?>" name="post_name" id="post_name" />
+		</div>
+		
+		<?php foreach ($view_model->store->field_types as $key => $value) { ?>
+			<div class="form-row row-break">
+				<label for="field-id-<?php echo $this->escape($key); ?>"><?php echo $this->escape($key); ?></label>
+				
+				<?php if (    ($view_model->store->field_types->{$key} == 'text')
+					       or ($view_model->store->field_types->{$key} == 'audio')
+					       or ($view_model->store->field_types->{$key} == 'image')
+						   or ($view_model->store->field_types->{$key} == 'video')
+						  ) { ?>
+					<input type="text" placeholder="content" value="<?php echo $this->escape($view_model->store->{$key}); ?>" name="field[<?php echo $this->escape($key); ?>]" id="field-id-<?php echo $this->escape($key); ?>" />
+				<?php } ?>
+				<?php if ($view_model->store->field_types->{$key} == 'textarea') { ?>
+					<textarea          placeholder="content" value="<?php echo $this->escape($view_model->store->{$key}); ?>" name="field[<?php echo $this->escape($key); ?>]" id="field-id-<?php echo $this->escape($key); ?>"></textarea>
+				<?php } ?>
+			</div>
+		<?php } ?>
+		
+		<br />
+		<br />
+		
+		<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+		
+		<button class="btn" type="submit" name="save_configs"><?php echo $GLOBALS['lang_save'];?></button>
+	</form>
+</div>
+

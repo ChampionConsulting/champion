@@ -1,0 +1,24 @@
+
+<div class="championcore">
+	
+	<h1><?php echo $GLOBALS['lang_update_prepare_title']; ?></h1>
+	
+	<!-- confirm changes -->
+	<form action="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=update_prepare" method="post">
+	
+		<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+		
+		<p><?php echo \htmlentities($GLOBALS['lang_update_prepare_text']); ?></p>
+		
+		<div class="spinner">
+			<div class="animated"></div>
+			<div class="content">
+				<p><?php echo \htmlentities( \sprintf( $GLOBALS['lang_update_prepare_progress'], 0, 0 )); ?></p>
+			</div>
+		</div>
+		
+		<p>
+			<button style="margin-left: 0px;" class="cancel btn toggle_duplicate_btn"><?php echo $GLOBALS['lang_update_button_cancel']; ?></button>
+		</p>
+	</form>
+</div>

@@ -1,0 +1,26 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<div class="championcore">
+	<h1><?php echo $GLOBALS['lang_settings_log_viewer_log_files'];?></h1>
+	<ul class="management">
+		<?php foreach ($view_model->logs as $value) { ?>
+			<li>
+				<a href="index.php?p=log_viewer&select=<?php echo \urlencode($value); ?>"><?php echo $this->escape($value); ?></a>
+			</li>
+		<?php } ?>
+	</ul>
+	
+	<?php if (\strlen($view_model->param_select) > 0) { ?>
+		
+		<h1><?php echo $GLOBALS['lang_settings_log_viewer_log_content'];?></h1>
+		<h2><?php echo $this->escape($view_model->param_select); ?></h2>
+		
+		<div><?php echo nl2br($this->escape($view_model->content)); ?></div>
+	
+	<?php } ?>
+	
+</div>

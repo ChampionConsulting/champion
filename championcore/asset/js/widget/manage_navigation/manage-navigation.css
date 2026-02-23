@@ -1,0 +1,341 @@
+
+/**
+ * CSS for manage-navigation widget
+ */
+.championcore.manage-navigation {
+	position: relative;
+	box-sizing: border-box;
+	
+	padding: 1px;
+	
+	border: 1px solid transparent;
+}
+
+.championcore.manage-navigation .down,
+.championcore.manage-navigation .up,
+.championcore.manage-navigation .label-checkbox {
+
+	border: 1px solid #888;
+	border-radius: 5px;
+
+	padding: 5px;
+
+	background-color: #ccc;
+
+	color: #000;
+
+	margin: 0 0 0 0;
+}
+
+.championcore.manage-navigation hr {
+	border: 1px solid #bbb;
+	margin: 1em 0 1em 0;
+}
+
+.championcore.manage-navigation .row {
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	flex-basis: 100%;
+	width: 100%;
+}
+
+.championcore.manage-navigation .row.centered {
+	justify-content: space-around;
+}
+.championcore.manage-navigation .row.right-justify {
+	justify-content: flex-end;
+}
+
+.championcore.manage-navigation .row > .button-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	gap: 10px;
+}
+
+
+/** expander component **/
+.championcore.manage-navigation .expander {
+
+	flex-basis: 100%;
+
+	position: relative;
+	padding: 10px 10px 10px 30px;
+}
+
+.championcore.manage-navigation .expander > .expander-content {
+	padding: 1px;
+}
+
+.championcore.manage-navigation .expander > .expander-toggle {
+	cursor: pointer;
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+/** menu item component **/
+.championcore.manage-navigation .menu-item {
+	padding: 1px;
+}
+.championcore.manage-navigation .menu-item > .menu-item-container {
+	padding: 1px 10px 1px 10px;
+}
+.championcore.manage-navigation .menu-item::after {
+	content: '';
+	display: block;
+	clear:   both;
+}
+
+.championcore.manage-navigation .menu-item > .menu-item-container > label {
+	display: inline-block;
+	color: #000000;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.championcore.manage-navigation .menu-item > .menu-item-container > .delete {
+	float: none;
+	cursor: pointer;
+	color: red;
+	margin: 0 3px 0 0;
+	padding: 0;
+	
+	height: auto;
+}
+
+.championcore.manage-navigation .menu-item > .menu-item-container > .url {
+	display: block;
+	float: right;
+	
+	margin: 5px 5em 0 0px;
+}
+
+/** menu list component **/
+.championcore.manage-navigation .menu-list {
+	padding: 1px;
+}
+
+.championcore.manage-navigation .menu-list .menu-box {
+	
+	background-color: #ccc;
+	padding: 3px;
+}
+
+.championcore.manage-navigation .menu-list .menu-box > .menu-box-container {
+	padding: 10px 10px 10px 10px;
+}
+.championcore.manage-navigation .menu-list .menu-box:nth-child(odd) {
+	background-color: #eee;
+}
+.championcore.manage-navigation .menu-list .menu-box:hover {
+	background-color: #cfc;
+}
+
+.championcore.manage-navigation .menu-list .menu-box > .menu-box-container > .delete {
+	float: none;
+	display: block;
+	margin: 0 0 0 0;
+	height: auto;
+}
+
+
+.championcore.manage-navigation .menu-list .menu-box > .menu-box-container > label {
+	display: block;
+
+	color: #000000;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.championcore.manage-navigation .menu-list .menu-box > .menu-box-container > .name {
+	color: #000000;
+	padding-left: 1em;
+	padding-right: 1em;
+
+	font-weight: bold;
+}
+
+.championcore.manage-navigation .menu-list .menu-box > .menu-box-container > .url {
+	display: block;
+	
+	margin: 5px 5em 0 0px;
+}
+
+.championcore.manage-navigation .menu-list .menu-box .draggble {
+	padding: 10px 0 10px 0;
+	border: 1px solid #eee;
+}
+
+.championcore.manage-navigation .menu-list .menu-box footer {
+	padding: 3px 0 3px 0;
+}
+
+
+.championcore.manage-navigation .expander > .expander-content > .menu-list  .menu-box {
+	background-color: #eee;
+}
+.championcore.manage-navigation .expander > .expander-content > .menu-list  .menu-box:nth-child(odd) {
+	background-color: #ccc;
+}
+.championcore.manage-navigation .expander > .expander-content > .menu-list  .menu-box:hover {
+	background-color: #ccf;
+}
+
+.championcore.manage-navigation .menu-list .menu-box .menu-box-container > .row.header {
+	background: #ddd;
+	padding: 5px;
+	border-radius: 5px;
+}
+.championcore.manage-navigation .menu-list .menu-box > .menu-box-container  .delete {
+	display: block;
+
+	float: none;
+
+	cursor: pointer;
+	color: #fff;
+	margin: 0 3px 0 0;
+	padding: 4px;
+
+	height: auto;
+}
+
+/** add non champion item button component **/
+.championcore.manage-navigation .non-champion-button {
+	
+	display: inline-block;
+	
+	margin: 0 1em 0 1em;
+}
+
+/** save button component **/
+.championcore.manage-navigation .save-button {
+	
+	display: inline-block;
+	
+	margin: 0 1em 0 1em;
+}
+
+
+
+
+
+
+
+
+.championcore.manage-navigation .navigation {
+	width: 100%;
+	
+	margin: 20px 0 20px 0;
+	padding: 1px;
+	border: 1px dotted #000;
+}
+
+.championcore.manage-navigation .navigation h3 {
+	margin-top: 6px;
+}
+
+.championcore.manage-navigation .navigation .draggble {
+	min-height: 2em;
+	border: 1px solid #888888;
+}
+
+.championcore.manage-navigation .navigation .drg_handle {
+}
+
+.championcore.manage-navigation .navigation.menu-box {
+	display: block;
+	
+	box-sizing: border-box;
+	
+	width: 80%;
+	
+	margin: 15px 10px 15px 0px;
+	padding: 1px;
+	
+	background: #bbb;
+	border: 3px solid #bbb;
+	border-radius: 5px;
+}
+
+.championcore.manage-navigation .navigation.menu-box label {
+	display: inline-block;
+	color: #000000;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.championcore.manage-navigation .navigation.menu-box .sub_menu {
+	min-height: 3em;
+	border: 1px solid #ffffff;
+	background-color: #ffffff;
+	margin-bottom: 5px;
+	padding-bottom: 20px;
+}
+
+.championcore.manage-navigation .navigation.menu-box .sub_menu .sub-menu-box {
+	
+	background: #bbffbb;
+	padding: 2px;
+	border: 1px solid #bbffbb;
+	
+	border-bottom: 1px solid #00ff00;
+	border-left:   5px solid #00ff00;
+	
+	min-height: 20px;
+	
+	/*display: none;*/
+	display: block;
+	clear: both;
+}
+
+/*
+.championcore.manage-navigation .navigation.menu-box:hover .sub_menu .sub-menu-box {
+	display: block;
+	clear: both;
+}
+*/
+
+.championcore.manage-navigation .navigation.menu-box .sub_menu .sub-menu-box > label > span {
+	font-size: large;
+}
+
+.championcore.manage-navigation .navigation.menu-box .sub_menu .sub-menu-box > .url {
+	display: block;
+	float: right;
+	
+	margin: 5px 5px 0 0;
+}
+
+.championcore.manage-navigation .navigation.menu-box .sub_menu .sub-menu-box .sub_sub_menu {
+	min-height: 3em;
+	border: 1px solid #ffffff;
+	background-color: #ffffff;
+	margin-bottom: 5px;
+	
+	clear: both;
+}
+
+.championcore.manage-navigation .navigation.menu-box .sub_menu .sub-menu-box .sub_sub_menu .sub_sub-menu-box {
+	background: #bbbbff;
+	padding: 2px;
+	border: 1px solid #bbbbff;
+	
+	border-bottom: 1px solid #0000ff;
+	border-left:   5px solid #0000ff;
+	
+	min-height: 20px;
+	
+	display: none;
+}
+
+.championcore.manage-navigation .navigation.menu-box .sub_menu .sub-menu-box .sub_sub_menu:hover .sub_sub-menu-box {
+	display: block;
+}

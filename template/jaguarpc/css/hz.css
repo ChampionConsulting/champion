@@ -1,0 +1,504 @@
+
+/*
+Essential
+-------------------------------------------------------------------------------------------------------------------------------*/
+.style1 { font-family: Arial, Helvetica, sans-serif; }
+
+
+
+/* Grey Border Boxes {{{ */
+.dataBox1	{
+	border:				1px solid #EFEFEF;
+	padding:			2px;
+	background:			#fff;
+}
+
+.dataBox2	{
+	border:				4px solid #F9F9F9;
+}
+
+.dataBox3	{
+	border:				1px solid #ccc;
+	padding:			3px;
+	background:			#fff;
+}
+/* }}} */
+
+
+/* }}} */
+
+.clear			{
+	width:				0px;
+	height:				1px;
+	line-height:		0px;
+	font-size:			0px;
+	clear:				both;
+}
+
+.clear_c			{
+	background:			#fff;
+	height:				1px;
+	line-height:		0px;
+	font-size:			0px;
+	clear:				both;
+}
+
+.sm_w			{
+	background:			#C2C2C2;
+	height:				100%;
+	width:				1px;
+	line-height:		0px;
+	font-size:			1px;
+	padding:			0px !important;
+	margin:				0px;
+}
+
+.sm_h	{
+	background:			#C2C2C2;
+	height:				1px;
+	width:				145px;
+	line-height:		0px;
+	font-size:			1px;
+	padding:			0px 5px 0px 7px !important;
+	margin:				5px 0 0 0;
+}
+
+.nb	{
+	border:				0px !important;
+}
+
+.dataTable	{
+	width:				100%;
+	color:				#333;
+	font-size:			10px;
+	
+}
+
+/* Plan Page Table {{{ */
+.dataTable	{
+	width:				700px;
+	color:				#333;
+	font-size:			10px;
+}
+#display .dataTable {
+	width: 100%;
+}
+
+.features	{
+	width:				674px !important;
+	margin:				10px 5px 5px 5px;
+}
+
+.dataTable th	{
+	color:				#147;
+	border-bottom:		1px solid #147;
+}
+
+.dataTable th.top	{
+	padding:			3px;
+	background:			#158;
+	color:				#fff;
+	border:				1px solid #147;
+}
+
+.dataTable td {
+	padding:			4px;
+	border-bottom:		1px solid #ddd;
+}
+
+.dataTable td.sp {
+	padding:			0px;
+	border-bottom:		0px;
+}
+
+.dataTable td.pad3	{
+	padding:0 3px 0 3px;
+}
+
+.dataTable td.pad5	{
+	padding:0 5px 0 7px;
+}
+
+.dataTable tr.dark {
+	background:			#FAFAFA;
+	border:				1px solid #000 !important;
+	font-weight:		bold;
+	color:				#666;
+}
+
+.dataTable tr.dark td {
+	border-top:			1px solid #ccc !important;
+	border-bottom:		1px solid #ccc !important;
+}
+
+.dataTable tr.dark td.st {
+	border-left:		1px solid #ccc !important;
+}
+
+.dataTable tr.dark td.ed {
+	border-right:		1px solid #ccc !important;
+}
+
+
+.dataTable .nul {
+	border-bottom:		0px !important;
+}
+
+.dataTable .center {
+	text-align:			center;
+}
+
+.dataTable .gy{
+	background:			#F6F6F6;
+}
+
+.dataTable a.dis {
+	display:			block;
+	height:				20px;
+	line-height:		20px;
+	padding-left:		8px;
+	border-bottom:		1px solid #E5E5E5 !important;
+	border-right:		1px solid #ccc !important;
+	border-left:		1px solid #E5E5E5 !important;
+	background:			#FAFAFA;
+	cursor:            pointer;
+}
+
+.dataTable a.tl {
+	border-top:			1px solid #E5E5E5 !important;
+}
+
+.dataTable a.bl {
+	border-bottom:		1px solid #E5E5E5 !important;
+}
+
+.dataTable a.hightl {
+	border-top:			1px solid #ccc !important;
+}
+
+.dataTable a.highlighted {
+	background:			#fff;
+	color:				#147 !important;
+	font-weight:		bold;
+	border-right:		0px !important;
+	display:			block;
+	height:				20px;
+	line-height:		20px;
+	padding-left:		8px;
+	border-bottom:		1px solid #ccc !important;
+	border-left:		1px solid #ccc !important;	
+}
+
+.dataTable a.highbot {
+	border-bottom:		1px solid #ccc !important;	
+}
+
+.dataTable a.dis:hover {
+	background:			#fff;
+}
+
+.displayBox {
+	width:				500px;
+	border:				1px solid #ccc !important;
+	border-left:		0px !important;
+	background:			#fff;
+}
+
+#display .head_grey {
+	background-image:none;
+	color:#000;
+	
+}
+.head_blue {
+	background-image:url(../images/bluebar_303.gif);
+	background-repeat:no-repeat;
+	width:301px;
+	height:28px;
+	font-size:14px;
+	text-align:center;
+	color:white;
+	
+}
+
+
+.head_grey {
+	background-image:url(../images/grey_bar.gif);
+	text-align:left !important;
+	background-repeat:no-repeat;
+	padding-left:15px;
+	height:20px;
+	border:0;
+	font-size:14px;
+	color:white;
+	padding:0;
+	
+}
+redtext style1 {
+	text-align:left;
+}
+#orderbtn {
+	background-image: url(../images/order_now1.gif);
+	width:140px;
+	height:29px;
+	display:block;
+	text-indent:0px;
+	/* overflow:hidden;*/
+}
+
+#orderbtn:hover {
+		background-image: url(../images/order_now2.gif);
+}
+#ordervps {
+	background-image: url(../images/vps_order1.gif);
+	width:136px;
+	height:26px;
+	display:block;
+	text-indent:0px;
+	/* overflow:hidden;*/
+}
+
+#ordervps:hover {
+		background-image: url(../images/vps_order2.gif);
+}
+
+#vps {
+	background-image: url(../images/details.png);
+	width:100px;
+	height:25px;
+	display:block;
+	text-indent:0px;
+	/* overflow:hidden;*/
+}
+
+#vps:hover {
+		background-image: url(../images/details.png);
+}
+
+/* ---------->>> jtip <<<---------------------------------------------------------------*/
+
+#JT_arrow_left{
+	background-image: url(../images/arrow_left.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: absolute;
+	z-index:101;
+	left:-12px;
+	height:23px;
+	width:10px;
+    top:-3px;
+}
+
+#JT_arrow_right{
+	background-image: url(images/arrow_right.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: absolute;
+	z-index:101;
+	font-weight:bold;
+	height:23px;
+	width:11px;
+    top:-2px;
+
+}
+
+
+#JT {
+	position: absolute;
+	z-index:1000;
+	border: 2px solid #CCCCCC;
+	background-color: #fff;
+	margin-left:10px;
+	top:0;
+	left:0;
+	display:none;
+}
+
+#JT_copy{
+	padding:5px;
+	color:#333333;
+
+}
+
+.JT_loader{
+	background-image: url(../images/loader.gif);
+	background-repeat: no-repeat; 
+	background-position: center center;
+	width:100%;
+	height:12px;
+}
+
+#JT_close_left{
+	background-color: #CCCCCC;
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+	font-weight:bold;
+}
+
+#JT_close_right{
+	background-color: #CCCCCC;
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+	font-weight:bold;
+}
+
+#JT_copy p{
+margin:3px 0;
+}
+
+#JT_copy img{
+	padding: 1px;
+	border: 1px solid #CCCCCC;
+}
+
+.jTip{
+cursor:help;
+}
+
+
+.colgrey {
+	background-color:#f5f5f5;
+	width:100px;
+}
+
+
+
+#display .head_grey {
+	background-image:none;
+	color:#000;
+	
+}
+
+#orderbtn {
+	background-image: url(../images/order_now1.gif);
+	width:151px;
+	height:29px;
+	display:block;
+	text-indent:1000px;
+	overflow:hidden;
+}
+
+#orderbtn:hover {
+		background-image: url(../images/order_now2.gif);
+}
+.h2content { 
+font-size:14px;
+margin:5px 15px;
+color:#333333;
+font-family:helvetica,arial,sans-serif;
+font-size:12px;
+
+}
+/* ---------->>> jtip <<<---------------------------------------------------------------*/
+
+#JT_arrow_left{
+	background-image: url(../images/arrow_left.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: absolute;
+	z-index:101;
+	left:-12px;
+	height:23px;
+	width:10px;
+    top:-3px;
+}
+
+#JT_arrow_right{
+	background-image: url(../images/arrow_right.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: absolute;
+	z-index:101;
+	font-weight:bold;
+	height:23px;
+	width:11px;
+    top:-2px;
+
+}
+
+
+#JT {
+	position: absolute;
+	z-index:1000;
+	border: 2px solid #CCCCCC;
+	background-color: #fff;
+	margin-left:10px;
+	top:0;
+	left:0;
+	display:none;
+}
+
+#JT_copy{
+	padding:5px;
+	color:#333333;
+
+}
+
+.JT_loader{
+	background-image: url(../images/loader.gif);
+	background-repeat: no-repeat; 
+	background-position: center center;
+	width:100%;
+	height:12px;
+}
+
+#JT_close_left{
+	background-color: #CCCCCC;
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+	font-weight:bold;
+}
+
+#JT_close_right{
+	background-color: #CCCCCC;
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+	font-weight:bold;
+}
+
+#JT_copy p{
+margin:3px 0;
+}
+
+#JT_copy img{
+	padding: 1px;
+	border: 1px solid #CCCCCC;
+}
+
+.jTip{
+cursor:help;
+}
+
+
+.colgrey {
+	background-color:#f5f5f5;
+	width:100px;
+}
+
+
+
+#display .head_grey {
+	background-image:none;
+	color:#000;
+	
+}
+
+#orderbtn {
+	background-image: url(../images/order_now1.gif);
+	width:151px;
+	height:29px;
+	display:block;
+	text-indent:1000px;
+	overflow:hidden;
+}
+
+#orderbtn:hover {
+		background-image: url(../images/order_now2.gif);
+}

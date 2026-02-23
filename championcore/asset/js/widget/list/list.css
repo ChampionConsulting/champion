@@ -1,0 +1,54 @@
+/**
+ * championcore widget for tags/categories/list
+ */
+
+.championcore.widget.list_tag {
+	max-width: 400px;
+	width: 100%;
+}
+
+.championcore.widget.list_tag input {
+}
+.championcore.widget.list_tag .add {
+	
+	display: inline-block;
+	
+	cursor: pointer;
+	
+	background-color: #0000ff;
+	color: white;
+	padding: 2px 12px;
+	font-size: 12px;
+	border-radius: 2px;
+	float: none;
+	margin-bottom: 10px;
+}
+
+.championcore.widget.list_tag ul {
+	width: 100%;
+}
+
+.championcore.widget.list_tag ul li {
+	display: block;
+	float: left;
+	
+	padding: 5px;
+	margin: 5px 5px 5px 0;
+	
+	width: auto;
+	
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+	
+	background-color: #eeeeee;
+}
+
+.championcore.widget.list_tag ul li .delete_list_tag {
+	display: inline-block;
+	
+	color: #ff0000;
+	font-size: normal;
+	padding: 3px;
+	
+	cursor: pointer;
+}

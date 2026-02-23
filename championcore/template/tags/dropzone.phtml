@@ -1,0 +1,15 @@
+
+<div class="championcore tag championcore-dropzone">
+	<form id="my-dropzone" action="<?php echo $view_model->upload_handler; ?>" method="post" class="dropzone" enctype="multipart/form-data">
+		<input type="hidden" name="csrf_token" value="<?php echo $this->escape($view_model->csrf_token); ?>" />
+		<!-- stub -->
+	</form>
+	
+	<?php if ($view_model->show_uploaded_item_url === true) { ?>
+		<br />
+		<br />
+		<ul class="urls">
+		</ul>
+	<?php } ?>
+	
+</div>

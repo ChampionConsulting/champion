@@ -1,0 +1,55 @@
+JSON_START{"html":"<ul class=\"timeline\">\n            <li>\n                <div class=\"timeline-image\"><img class=\"rounded-circle img-fluid\" src=\"{{show_var:\"path\"}}\/content\/media\/about\/1.jpg\" data-image=\"1t3njupe3muf\"><\/div>\n                <div class=\"timeline-panel\">\n                    <div class=\"timeline-heading\">\n                        <h4>2009-2011<\/h4>\n                        <h4 class=\"subheading\">Our Humble Beginnings<\/h4>\n                    <\/div>\n                    <div class=\"timeline-body\"><p class=\"text-muted\">Mountain climbing is a great activity.&nbsp;That said, it's extremely risky. Many people have lost their lives mountain climbing.<\/p><\/div>\n                <\/div>\n            <\/li>\n            <li class=\"timeline-inverted\">\n                <div class=\"timeline-image\"><img class=\"rounded-circle img-fluid\" src=\"{{show_var:\"path\"}}\/content\/media\/about\/2.jpg\" data-image=\"ezfswcrjlr1z\"><\/div>\n                <div class=\"timeline-panel\">\n                    <div class=\"timeline-heading\">\n                        <h4>March 2011<\/h4>\n                        <h4 class=\"subheading\">An Agency is Born<\/h4>\n                    <\/div>\n                    <div class=\"timeline-body\"><p class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!<\/p><\/div>\n                <\/div>\n            <\/li>\n            <li>\n                <div class=\"timeline-image\"><img class=\"rounded-circle img-fluid\" src=\"{{show_var:\"path\"}}\/content\/media\/about\/3.jpg\" data-image=\"nnektsjkca47\"><\/div>\n                <div class=\"timeline-panel\">\n                    <div class=\"timeline-heading\">\n                        <h4>December 2012<\/h4>\n                        <h4 class=\"subheading\">Transition to Full Service<\/h4>\n                    <\/div>\n                    <div class=\"timeline-body\"><p class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!<\/p><\/div>\n                <\/div>\n            <\/li>\n            <li class=\"timeline-inverted\">\n                <div class=\"timeline-image\"><img class=\"rounded-circle img-fluid\" src=\"{{show_var:\"path\"}}\/content\/media\/about\/4.jpg\" data-image=\"jl2ezgbkcqcz\"><\/div>\n                <div class=\"timeline-panel\">\n                    <div class=\"timeline-heading\">\n                        <h4>July 2014<\/h4>\n                        <h4 class=\"subheading\">Phase Two Expansion<\/h4>\n                    <\/div>\n                    <div class=\"timeline-body\"><p class=\"text-muted\">Lorem ipsum dolor sit amet, consectetur cicaro elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!<\/p><\/div>\n                <\/div>\n            <\/li>\n            <li class=\"timeline-inverted\">\n                <div class=\"timeline-image\">\n                    <h4>\n                        Be Part\n                        <br>\n                        Of Our\n                        <br>\n                        Story!\n                    <\/h4>\n                <\/div>\n            <\/li>\n        <\/ul>","meta_searchable":"yes","title":"about-timeline"}JSON_END
+
+<ul class="timeline">
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{show_var:"path"}}/content/media/about/1.jpg" data-image="1t3njupe3muf"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2009-2011</h4>
+                        <h4 class="subheading">Our Humble Beginnings</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Mountain climbing is a great activity.&nbsp;That said, it's extremely risky. Many people have lost their lives mountain climbing.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{show_var:"path"}}/content/media/about/2.jpg" data-image="ezfswcrjlr1z"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>March 2011</h4>
+                        <h4 class="subheading">An Agency is Born</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{show_var:"path"}}/content/media/about/3.jpg" data-image="nnektsjkca47"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>December 2012</h4>
+                        <h4 class="subheading">Transition to Full Service</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{show_var:"path"}}/content/media/about/4.jpg" data-image="jl2ezgbkcqcz"></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>July 2014</h4>
+                        <h4 class="subheading">Phase Two Expansion</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur cicaro elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <h4>
+                        Be Part
+                        <br>
+                        Of Our
+                        <br>
+                        Story!
+                    </h4>
+                </div>
+            </li>
+        </ul>

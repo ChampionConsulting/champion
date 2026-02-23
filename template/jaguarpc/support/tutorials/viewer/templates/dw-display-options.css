@@ -1,0 +1,141 @@
+#all-dw-series, #dw-series-titles, #colorbox {
+  font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;
+  font-size: 11pt;
+  line-height: 16pt;
+}
+
+.dw-series-list {
+  margin: 20px 0;
+}
+
+.dw-series-list h3, #dw-series-titles h3 {
+  margin-bottom: 0;
+}
+
+#all-dw-series ol, #colorbox ol {
+  margin-top: 10px;
+}
+
+.dw-info-header div {
+  text-align: center;
+}
+
+.dw-info-header {
+  background-color: #fdfac4;
+  border: 1px solid #fff53a;
+  color: black;
+  font-family: Arial, Helvetica, Verdana, Tahoma, sans-serif;
+  font-size: 14px;
+  margin: 0 auto 5px auto;
+  padding: 7px 0;
+  text-align: center;
+}
+
+.dw-info-header {
+  background-color: #e5e5e5;
+  border: 1px solid #d7d7d7;
+}
+
+.dw-info-header-title {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+
+.dw-info-header-sub {
+  font-size: 11px;
+}
+
+.dw-info-header a, .dw-info-header a:link,
+.dw-info-header a:active, .dw-info-header a:visited {
+  color: #27658c;
+  text-decoration: none;
+}
+
+.dw-info-header a:hover {
+  color: #46a8e6;
+  text-decoration: underline;
+}
+
+
+/* Colorbox Only */
+
+#colorbox {
+  line-height: 11pt;
+}
+
+#colorbox .dw-series-list {
+  line-height: 16pt;
+  width: 600px;
+  margin: 5px;
+}
+
+
+/* Accordion Only */
+
+.ui-accordion {
+  font-size: 10pt;
+}
+
+.ui-accordion ol {
+  margin: 0;
+  padding: 0 15px 0 15px;
+}
+
+
+/* Columns */
+
+div.dw-two-columns {
+  float: left;
+  font-size: 85%;
+  margin: 10px;
+  width: 440px;
+}
+
+div.dw-three-columns {
+  float: left;
+  font-size: 77%;
+  margin: 10px;
+  width: 300px;
+}
+
+/* Search */
+
+div#dw-search {
+  margin-bottom: 10px;
+}
+
+/* Text-Based Tutorials */
+
+div.dw-text {
+  padding: 10px 24px 0 24px;
+}
+
+div.dw-text big {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+div.dw-text h1, div.dw-text h2 {
+  text-align: center;
+}
+
+div.dw-text p {
+  border: 4px solid #c7c7c7;
+  background-color: #dfdfdf;
+  padding: 5px;
+  margin: 40px 0;
+}
+
+div.dw-text p.demoIntro {
+  margin-bottom: 20px;
+}
+
+div.dw-text p.lastStep {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+div.dw-text img {
+  margin-top: 10px;
+}

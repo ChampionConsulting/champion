@@ -1,0 +1,30 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<div class="championcore">
+	<h1><?php echo $GLOBALS['lang_settings_custompostentries'];?> <?php echo $this->escape($view_model->post_type_name); ?></h1>
+	
+	<ul class="management">
+			<?php foreach ($view_model->list as $key => $value) { ?>
+				<li>
+					<?php echo $this->escape($value[1]->location); ?>
+					<div class="op">
+						<a href="index.php?p=custom_post_types&post_name=<?php echo $this->escape($value[1]->location); ?>&post_type_name=<?php echo $this->escape($view_model->post_type_name); ?>&method=put&csrf_token=<?php echo \championcore\session\csrf\create(); ?>">edit</a>
+					</div>
+					<div class="op">
+						<a href="index.php?p=custom_post_types&post_name=<?php echo $this->escape($value[1]->location); ?>&post_type_name=<?php echo $this->escape($view_model->post_type_name); ?>&method=delete&csrf_token=<?php echo \championcore\session\csrf\create(); ?>">
+							<img src="img/icon-delete.svg" />
+						</a>
+					</div>
+				</li>
+			<?php } ?>
+	</ul>
+	
+	<p>
+		<a class="btn" href="index.php?p=custom_post_types&post_type_name=<?php echo $this->escape($view_model->post_type_name); ?>&method=post&csrf_token=<?php echo \championcore\session\csrf\create(); ?>"><?php echo $GLOBALS['lang_settings_custompostadd'];?></a>
+	</p>
+	
+</div>

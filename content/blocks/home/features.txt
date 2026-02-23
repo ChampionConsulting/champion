@@ -1,0 +1,46 @@
+JSON_START{"html":"<div class=\"row\">\r\n    <div class=\"col-lg-4 col-sm-6\">\r\n        <div class=\"single-feature text-center\">\r\n            \r\n            <h3>Inline editing<\/h3>\r\n            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.<\/p>\r\n        <\/div>\r\n    <\/div>\r\n    <div class=\"col-lg-4 col-sm-6\">\r\n        <div class=\"single-feature text-center\">\r\n            \r\n            <h3>New interface<\/h3>\r\n            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.<\/p>\r\n        <\/div>\r\n    <\/div>\r\n    <div class=\"col-lg-4 col-sm-6\">\r\n        <div class=\"single-feature text-center\">\r\n            \r\n            <h3>Multiple users<\/h3>\r\n            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.<\/p>\r\n        <\/div>\r\n    <\/div>\r\n    <div class=\"col-lg-4 col-sm-6\">\r\n        <div class=\"single-feature text-center\">\r\n            \r\n            <h3>Enhanced security<\/h3>\r\n            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.<\/p>\r\n        <\/div>\r\n    <\/div>\r\n    <div class=\"col-lg-4 col-sm-6\">\r\n        <div class=\"single-feature text-center\">\r\n            \r\n            <h3>Embed anywhere<\/h3>\r\n            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.<\/p>\r\n        <\/div>\r\n    <\/div>\r\n    <div class=\"col-lg-4 col-sm-6\">\r\n        <div class=\"single-feature text-center\">\r\n            \r\n            <h3>Loads of integrations<\/h3>\r\n            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.<\/p>\r\n        <\/div>\r\n    <\/div>\r\n<\/div>","meta_searchable":"yes","title":""}JSON_END
+
+<div class="row">
+    <div class="col-lg-4 col-sm-6">
+        <div class="single-feature text-center">
+            
+            <h3>Inline editing</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+        <div class="single-feature text-center">
+            
+            <h3>New interface</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+        <div class="single-feature text-center">
+            
+            <h3>Multiple users</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+        <div class="single-feature text-center">
+            
+            <h3>Enhanced security</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+        <div class="single-feature text-center">
+            
+            <h3>Embed anywhere</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+        <div class="single-feature text-center">
+            
+            <h3>Loads of integrations</h3>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+        </div>
+    </div>
+</div>

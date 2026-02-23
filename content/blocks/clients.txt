@@ -1,0 +1,21 @@
+JSON_START{"html":"<!-- Clients-->\r\n<div class=\"py-5\">\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-3 col-sm-6 my-3\">\r\n                <figure><a href=\"#!\"><img class=\"img-fluid d-block mx-auto\" src=\"\\/content\/media\/logos\/envato.jpg\" data-image=\"hou18vt8srys\"><\/a><\/figure>\r\n            <\/div>\r\n            <div class=\"col-md-3 col-sm-6 my-3\">\r\n                <figure><a href=\"#!\"><img class=\"img-fluid d-block mx-auto\" src=\"\\/content\/media\/logos\/designmodo.jpg\" data-image=\"f2d2zlyuk1zl\"><\/a><\/figure>\r\n            <\/div>\r\n            <div class=\"col-md-3 col-sm-6 my-3\">\r\n                <figure><a href=\"#!\"><img class=\"img-fluid d-block mx-auto\" src=\"\\/content\/media\/logos\/themeforest.jpg\" data-image=\"r56wupvltmgo\"><\/a><\/figure>\r\n            <\/div>\r\n            <div class=\"col-md-3 col-sm-6 my-3\">\r\n                <figure><a href=\"#!\"><img class=\"img-fluid d-block mx-auto\" src=\"\\/content\/media\/logos\/creative-market.jpg\" data-image=\"gwa20tew2sbe\"><\/a><\/figure>\r\n            <\/div>\r\n        <\/div>\r\n    <\/div>\r\n<\/div>","meta_searchable":"yes","title":""}JSON_END
+
+<!-- Clients-->
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 my-3">
+                <figure><a href="#!"><img class="img-fluid d-block mx-auto" src="/content/media/logos/envato.jpg" data-image="hou18vt8srys"></a></figure>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <figure><a href="#!"><img class="img-fluid d-block mx-auto" src="/content/media/logos/designmodo.jpg" data-image="f2d2zlyuk1zl"></a></figure>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <figure><a href="#!"><img class="img-fluid d-block mx-auto" src="/content/media/logos/themeforest.jpg" data-image="r56wupvltmgo"></a></figure>
+            </div>
+            <div class="col-md-3 col-sm-6 my-3">
+                <figure><a href="#!"><img class="img-fluid d-block mx-auto" src="/content/media/logos/creative-market.jpg" data-image="gwa20tew2sbe"></a></figure>
+            </div>
+        </div>
+    </div>
+</div>

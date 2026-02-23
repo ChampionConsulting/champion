@@ -1,0 +1,2 @@
+<p>Some things you can try!</p>
+<ol><li>* Edit the front page looking at the site</li><li>* Add a video or upload some photos to a Block</li><li>* Write a blog article and add some tags</li><li>* Edit this note in dashboard-notes Block</li></ol>

@@ -1,0 +1,322 @@
+/* CSS Document */
+ul,li,ol{ margin:0; padding:0;}
+.why-bloc{ width:670px; height:auto; float:left; font-family:Georgia, "Times New Roman", Times, serif; font-size:12px; color:#605f5f; padding-bottom:25px;}
+
+.why-bloc h1{color : #5c5c5c;
+font-size : 24px;
+font-family : "Sketch Block", Arial, Helvetica, sans-serif;
+font-weight : lighter;
+letter-spacing : 1pt;}
+
+.sprt-bloc{ width:670px; height:auto; float:left; padding-bottom:10px;}
+.sprt-bloc h3{ font-family:Arial, Helvetica, sans-serif; font-size:17px; font-weight:bold; color:#5c5c5c;}
+.brdr-box01{ width:305px; height:67px; float:left; border:solid 3px #f2f3f5; background:url(../images/brdr-grade.gif) repeat-x; padding:10px; line-height:22px;}
+.brdr-box02{ width:305px; height:67px; float:right; border:solid 3px #f2f3f5; background:url(../images/brdr-grade.gif) repeat-x; padding:10px; line-height:22px;}
+.award-bloc01{ width:265px; height:auto; float:right; font-family:Georgia, "Times New Roman", Times, serif; color:#605f5f; font-size:12px;}
+.award-bloc01 h1{ color : #5c5c5c;
+font-size : 24px;
+font-family : "Sketch Block", Arial, Helvetica, sans-serif;
+font-weight : lighter;
+letter-spacing : 1pt;}
+.awrd-head{ width:265px; height:69px; float:left; border-bottom : 2px dashed #dddddd;}
+.award-list01{ width:265px; height:auto; float:left; border-bottom : 2px dashed #dddddd; padding-top:10px; padding-bottom:10px;}
+.award-txt01{ width:265px; height:auto; float:left; padding-top:10px;}
+
+
+.td-bg01{ font-family:Verdana, Arial, Helvetica, sans-serif; font-size:18px; color:#ffffff; font-weight:normal; height:44px; background:url(../images/td-bg01.gif) repeat-x; padding-right:15px;}
+.td-bg02{ font-family:Verdana, Arial, Helvetica, sans-serif; font-size:18px; color:#ffffff; font-weight:normal; height:44px; background:url(../images/td-bg02.gif) repeat-x;}
+.td-bg03{ font-family:Verdana, Arial, Helvetica, sans-serif; font-size:18px; color:#ffffff; font-weight:normal; height:44px; background:url(../images/td-bg02.gif) repeat-x; padding-right:25px;}
+
+
+
+
+
+.widget {
+width: 690px;
+height:auto; float:left; font-family:Georgia, "Times New Roman", Times, serif; font-size:14px; color:#605f5f;
+
+}
+
+.widget a {
+	text-decoration: none;
+	}
+	
+.widget a:hover {
+	color: #6e2056;
+	text-decoration: none;
+	}
+.tabnav { width:210px; height:auto; float:left; background:url(../images/sep02.gif) repeat-y; margin:0px; padding:0px;}
+
+.tabnav li {
+	display: list-item;
+	list-style: none;
+	}
+	
+.tabnav li a { width:190px; height:29px; float:left;  font-size:12px; color:#5a5a5a; font-weight:bold; padding-right:20px; text-align:right; padding-top:10px;}
+		
+.tabnav li a:hover, .tabnav li a:active, .tabnav li.ui-tabs-selected a { background:url(../images/tab-hvr.gif) no-repeat; color:#9d3434;}
+		
+.tabdiv {
+	 height:auto; float:left; width:460px; padding-left:15px;
+	
+	}
+	
+		.tabdiv li {
+		
+		}
+
+.ui-tabs-hide {
+		display: none;
+		}
+
+		#featuredvid {
+		text-align: center;
+		}
+		
+			.fvid {
+			margin-bottom: 5px;
+			}
+		
+			.vidselector li {
+			text-align: left;
+			list-style: none;
+			padding: 5px;
+			background: #ffffff;
+			border: 1px solid #dedbd1;
+			margin-bottom: 5px;
+			}
+
+
+
+
+.new-rightpan{ width:269px; height:auto; float:right; font-family:Georgia, "Times New Roman", Times, serif; font-size:12px; color:#8b8888;}
+.new-rgtbox{ width:269px; height:auto; float:left; background:url(../images/content-spacer.jpg) no-repeat left bottom; padding-bottom : 25px;}
+.help02{ width:269px; height:123px; float:left; background:url(../images/help2.gif) no-repeat;}
+.help-txt01{ width:130px; height:auto; float:left; padding-left:10px; padding-top:20px;}
+.help-txt01 span{ font-family:Verdana, Arial, Helvetica, sans-serif; font-size:18px; font-weight:normal; color:#5f5f5f;}
+.phone01{ width:269px; height:102px; float:left; background:url(../images/phone1.gif) no-repeat; margin-top:5px;}
+.ph-txt01{ width:158px; height:auto; float:left; padding-left:90px; padding-top:10px;}
+.ph-head1{ width:158px; height:auto; float:left;}
+.ph-head1 h4{ font-size:18px; font-weight:bold; color:#aa3131; text-transform:uppercase;}
+.ph-head1 h4 span{ color:#5f5f5f;}
+.ph-head2{ width:158px; height:auto; float:left; color:#717171; padding-top:5px;}
+.ph-head2 span{ font-weight:bold; color:#000000;}
+
+.daybg{ width:269px; height:97px; float:left; background:url(../images/30day.gif) no-repeat; margin-top:5px;}
+.spn-txt01{ font-size:15px; color:#a23636;}
+.spn-txt02{ font-size:15px; color:#605f5f;}
+.new-box01{ width:263px; height:auto; float:left; border:solid 3px #eaedef; margin-top:18px; background:#fbfbfb;}
+.tst-head02{ width:209px; height:37px; float:left; background:url(../images/tsthead2.gif) no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:bold; color:#5a5a5a; padding-left:54px; padding-top:13px;}
+.new-testi{ width:233px; height:auto; float:left; padding-top:15px; padding-left:15px; padding-bottom:15px;}
+.new-testi span{ font-size:14px; color:#a23636;}
+.new-test2{ width:263px; height:auto; float:left; background:url(../images/new-grade.gif) repeat-x left bottom;}
+.rgt-newlist{ width:243px; height:auto; float:left; padding:15px 10px 15px 10px; border-bottom:dashed 2px #eaeaea;}
+.rgt-newlist span{ font-size:16px; color:#5a5a5a;}
+
+
+
+
+.tab-sliderbg{ width:698px; height:auto; float:left;}
+
+#example-two .list-wrap { width:698px; height:auto; padding-top:15px;}
+
+#example-two ul { list-style: none; margin:0px; padding:0px; }
+
+#example-two .nav { width:650px; height:41px; background:url(../images/tab-navbg.gif) repeat-x; overflow: hidden; padding-left:40px; padding-top:14px;-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 5px; -webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+
+}
+#example-two .nav li { width: 189px; float: left; padding-right:4px; }
+#example-two .nav li.last { margin-right: 0; }
+#example-two .nav li a { display: block; width:189px; height:31px; float:left; background:url(../images/tab-a2.gif) no-repeat; text-align: center; border: 0; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:18px; color:#ffffff; font-weight:normal; padding-top:10px;}
+
+#example-two li a.current,#example-two li a.current:hover { background:url(../images/tab-a2hvr.gif) !important; color:#772323; }
+#example-two .nav li a:hover, #example-two .nav li a:focus {background:url(../images/tab-a2hvr.gif);color:#772323; }
+
+
+.new-links{ width:263px; height:auto; float:left;}
+
+.tb-dropdown{ width:690px; height:25px; float:left; background:url(../images/tab-dropdown.png) no-repeat; text-align:center; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:14px; color:#ffffff; padding-top:10px;}
+.linux-listing01{ width:694px; height:auto; float:left; padding-top:15px; padding-bottom:15px;}
+.linux-pklisting{ width:694px; height:auto; float:left; padding-top:24px; font-family:Verdana, Arial, Helvetica, sans-serif;}
+.lnx-head01{ width:694px; height:34px; float:left; background:url(../images/vps-hd01.gif) no-repeat; font-size:12px; color:#606060; padding-top:10px;}
+
+.lnx-head02{ width:694px; height:34px; float:left; background:url(../images/vps-hd02.gif) no-repeat; font-size:12px; color:#606060; padding-top:10px;}
+
+.lnx-hd01{ width:178px; height:auto; float:left; text-align:center;}
+.lnx-hd02{ width:130px; height:auto; float:left; text-align:center;}
+.lnx-hd03{ width:126px; height:auto; float:left; text-align:center;}
+
+.lnx-list{ width:694px; height:48px; float:left; background:url(../images/lnx-list.gif) no-repeat; padding-top:25px; font-size:11px; color:#606060; font-family:Verdana, Arial, Helvetica, sans-serif;}
+
+.lnx-list02{ width:694px; height:29px; float:left; background:url(../images/lnx-list2.gif) no-repeat; font-size:11px; color:#606060; font-family:Verdana, Arial, Helvetica, sans-serif; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#7a7a7a; padding-top:13px;}
+.lnx-list03{ width:694px; height:37px; float:left; background:url(../images/lnx-list3.gif) no-repeat; font-size:11px; color:#606060; font-family:Verdana, Arial, Helvetica, sans-serif;  padding-top:10px;}
+
+
+
+
+
+
+
+.self-01{ width:306px; height:58px; float:left; background:#cccccc;}
+.self-01 h4{ width:50px; height:auto; float:left; font-size:18px; color:#666666;}
+.self-01 h5{ width:50px; height:auto; float:right; font-size:18px; color:#FF3300;}
+
+
+
+.slide-bg01{ width:347px; height:auto; float:left; border-right: dashed 1px #c9c8c8; margin-right:20px;}
+
+#inner-banner01{ height:234px; background:url(../images/red-bg1.gif) repeat-x;}
+#inner-wrapper01{ width:980px; height:auto; margin:auto; padding-top:20px;}
+.inner-bannertxt{ width:980px; height:180px; float:left; font-family:Arial, Helvetica, sans-serif;}
+.banner-txt01{ width:504px; height:auto; float:left; padding-left:30px; padding-top:10px;}
+.banner-txt01 h1{font-size:22px; font-weight:bold; color:#ffffff; font-family:Arial, Helvetica, sans-serif; margin:0; padding:0;}
+.banner-txt01 h3{ font-size:22px; font-weight:bold; color:#ffffff; font-family:Arial, Helvetica, sans-serif;}
+.banner-txt01 h3 span{ font-size:14px; font-weight:normal; color:#fddbbf;}
+
+.banner-txt01 ul{ width:504px; height:auto; float:left; padding-top:15px; font-size:14px; color:#fddbbf; line-height:22px; margin:0;}
+.banner-txt01 ul li{ display:list-item; list-style:url(../images/arrow02.png) inside;}
+
+.bn-txt01{font-size:22px; font-weight:bold; color:#ffffff; font-family:Arial, Helvetica, sans-serif;}
+.bn-txt02{ font-size:14px; font-weight:normal; color:#fddbbf;}
+
+.inner-nav01{ width:950px; height:auto; float:left; padding-left:20px; padding-top:6px;}
+.inner-nav01 ul{ font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:normal; color:#b09fa0;}
+.inner-nav01 ul li{ display:inline; list-style:none;}
+.inner-nav01 ul li a{color:#b09fa0; padding-left:10px; padding-right:10px;}
+.inner-nav01 ul li a:hover{ color:#ffffff;}
+.inner-nav01 ul li a.active{ color:#ffffff;}
+
+.get-secondmonth{ width:436px; height:auto; float:right; padding-top:10px;}
+
+
+.leftpan-topcontents{ width:696px; height:auto; float:left; font-family:Georgia, "Times New Roman", Times, serif; font-size:16px; color:#454545; line-height:20px; padding-bottom:20px;}
+.leftpan-topcontents h2{font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; font-weight:normal; color:#a23636;}
+.leftpan-topcontents h1{font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; font-weight:normal; color:#a23636;}
+.leftpan-topcontents h3{ font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; font-weight:normal; color:#a23636;}
+.left-hd1{font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; font-weight:normal; color:#a23636;}
+
+.leftpan-contents2{ width:696px; height:auto; float:left; font-family:Georgia, "Times New Roman", Times, serif; font-size:12px; color:#605f5f; line-height:20px; padding-bottom:20px;}
+.leftpan-contents03{ width:696px; height:auto; float:left; font-family:Georgia, "Times New Roman", Times, serif; font-size:12px; color:#605f5f; line-height:20px; padding-bottom:20px;}
+.leftpan-contents03 h2{font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; font-weight:normal; color:#a23636; letter-spacing:-1px;}
+.leftpan-contents03 h3{ font-family:Verdana, Arial, Helvetica, sans-serif; font-size:20px; font-weight:normal; color:#605f5f;}
+.leftpan-contents03 h3 span{ color:#006699;}
+.leftpan-contents2 h1{font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; font-weight:normal; color:#a23636; letter-spacing:-1px;}
+.leftpan-contents2 h3{ font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; font-weight:normal; color:#a23636;}
+
+
+
+
+
+.resell-listbg{ width:686px; height:auto; float:left; border:solid 1px #e5e8eb; margin-top:15px; font-family:Georgia, "Times New Roman", Times, serif; font-size:12px; color:#3f8cb3;}
+.resell-hd{ width:666px; height:48px; float:left; background:url(../images/grade02.gif) repeat-x;  padding-left:20px; padding-top:10px;}
+.resell-hd h4{font-size:24px; font-weight:normal; color:#006699; font-family:Georgia, "Times New Roman", Times, serif;}
+.resell-hd h3{font-size:24px; font-weight:normal; color:#006699; font-family:Georgia, "Times New Roman", Times, serif;}
+.resell-lst{ width:672px; height:26px; float:left; background:url(../images/grade03.gif) repeat-x; padding-left:14px; padding-top:10px; border-bottom:solid 1px #eaedef;}
+.resell-lst img{ float:left; padding-right:15px;}
+
+.get-your2{ width:682px; height:85px; float:left; background:url(../images/grade04.gif) repeat-x; border:solid 3px #e5e8eb; margin-top:20px;}
+.get-your2 div{ width:370px; height:auto; float:left; margin:0; padding-top:25px; padding-left:25px; font-family:Georgia, "Times New Roman", Times, serif; font-size:28px; font-weight:normal; color:#aa3131;}
+.get-your2 img{ float:right; margin-right:45px; margin-top:14px;}
+
+
+.right-nav01{ width:263px; height:auto; float:left; font-family:Georgia, "Times New Roman", Times, serif; font-size:12px; color:#989898;}
+.right-nav01 div{ width:251px; height:auto; float:left; margin:0; padding:16px 0 16px 12px; font-size:16px; color:#9f3636; font-family:Georgia, "Times New Roman", Times, serif;}
+.right-nav01 ul{ width:263px; height:auto; float:left;}
+.right-nav01 ul li{ display:list-item; list-style:none;}
+.right-nav01 ul li a{ width:251px; height:26px; float:left; background:url(../images/grade05.gif) repeat-x; border-top:solid 1px #f0f1f3; padding-left:12px; padding-top:10px; color:#989898;}
+.right-nav01 ul li a img{ float:left; padding-right:15px;}
+.right-nav01 ul li a:hover{ color:#a23636;}
+
+
+
+
+.windowsvps-plans{ width:694px; height:auto; float:left; padding-bottom:15px;}
+.vps-planhd{ width:694px; height:44px; float:left; background:url(../images/grade06.gif) repeat-x;  -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; text-align:center; padding-top:13px;}
+
+.vps-planhd001{ width:694px; height:57px; float:left; background:url(../images/grade06.gif) repeat-x;  -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; text-align:center; }
+
+.vps-planhd001 h2{font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; font-weight:normal; color:#ffffff;}
+
+.vps-planhd h2{font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; font-weight:normal; color:#ffffff;}
+
+.vps-planhd1{ width:694px; height:64px; float:left; font-family:Georgia, "Times New Roman", Times, serif; font-size:16px; color:#ffffff;  text-align:center;}
+.vps-planhd1 span{ color:#000000;}
+
+.vps-plnhd01{ width:171px; height:54px; float:left; background:#cbcbcb; padding-top:10px;}
+.vps-plnhd02{ width:134px; height:54px; float:left; background:#969696; padding-top:10px;}
+.vps-plnhd03{ width:126px; height:54px; float:left; background:#8f8f8f; padding-top:10px;}
+.vps-plnhd04{ width:134px; height:54px; float:left; background:#969797; padding-top:10px;}
+.vps-plnhd05{ width:129px; height:54px; float:left; background:#8f8f8f; padding-top:10px;}
+
+
+.vps-planlist01{ width:694px; height:25px; float:left; background:url(../images/vs-list01.gif) no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#606060; padding-top:10px;}
+.vps-planlist01 span{ font-weight:bold; color:#000000;}
+.vps-planlist02{ width:694px; height:25px; float:left; background:url(../images/vs-list02.gif) no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#606060; padding-top:10px;}
+.vps-planlist02 span{ font-weight:bold; color:#000000;}
+.vps-planlist03{ width:694px; height:41px; float:left; background:url(../images/vs-list03.gif) no-repeat; font-family:Georgia, "Times New Roman", Times, serif; font-size:16px; font-weight:bold; color:#006600; padding-top:15px;}
+.vps-planlist03 span{ font-weight:bold; color:#000000;}
+.vps-planlist04{ width:694px; height:61px; float:left; background:url(../images/vs-list04.gif) no-repeat; padding-top:20px;}
+.vps-planlist05{ width:694px; height:25px; float:left; background:url(../images/vs-list02.gif) no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#009900; padding-top:10px;}
+.vps-planlist05 span{ font-weight:bold; color:#000000;}
+
+.vps-pln01{ width:151px; height:auto; float:left; padding-left:20px;}
+.vps-pln02{ width:134px; height:auto; float:left; text-align:center;}
+.vps-pln03{ width:126px; height:auto; float:left; text-align:center;}
+.vps-pln04{ width:134px; height:auto; float:left; text-align:center;}
+.vps-pln05{ width:129px; height:auto; float:left; text-align:center;}
+
+.pack-box01{ width:692px; height:auto; float:left; padding-top:15px;}
+.pk-hd{ width:670px; height:35px; float:left; background:url(../images/grade07.gif) repeat-x; border:solid 3px #e5e8eb;  padding-left:16px; padding-top:10px;}
+.pk-hd h3{font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; color:#636363;}
+.pk-hd h4{font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; color:#636363; font-weight:normal;}
+.pk-listing1{ width:656px; height:auto; float:left;  border-bottom:solid 3px #f1f2f4; border-right:solid 3px #f1f2f4; border-left:solid 3px #f1f2f4; background:url(../images/grade08.gif) repeat-x left bottom #fefefe; padding:15px;}
+
+.pk-listing1 ul{ font-family:Georgia, "Times New Roman", Times, serif; font-size:12px; color:#5d5d5d; margin:0; padding:0; line-height:26px;}
+.pk-listing1 ul li{ display:list-item; list-style:url(../images/raquo2.gif) inside;}
+.pk-listing1 ul li span{ color:#006699; font-weight:bold;}
+.pk-listing1 ul li strong{ color:#a23636;}
+
+
+.leftpan-contents2 h2{font-size : 20px; margin:0; padding:0; font-weight:normal;
+font-family : Verdana, Arial, sans-serif;
+color:#605f5f;}
+
+.leftpan-contents2 h2 span{ color:#006699;}
+
+
+
+
+
+
+
+
+.newhd01{font-family : "Verdana", Geneva, sans-serif;
+font-size : 14px;
+font-weight : lighter;
+color : #333333;
+margin : 0;}
+
+.newhd02{font-family : "Verdana", Geneva, sans-serif;
+font-size : 18px; font-weight:bold;
+text-transform : uppercase; color:#821b1b;
+letter-spacing : normal;
+}
+
+.newhd03{font-family : "Verdana", Geneva, sans-serif;
+font-size : 18px; font-weight:bold;
+text-transform : uppercase; color:#35425b;
+letter-spacing : normal;
+}
+
+.newhd04{font-family : "Verdana", Geneva, sans-serif;
+font-size : 18px; font-weight:bold;
+text-transform : uppercase; color:#7d9055;
+letter-spacing : normal;
+}
+
+
+
+
+

@@ -1,0 +1,17 @@
+Our Work
+
+Work page description.
+
+<h2>Lightbox Gallery</h2>
+<p></p>
+{{gal:gallery2}}
+<p>&nbsp;</p>
+
+<h2>Thumbnails Gallery</h2>
+<p></p>
+{{thumbs:gallery2}}
+<p>&nbsp;</p>
+
+<h2>Slider</h2>
+<p></p>
+{{slide:gallery3}}

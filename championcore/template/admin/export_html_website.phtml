@@ -1,0 +1,44 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<?php
+# pagination helper
+	$view_helper_pagination = new \championcore\view\helper\Pagination(); 
+	echo $view_helper_pagination->render(
+		[
+			'max_pages' => $view_model->total_pages,
+			'base_url'  => ('?f=pages'),
+			
+			'page'       => ((int)$view_model->cur_page),
+			
+			'css_class'      => 'older',
+			'next_css_class' => 'older',
+			'prev_css_class' => 'older'
+		]
+	);
+?>
+
+<div class="championcore export-html-website">
+	<h1><?php echo \htmlentities($GLOBALS['lang_export_html_header']); ?> "<?php echo \htmlentities($view_model->export_folder); ?>" ...</h1>
+
+	<p>
+		<?php echo $GLOBALS['lang_export_html_text']; ?>
+	</p>
+	
+	<div class="championcore_float_barrier"></div>
+</div>
+
+<a class='btn create-new' href='index.php?p=create'><?php echo \htmlentities($GLOBALS['lang_home_new']); ?></a>
+<a class='btn create-new' href='index.php?p=export-html-website'><?php echo \htmlentities($GLOBALS['lang_export_html_button']); ?></a>
+
+<?php
+	if ($view_model->cur_page < $view_model->total_pages) { 
+		echo "<a class='older' href='index.php?f=pages&pnum=".($view_model->cur_page+1)."'>></a>"; 
+	}
+	if ($view_model->cur_page > 1) { 
+		echo "<a class='newer' href='index.php?f=pages&pnum=".($view_model->cur_page-1)."'><</a>"; 
+	}
+?>

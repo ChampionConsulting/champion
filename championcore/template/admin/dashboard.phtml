@@ -1,0 +1,84 @@
+<div class="wrapper ">
+	
+	<div class="dashboard">
+		
+		<div class="grid flexbox">
+			<div class="panel blocks-status grid-item">
+				<div class="panel-heading"><h2><?php echo $GLOBALS['lang_dashboard_blocks']; ?></h2></div>
+				<div class="panel-content">
+				<?php
+					echo $view_model->blocks;
+					echo $view_model->block_size_count;
+				?>
+				<a href="index.php?f=blocks" class="btn"><?php echo $GLOBALS['lang_dashboard_edit_blocks']; ?></a>
+				</div>
+			</div>
+			
+			<div class="panel blog-status grid-item">
+				<div class="panel-heading"><h2><?php echo $GLOBALS['lang_dashboard_blog']; ?></h2></div>
+				<div class="panel-content">
+				<?php
+					echo $view_model->blogs;
+					echo $view_model->blog_size_count;
+				?>
+				<a href="index.php?f=blog" class="btn"><?php echo $GLOBALS['lang_dashboard_edit_blog']; ?></a>
+				</div>
+			</div>
+			
+			<div class="panel media-status grid-item">
+				<div class="panel-heading"><h2><?php echo $GLOBALS['lang_dashboard_media']; ?></h2></div>
+				<div class="panel-content">
+				<?php
+					echo $view_model->media;
+					echo $view_model->media_size_count;
+				?>
+				<a href="index.php?f=media" class="btn"><?php echo $GLOBALS['lang_dashboard_edit_media']; ?></a>
+				</div>
+			</div>
+			
+			<?php if (\championcore\acl_role\is_administrator() or \championcore\acl_role\is_editor_allowed_resource('page')) { ?>
+				<div class="panel pages-status grid-item">
+					<div class="panel-heading"><h2><?php echo $GLOBALS['lang_dashboard_pages']; ?></h2></div>
+					<div class="panel-content">
+					<?php
+						echo $view_model->page;
+						echo $view_model->page_size_count;
+					?>
+					<a href="index.php?f=pages" class="btn"><?php echo $GLOBALS['lang_dashboard_edit_page']; ?></a>
+					</div>
+				</div>
+			<?php } ?>
+			
+			<div class="panel backups-status grid-item">
+				<div class="panel-heading"><h2><?php echo $GLOBALS['lang_dashboard_backups']; ?></h2></div>
+				<div class="panel-content">
+				<?php
+					echo $view_model->backup;
+					echo $view_model->backup_size_count;
+				?>
+				</div>
+			</div>
+			
+			<?php
+				$dashboard_notes_filename = \championcore\get_configs()->dir_content . '/blocks/dashboard-notes.txt';
+				
+				$datum_block = new \championcore\store\block\Item();
+				
+				if ($datum_block->exists($dashboard_notes_filename)) { ?>
+				<div class="panel dashboard-notes grid-item">
+					<div class="panel-heading"><h2><?php echo $GLOBALS['lang_dashboard_notes']; ?></h2></div>
+					<div class="panel-content">
+					<?php
+						$datum_block->load( $dashboard_notes_filename );
+						
+						echo $datum_block->html;
+					?>
+					</div>
+				</div>
+			<?php } ?>
+			
+		</div>
+		
+	</div>
+
+</div>

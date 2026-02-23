@@ -1,0 +1,94 @@
+
+/*styles for inner page*/
+
+
+.top-holder{
+  position: relative;
+}
+
+#mainNav.navbar-bg{
+  background-color:#212529;
+  position: sticky;
+}
+.navbar-nav {
+  padding: 0 1rem;
+  margin-right: auto;
+}
+@media (min-width: 576px) {
+  .navbar-nav {
+    max-width: 540px;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-nav {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-nav {
+    max-width: 9999px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-collapse{
+    position: absolute;
+    width: 100%;
+    top:100%;
+    left:0;
+    z-index: 1;
+    background:#212529;
+    padding-bottom: 1rem;
+  }
+}
+
+.holder-items .box-info{
+  color:#fff;
+  font-size:1.1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.holder-items .container{
+  max-width: 1240px;
+}
+.holder-box{
+  background-color:rgba(0, 0, 0, 0.42);
+  font-size:0.8rem;
+  height: 100%;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .holder-box{
+    font-size:1.1rem;
+  }
+}
+
+.holder-box p{
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+.holder-box h2{
+  font-size: 1.2rem;
+  margin-bottom: 0.1rem;
+  margin: 0 -1rem;
+}
+@media (min-width: 576px) {
+  .holder-box h2{
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .holder-box h2{
+    font-size: 2rem;
+  }
+}
+
+.page-section.inner-page{
+  padding: 2rem 0;
+}
+@media (min-width: 768px) {
+  .page-section.inner-page {
+    padding: 5.8rem 0 6rem;
+  }
+}

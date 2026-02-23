@@ -1,0 +1,17 @@
+JSON_START{"description":"","html":"<!-- Masthead-->\r\n<div class=\"top-holder\" style=\"max-height: 550px;\">\r\n    <header class=\"masthead inner-page\" style=\"max-height: 50px;\">\r\n            <div class=\"masthead-heading text-uppercase\">New Page<\/div>\r\n            <div class=\"masthead-subheading\">The evolution of a fine firm<\/div>\r\n    <\/header>\r\n<\/div>\r\n{{block:intro-alt}}\r\n{{block:textimg}}\r\n{{block:textimg2}}\r\n{{block:textimg}}","id":"New-Page","location":"\/pages\/New-Page","meta_custom_description":"","meta_indexed":"no","meta_language":"","meta_no_follow":"no","meta_searchable":"yes","page_template":"default","title":"page title","inline_css":"","inline_js":""}JSON_END
+
+page title
+
+
+
+<!-- Masthead-->
+<div class="top-holder" style="max-height: 550px;">
+    <header class="masthead inner-page" style="max-height: 50px;">
+            <div class="masthead-heading text-uppercase">New Page</div>
+            <div class="masthead-subheading">The evolution of a fine firm</div>
+    </header>
+</div>
+{{block:intro-alt}}
+{{block:textimg}}
+{{block:textimg2}}
+{{block:textimg}}

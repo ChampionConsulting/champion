@@ -1,0 +1,208 @@
+html {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	margin: 0 0 37px;
+	background-color: #333339;
+}
+
+#login-page{
+	height:100%;
+	display:block;
+	overflow:hidden;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:top center;
+	background-image:url(../../content/media/branding/login-background.jpg);
+}
+
+#login-page:after{
+	content:"";
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	display:block;
+	position:absolute;
+	background-color:rgba(0,0,0,0.35);
+	top:auto;
+}
+
+#logo{
+	top:20px;
+	left:20px;
+	z-index:3;
+	width:334px;
+	height:90px;
+	display:block;
+	position:absolute;
+	background-size: 334px 90px;
+	background-image:url(../../content/media/branding/logo.png)!important;
+}
+
+#login-form{
+	top:50%;
+	left:50%;
+	z-index:3;
+	width:300px;
+	padding:10px;
+	display:block;
+	min-height:300px;
+	text-align:center;
+	position:absolute;
+	border-radius:3px;
+	margin:-160px 0 0 -150px;
+	transition:0.5s ease-in-out;
+	background-color:rgba(0,0,0,0.40);
+	-webkit-transition:0.5s ease-in-out;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+}
+
+#login-form a{
+	color:#ccc;
+	font-size:13px;
+}
+
+#login-form a:hover{
+	color:#50ACFF;
+}
+
+#login-form h1{
+	color:#fff;
+	margin:20px 0;
+	font-size:21px;
+	font-weight: bold;
+}
+
+#login-form h1 span{
+	color:#E7AC3F;
+}
+
+#login-page input, 
+#login-page select {
+	margin:0 auto;
+}
+
+#password,
+#login-page input,
+#login-page select {
+	border:none;
+	width:220px;
+	display:block;
+	font-size:14px;
+	margin: 10px auto;
+	padding:12px 10px;
+	border-radius:3px;
+	outline-color:#50ACFF;
+}
+
+.otp {
+	margin-top: 5px!important;
+}
+
+#avatarArea{
+	width:100px;
+	height:100px;
+	display:block;
+	margin:10px auto;
+	border-radius:50%;
+	background-size:100px 100px;
+	background-image:url(../../content/media/branding/avatar.jpg);
+	background-color: rgba(0, 0, 0, 0.35);
+	box-shadow: inset 0px 0px 1px rgba(255,255,255,0.3);
+}
+
+button{
+	color:#fff;
+	height:40px;
+	width:222px;
+	display:block;
+	font-size:16px;
+	cursor:pointer;
+	margin:10px auto;
+	border-radius:3px;
+	transition:0.2s ease-in-out;
+	-webkit-transition:0.2s ease-in-out;
+}
+
+button:hover{
+	border:1px solid #F3A629;
+	background-color:#F3A629;
+	color: #fff;
+}
+
+.errorMsg{
+	font-size:14px!important;
+	background: white;
+	border-radius: 4px;
+}
+
+#login-page .forgot_password {
+	text-align: center;
+}
+#login-page .forgot_password a {
+	color: #fff;
+}
+
+#login-page .forgot_password a:hover {
+	color: #E7AC3F;
+}
+
+.slideUp{
+	animation:1s slideUp ease;	
+	-webkit-animation:1s slideUp ease;					
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(200%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@-webkit-keyframes slideUp {
+	0% {
+		-webkit-transform: translateY(200%);
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+	}
+}
+
+.flash span{
+	animation: flash 1s infinite;
+	-webkit-animation: flash 1s infinite;
+}
+
+@keyframes flash {
+	0%{
+		opacity: 1;
+	}
+	
+	50%{
+		opacity: 0;
+	}
+	
+	100%{
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes flash {
+	0%{
+		opacity: 1;
+	}
+	
+	50%{
+		opacity: 0;
+	}
+	
+	100%{
+		opacity: 1;
+	}
+}

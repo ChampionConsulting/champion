@@ -1,0 +1,61 @@
+
+# things to ignore
+
+*.bak
+
+# no compiled python
+*.pyc
+
+# contents
+/content/backups/*.zip
+#content/blog/*.txt
+/content/media/gallery_blog_import/blog_*
+/content/stats/*.txt
+
+# docs
+/championcore/docs/phpdoc.xml
+/championcore/docs/api
+/championcore/docs/tmp
+
+# storage
+/championcore/storage/cache/*
+
+# logs
+/championcore/storage/log/*.log
+
+# json
+#/championcore/storage/config.json
+/championcore/storage/install_lock.json
+
+# backups
+*.bkup
+*.bkup.*
+
+.DS_Store
+
+/REVISION
+/REVISION.php
+
+/championcore/asset/dist/*.css
+/championcore/asset/dist/*.js
+/championcore/asset/dist/css/*.css
+/championcore/asset/dist/vendor/*
+/championcore/asset/dist/widget/*.css
+/championcore/asset/dist/widget/*.js
+
+/championcore/asset/node_modules/*
+/championcore/asset/vendor/node_modules/*
+
+/championcore/tests/unittest/.phpunit.result.cache
+
+/championcore/tests/acceptance/chromedriver/vendor
+
+*.lock
+.vscode/launch.json
+.vscode/settings.json
+championcore/storage/update_log.txt
+championcore/storage/update_prepare.txt
+championcore/storage/update_start.txt
+championcore/storage/update_status.txt
+
+.idea

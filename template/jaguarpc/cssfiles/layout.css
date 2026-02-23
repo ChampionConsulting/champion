@@ -1,0 +1,133 @@
+/*
+Okto template CSS for Elxis 2008
+Author: Ioannis Sannos (datahell)
+E-mail: datahell@elxis.org
+URL: http://www.elxis.org
+Date: December 30, 2007
+License: GNU/GPL
+Elxis CMS is a free software
+*/
+
+
+/* 2C425E is used in order body to be left white */
+#container {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	background: #C2C29C url(../images/bg.png) repeat 0 0;
+	text-align: center;
+}
+
+/* contains template's 3 columns */
+#mainwrap {
+	width:60%; /*center hack*/
+	margin:0 auto; /*center hack*/
+	text-align:left;
+/*	background: url(../images/rbg.png) repeat-y 80% 0; */
+	height:100% !Important; 
+	height:1%; /* IE */
+	border: 1px solid #777777;
+}
+
+/* template's header */
+#header {
+	text-align:left;
+	/* background: #78A1BB url(../images/elxislogo.jpg) no-repeat top left; */
+	height: 75px;
+	border-bottom: 1px solid #1D4D6C;
+}
+
+/* div for language module positioned top right */
+/* #headright {
+	float: right;
+	margin-right: 10px;
+}
+*/
+#greyleft {
+	margin: 0;
+	padding: 0;
+	height: 200px;
+	float: left;
+	color: #444444;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+img.championimg {
+	margin:0; padding: 0; border: 0; position: relative; top: 0; left: 0;
+}
+
+#greyleft a, #greyleft a:visited { color: #B01524; text-decoration: none; }
+#greyleft a:hover { color: #000000; }
+#greyleft span {
+	font-size: 0.9em;
+	font-weight: normal;
+}
+
+/* Site's footer (copyright) */
+#copyright {
+	background-color: #333333; 
+	margin: 0px 0px 0px 0px;
+	padding: 5px;
+	color: #eee;
+	width: 60%;
+	border: 1px solid #333;
+	font-size: 0.9em;
+}
+#copyright a { color: #fff; font-weight: bold; text-decoration: none; }
+#copyright a:hover { text-decoration: underline; }
+
+/* main-body contains left column and main site content */
+#main-body {
+	width:100%;
+	float:left;
+	background: url(../images/lbg.png) repeat-y 25% 0;
+	height:100% !Important; 
+	height:1%;
+}
+
+/* template's right column */
+/*
+#rightcolumn {
+	float:right;
+	width:20%; /* 19.5% 
+	overflow:hidden;
+	margin-left:-3px;
+}
+*/
+/* main site content */
+#sitecontent {
+	float:right;
+	width:75%; /* not 75% because of IE and border overall */
+	overflow:hidden;
+}
+
+/* left column */
+#leftcolumn {
+	float:left;
+	width:30%;
+	overflow:hidden;
+}
+
+/* gives a padding to columns inner html */
+.inside { padding: 0px; }
+.inside-col { margin-left: 0px; }
+
+/* top position wrapper */
+#position_top {
+	position:relative;
+	float:left;
+	clear: none;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+#content_top_wrapper {position:relative;float:left;clear: none;width:100%;margin: 10px;padding: 10px;}
+
+/** div container for position:user1 **/
+#content_user1 {position:relative;float:left;width:50%;}
+
+/** div container for position:user2 **/
+
+#content_user2 {	position:relative;	float:left;	width:50%;}/* navigation (top menu) */.navigation {	background: #3C6F89 url(../images/topmenu.png) top left repeat-x;	height: 30px;}
+/* pathway */
+div.pathway {	background-color: #555555;	border-bottom: 1px solid #333333;}

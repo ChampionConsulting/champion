@@ -1,0 +1,31 @@
+/*@component-begin @name MultiLayoutRegion1 @type Accordion{*/
+#MultiLayoutRegion1LYR {
+	margin:0px;
+	padding:0px;
+	text-indent:0px
+	/*background-color:#fff;*/
+}
+#MultiLayoutRegion1LYR a.head {
+	cursor:pointer;
+	background:#76a3da url( "../assets/images/ATab1.gif" );
+	color:black;
+	font-weight:normal;
+	margin:0px;
+	padding:5px;
+	text-indent:12px;
+	text-decoration: none
+}
+#MultiLayoutRegion1LYR a.selected {
+	background-image: url( "../assets/images/ATab2.gif" );
+	color:white;
+	font-weight:bold;
+	padding:7px;
+	font-size : 14px
+}
+#MultiLayoutRegion1LYR a.current {
+	background-color:#FFFF99
+}
+
+BODY{	font-family : Verdana;
+	font-size : 12px
+}

@@ -1,0 +1,21 @@
+<?php echo"<?xml version='1.0' encoding='utf-8'?>"; ?>
+<rss version='2.0' xmlns:atom='http://www.w3.org/2005/Atom'>
+	<channel>
+		<title><?php echo $this->escape($view_model->blog_title); ?> - <?php echo $this->escape($view_model->param_blog_name); ?></title>
+		<link><?php echo $this->escape($view_model->blog_url); ?>/<?php echo $this->escape($view_model->param_blog_name); ?></link>
+		<description><?php echo $this->escape($view_model->blog_description); ?> - <?php echo $this->escape($view_model->param_blog_name); ?></description>
+		<language><?php echo $this->escape($view_model->rss_lang); ?></language>
+		<copyright><?php echo $this->escape($view_model->blog_title); ?> - <?php echo $this->escape($view_model->blog_description); ?> - <?php echo $this->escape($view_model->param_blog_name); ?>All rights reserved.</copyright>
+		<generator>Champion CMS</generator>
+		
+		<?php foreach ($view_model->blog_entries as $item) { ?>
+			<item>
+				<title><?php echo $this->escape($item->title); ?></title>
+				<link><?php echo $this->escape($view_model->protocol); ?>://<?php echo $this->escape($_SERVER['HTTP_HOST']); ?><?php echo $this->escape($view_model->path); ?>/<?php echo $this->escape($view_model->param_blog_name); ?>/<?php echo $this->escape($item->relative_url); ?></link>
+				<description><![CDATA[<?php echo \str_replace("##more##", "", $item->html); ?>]]></description>
+				<pubDate><?php echo $this->escape($item->date); ?></pubDate>
+				<guid isPermaLink='true'><?php echo $this->escape($view_model->protocol); ?>://<?php echo $this->escape($_SERVER['HTTP_HOST']); ?><?php echo $this->escape($view_model->path); ?>/<?php echo $this->escape($view_model->param_blog_name); ?>/<?php echo $this->escape($item->relative_url); ?></guid>
+		 </item>
+		<?php } ?>
+</channel>
+</rss>

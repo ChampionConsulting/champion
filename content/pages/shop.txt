@@ -1,0 +1,7 @@
+JSON_START{"description":"","html":"{{unishop:\"test@this.that\":\"USD\":\"$\":\"US\":\"0\":\"\/paypal_ok\":\"\/paypal_cancel\"}}","id":"Shop","location":"\/pages\/Shop","meta_custom_description":"","meta_indexed":"no","meta_no_follow":"no","meta_searchable":"yes","page_template":"default","title":"page title","inline_css":"","inline_js":""}JSON_END
+
+page title
+
+
+
+{{unishop:"test@this.that":"USD":"$":"US":"0":"/paypal_ok":"/paypal_cancel"}}

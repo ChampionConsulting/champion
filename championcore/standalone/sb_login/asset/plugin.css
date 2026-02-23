@@ -1,0 +1,87 @@
+
+section.sb_login {
+	
+	background-color: #333339;
+	text-align: center;
+	margin-top: 50px;
+	padding: 50px;
+}
+
+section.sb_login.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+section.sb_login.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+section.sb_login form {
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+	
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+}
+
+section.sb_login form p {
+	color: #fff;
+	padding: 5px;
+	margin: 5px;
+}
+
+section.sb_login input {
+	font-size: 14px;
+	padding: 6px 8px;
+	line-height: normal;
+	border-radius: 2px;
+	border: 1px solid #ddd;
+	
+	outline:0;
+	outline:none;
+	
+	border: 0;
+	margin: 10px 0;
+	
+	max-width: 30%;
+}
+
+section.sb_login .btn {
+	padding: 6px 16px;
+	background-color: #50ACFF;
+	font-size: 14px;
+	display: inline-block;
+	color: white;
+	border: 0;
+	border-radius: 2px;
+	cursor: pointer;
+}

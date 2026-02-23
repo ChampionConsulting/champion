@@ -1,0 +1,506 @@
+var search_href = window.location.href;
+
+function processQuery(query) {
+  query = trim(query);
+  
+  if (query.length < 2) {
+    // Don't start working until 2 characters have been typed.
+    query = "";
+  }
+  
+  if (typeof processQuery.lastQuery != 'undefined' && processQuery.lastQuery == query) {
+    return false; // Don't re-send the same query.
+  }
+  
+  if (typeof demowolfSearchPreProcess !== 'undefined') {
+    demowolfSearchPreProcess();
+  }
+  
+  jQuery.get(search_href, { q: query, ajax: 1 }, function(data) {
+    if (typeof data.s_visibility != 'undefined' && typeof data.d_visibility != 'undefined') {
+      // Reset the accordion elements.
+      if (typeof accordionOptions != 'undefined') {
+        jQuery("#all-dw-series").find('[id$=-link]').parents('h3').show().end().find('[id$=-list]').show();
+      }
+    
+      for (var k in data.s_visibility) {
+        var h3 = jQuery(k + "-link").parents('h3');
+        var list = jQuery(k + "-list");
+        var accordion = false;
+        
+        if (h3.hasClass('ui-accordion-header')) {
+          if (!data.s_visibility[k]) {
+            h3.hide();
+            list.hide();
+          }
+        } else {
+          if (data.s_visibility[k]) {
+            h3.fadeIn().slideDown();
+            list.fadeIn().slideDown();
+          } else {
+            if ($(h3).is(':hidden')) {
+              h3.hide(); // In case the parent is what's actually hidden.
+            } else {
+              h3.fadeOut().slideUp();
+            }
+            if ($(list).is(':hidden')) {
+              list.hide(); // In case the parent is what's actually hidden.
+            } else {
+              list.fadeOut().slideUp();
+            }
+          }
+        }
+        
+        if (typeof data.d_visibility[k] != 'undefined') {
+          for (var d in data.d_visibility[k]) {
+            var d_elem = jQuery(d).parents('li');
+            if (data.d_visibility[k][d]) {
+              d_elem.show();
+            } else {
+              d_elem.hide();
+            }
+          }
+        }
+      }
+      
+      // Rebuild the accordion.
+      if (typeof accordionOptions != 'undefined') {
+        accordionOptions.active = false;
+        jQuery("#all-dw-series").accordion('destroy').accordion(accordionOptions).accordion('activate', false);
+      }
+    }
+    
+    if (typeof demowolfSearchPostProcess !== 'undefined') {
+      setTimeout(function() {
+        demowolfSearchPostProcess();
+      }, 1000);
+    }
+  }, "json");
+  
+  // Place the query in the query strings of all the series links
+  jQuery("a[id^=dw-series]").each(function() {
+    var href = jQuery(this).attr('href');
+    
+    if (href.indexOf(processQuery.lastQuery) != -1) {
+      href = href.replace('q=' + processQuery.lastQuery, 'q=' + query);
+    } else {
+      if (href.indexOf('?') == -1) {
+        href += '?';
+      } else {
+        href += '&';
+      }
+      href += "q=" + query;
+    }
+    
+    jQuery(this).attr('href', href);
+  });
+  
+  processQuery.lastQuery = query;
+}
+
+// From phpjs.org
+function trim(str, charlist) {
+  var whitespace, l = 0, i = 0;
+  str += '';
+  
+  if (!charlist) {
+      // default list
+      whitespace = " \n\r\t\f\x0b\xa0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000";
+  } else {
+      // preg_quote custom list
+      charlist += '';
+      whitespace = charlist.replace(/([\[\]\(\)\.\?\/\*\{\}\+$\^\:])/g, '$1');
+  }
+  
+  l = str.length;
+  for (i = 0; i < l; i++) {
+      if (whitespace.indexOf(str.charAt(i)) === -1) {
+          str = str.substring(i);
+          break;
+      }
+  }
+  
+  l = str.length;
+  for (i = l - 1; i >= 0; i--) {
+      if (whitespace.indexOf(str.charAt(i)) === -1) {
+          str = str.substring(0, i + 1);
+          break;
+      }
+  }
+  
+  return whitespace.indexOf(str.charAt(0)) === -1 ? str : '';
+}
+
+jQuery(function() {
+  jQuery("#dw-series265-list a[id^='dw-']").attr('title', "Apple (Mac) Mail (VOICE)").attr('rel', 'dw-series265-list');
+  jQuery("#dw-series178-list a[id^='dw-']").attr('title', "CMS Made Simple series (VOICE)").attr('rel', 'dw-series178-list');
+  jQuery("#dw-series159-list a[id^='dw-']").attr('title', "Complete FTP series (VOICE)").attr('rel', 'dw-series159-list');
+  jQuery("#dw-series39-list a[id^='dw-']").attr('title', "Configuring Email (original) series").attr('rel', 'dw-series39-list');
+  jQuery("#dw-series147-list a[id^='dw-']").attr('title', "Configuring Email (SMTP auth) series (VOICE)").attr('rel', 'dw-series147-list');
+  jQuery("#dw-series298-list a[id^='dw-']").attr('title', "cPanel 11.30 x3 (2011) end-user series (VOICE)").attr('rel', 'dw-series298-list');
+  jQuery("#dw-series129-list a[id^='dw-']").attr('title', "cPanel11 rvBlue end-user series (VOICE)").attr('rel', 'dw-series129-list');
+  jQuery("#dw-series161-list a[id^='dw-']").attr('title', "CubeCart series (VOICE)").attr('rel', 'dw-series161-list');
+  jQuery("#dw-series135-list a[id^='dw-']").attr('title', "Direct Admin end-user series (VOICE)").attr('rel', 'dw-series135-list');
+  jQuery("#dw-series136-list a[id^='dw-']").attr('title', "Direct Admin reseller series (VOICE)").attr('rel', 'dw-series136-list');
+  jQuery("#dw-series157-list a[id^='dw-']").attr('title', "Domain Transfer series (VOICE)").attr('rel', 'dw-series157-list');
+  jQuery("#dw-series175-list a[id^='dw-']").attr('title', "Drupal series (VOICE)").attr('rel', 'dw-series175-list');
+  jQuery("#dw-series296-list a[id^='dw-']").attr('title', "Facebook series (VOICE)").attr('rel', 'dw-series296-list');
+  jQuery("#dw-series186-list a[id^='dw-']").attr('title', "Fantastico series (VOICE)").attr('rel', 'dw-series186-list');
+  jQuery("#dw-series176-list a[id^='dw-']").attr('title', "Gallery series (VOICE)").attr('rel', 'dw-series176-list');
+  jQuery("#dw-series151-list a[id^='dw-']").attr('title', "Gmail series (VOICE)").attr('rel', 'dw-series151-list');
+  jQuery("#dw-series278-list a[id^='dw-']").attr('title', "Google Chrome series (VOICE)").attr('rel', 'dw-series278-list');
+  jQuery("#dw-series148-list a[id^='dw-']").attr('title', "Horde series (VOICE)").attr('rel', 'dw-series148-list');
+  jQuery("#dw-series215-list a[id^='dw-']").attr('title', "Installatron series (VOICE)").attr('rel', 'dw-series215-list');
+  jQuery("#dw-series280-list a[id^='dw-']").attr('title', "Internet Explorer series (VOICE)").attr('rel', 'dw-series280-list');
+  jQuery("#dw-series184-list a[id^='dw-']").attr('title', "Intro to Web Hosting series (VOICE)").attr('rel', 'dw-series184-list');
+  jQuery("#dw-series192-list a[id^='dw-']").attr('title', "Intro to XHTML series (VOICE)").attr('rel', 'dw-series192-list');
+  jQuery("#dw-series277-list a[id^='dw-']").attr('title', "iPad email series (VOICE)").attr('rel', 'dw-series277-list');
+  jQuery("#dw-series267-list a[id^='dw-']").attr('title', "iPhone email series (VOICE)").attr('rel', 'dw-series267-list');
+  jQuery("#dw-series169-list a[id^='dw-']").attr('title', "Joomla New Admin series (VOICE)").attr('rel', 'dw-series169-list');
+  jQuery("#dw-series170-list a[id^='dw-']").attr('title', "Joomla New CMS series (VOICE)").attr('rel', 'dw-series170-list');
+  jQuery("#dw-series172-list a[id^='dw-']").attr('title', "Joomla New end-user series (VOICE)").attr('rel', 'dw-series172-list');
+  jQuery("#dw-series171-list a[id^='dw-']").attr('title', "Joomla New Extensions series (VOICE)").attr('rel', 'dw-series171-list');
+  jQuery("#dw-series168-list a[id^='dw-']").attr('title', "Joomla New Setup series (VOICE)").attr('rel', 'dw-series168-list');
+  jQuery("#dw-series297-list a[id^='dw-']").attr('title', "LinkedIn series (VOICE)").attr('rel', 'dw-series297-list');
+  jQuery("#dw-series279-list a[id^='dw-']").attr('title', "Mozilla Firefox series (VOICE)").attr('rel', 'dw-series279-list');
+  jQuery("#dw-series160-list a[id^='dw-']").attr('title', "osCommerce series (VOICE)").attr('rel', 'dw-series160-list');
+  jQuery("#dw-series187-list a[id^='dw-']").attr('title', "PayPal series (VOICE)").attr('rel', 'dw-series187-list');
+  jQuery("#dw-series189-list a[id^='dw-']").attr('title', "PhotoShop CS3 Basic series (VOICE)").attr('rel', 'dw-series189-list');
+  jQuery("#dw-series185-list a[id^='dw-']").attr('title', "phpBB 3 series (VOICE)").attr('rel', 'dw-series185-list');
+  jQuery("#dw-series140-list a[id^='dw-']").attr('title', "phpMyAdmin series (VOICE)").attr('rel', 'dw-series140-list');
+  jQuery("#dw-series158-list a[id^='dw-']").attr('title', "Private Nameserver series (VOICE)").attr('rel', 'dw-series158-list');
+  jQuery("#dw-series139-list a[id^='dw-']").attr('title', "PuTTY Enhanced series (VOICE)").attr('rel', 'dw-series139-list');
+  jQuery("#dw-series150-list a[id^='dw-']").attr('title', "RoundCube series (VOICE)").attr('rel', 'dw-series150-list');
+  jQuery("#dw-series281-list a[id^='dw-']").attr('title', "Safari series (VOICE)").attr('rel', 'dw-series281-list');
+  jQuery("#dw-series230-list a[id^='dw-']").attr('title', "SmarterMail 7.x series (VOICE)").attr('rel', 'dw-series230-list');
+  jQuery("#dw-series214-list a[id^='dw-']").attr('title', "SMF series (VOICE)").attr('rel', 'dw-series214-list');
+  jQuery("#dw-series216-list a[id^='dw-']").attr('title', "Softaculous series (VOICE)").attr('rel', 'dw-series216-list');
+  jQuery("#dw-series149-list a[id^='dw-']").attr('title', "SquirrelMail series (VOICE)").attr('rel', 'dw-series149-list');
+  jQuery("#dw-series302-list a[id^='dw-']").attr('title', "Twitter series (VOICE)").attr('rel', 'dw-series302-list');
+  jQuery("#dw-series156-list a[id^='dw-']").attr('title', "Updating DNS series (VOICE)").attr('rel', 'dw-series156-list');
+  jQuery("#dw-series141-list a[id^='dw-']").attr('title', "Virtuozzo (Linux) series (VOICE)").attr('rel', 'dw-series141-list');
+  jQuery("#dw-series145-list a[id^='dw-']").attr('title', "WHM 11 Accounts series (VOICE)").attr('rel', 'dw-series145-list');
+  jQuery("#dw-series146-list a[id^='dw-']").attr('title', "WHM 11 Management series (VOICE)").attr('rel', 'dw-series146-list');
+  jQuery("#dw-series131-list a[id^='dw-']").attr('title', "WHM 11 reseller series (VOICE)").attr('rel', 'dw-series131-list');
+  jQuery("#dw-series144-list a[id^='dw-']").attr('title', "WHM 11 Services series (VOICE)").attr('rel', 'dw-series144-list');
+  jQuery("#dw-series143-list a[id^='dw-']").attr('title', "WHM 11 Setup series (VOICE)").attr('rel', 'dw-series143-list');
+  jQuery("#dw-series180-list a[id^='dw-']").attr('title', "WHMCS 4 end-user series (VOICE)").attr('rel', 'dw-series180-list');
+  jQuery("#dw-series182-list a[id^='dw-']").attr('title', "WHMCS 4 Management series (VOICE)").attr('rel', 'dw-series182-list');
+  jQuery("#dw-series181-list a[id^='dw-']").attr('title', "WHMCS 4 Setup series (VOICE)").attr('rel', 'dw-series181-list');
+  jQuery("#dw-series218-list a[id^='dw-']").attr('title', "WordPress 3 series (VOICE)").attr('rel', 'dw-series218-list');
+  jQuery("#dw-series188-list a[id^='dw-']").attr('title', "YouTube series (VOICE)").attr('rel', 'dw-series188-list');
+  jQuery("#dw-series162-list a[id^='dw-']").attr('title', "ZenCart series (VOICE)").attr('rel', 'dw-series162-list');
+  jQuery("#dw-series264-list a[id^='dw-']").attr('title', "Apple (Mac) Mail").attr('rel', 'dw-series264-list');
+  jQuery("#dw-series71-list a[id^='dw-']").attr('title', "CMS Made Simple series").attr('rel', 'dw-series71-list');
+  jQuery("#dw-series52-list a[id^='dw-']").attr('title', "Complete FTP series").attr('rel', 'dw-series52-list');
+  jQuery("#dw-series40-list a[id^='dw-']").attr('title', "Configuring Email (SMTP auth) series").attr('rel', 'dw-series40-list');
+  jQuery("#dw-series289-list a[id^='dw-']").attr('title', "cPanel 11.30 x3 (2011) end-user series").attr('rel', 'dw-series289-list');
+  jQuery("#dw-series16-list a[id^='dw-']").attr('title', "cPanel11 rvBlue end-user series").attr('rel', 'dw-series16-list');
+  jQuery("#dw-series54-list a[id^='dw-']").attr('title', "CubeCart series").attr('rel', 'dw-series54-list');
+  jQuery("#dw-series26-list a[id^='dw-']").attr('title', "Direct Admin end-user series").attr('rel', 'dw-series26-list');
+  jQuery("#dw-series27-list a[id^='dw-']").attr('title', "Direct Admin reseller series").attr('rel', 'dw-series27-list');
+  jQuery("#dw-series50-list a[id^='dw-']").attr('title', "Domain Transfer series").attr('rel', 'dw-series50-list');
+  jQuery("#dw-series68-list a[id^='dw-']").attr('title', "Drupal series").attr('rel', 'dw-series68-list');
+  jQuery("#dw-series284-list a[id^='dw-']").attr('title', "Facebook series").attr('rel', 'dw-series284-list');
+  jQuery("#dw-series80-list a[id^='dw-']").attr('title', "Fantastico series").attr('rel', 'dw-series80-list');
+  jQuery("#dw-series69-list a[id^='dw-']").attr('title', "Gallery series").attr('rel', 'dw-series69-list');
+  jQuery("#dw-series44-list a[id^='dw-']").attr('title', "Gmail series").attr('rel', 'dw-series44-list');
+  jQuery("#dw-series268-list a[id^='dw-']").attr('title', "Google Chrome series").attr('rel', 'dw-series268-list');
+  jQuery("#dw-series41-list a[id^='dw-']").attr('title', "Horde series").attr('rel', 'dw-series41-list');
+  jQuery("#dw-series209-list a[id^='dw-']").attr('title', "Installatron series").attr('rel', 'dw-series209-list');
+  jQuery("#dw-series270-list a[id^='dw-']").attr('title', "Internet Explorer series").attr('rel', 'dw-series270-list');
+  jQuery("#dw-series78-list a[id^='dw-']").attr('title', "Intro to Web Hosting series").attr('rel', 'dw-series78-list');
+  jQuery("#dw-series86-list a[id^='dw-']").attr('title', "Intro to XHTML series").attr('rel', 'dw-series86-list');
+  jQuery("#dw-series276-list a[id^='dw-']").attr('title', "iPad email series").attr('rel', 'dw-series276-list');
+  jQuery("#dw-series266-list a[id^='dw-']").attr('title', "iPhone email series").attr('rel', 'dw-series266-list');
+  jQuery("#dw-series62-list a[id^='dw-']").attr('title', "Joomla New Admin series").attr('rel', 'dw-series62-list');
+  jQuery("#dw-series63-list a[id^='dw-']").attr('title', "Joomla New CMS series").attr('rel', 'dw-series63-list');
+  jQuery("#dw-series65-list a[id^='dw-']").attr('title', "Joomla New end-user series").attr('rel', 'dw-series65-list');
+  jQuery("#dw-series64-list a[id^='dw-']").attr('title', "Joomla New Extensions series").attr('rel', 'dw-series64-list');
+  jQuery("#dw-series61-list a[id^='dw-']").attr('title', "Joomla New Setup series").attr('rel', 'dw-series61-list');
+  jQuery("#dw-series287-list a[id^='dw-']").attr('title', "LinkedIn series").attr('rel', 'dw-series287-list');
+  jQuery("#dw-series269-list a[id^='dw-']").attr('title', "Mozilla Firefox series").attr('rel', 'dw-series269-list');
+  jQuery("#dw-series53-list a[id^='dw-']").attr('title', "osCommerce series").attr('rel', 'dw-series53-list');
+  jQuery("#dw-series81-list a[id^='dw-']").attr('title', "PayPal series").attr('rel', 'dw-series81-list');
+  jQuery("#dw-series83-list a[id^='dw-']").attr('title', "PhotoShop CS3 Basic series").attr('rel', 'dw-series83-list');
+  jQuery("#dw-series79-list a[id^='dw-']").attr('title', "phpBB 3 series").attr('rel', 'dw-series79-list');
+  jQuery("#dw-series32-list a[id^='dw-']").attr('title', "phpMyAdmin series").attr('rel', 'dw-series32-list');
+  jQuery("#dw-series51-list a[id^='dw-']").attr('title', "Private Nameserver series").attr('rel', 'dw-series51-list');
+  jQuery("#dw-series31-list a[id^='dw-']").attr('title', "PuTTY Enhanced series").attr('rel', 'dw-series31-list');
+  jQuery("#dw-series43-list a[id^='dw-']").attr('title', "RoundCube series").attr('rel', 'dw-series43-list');
+  jQuery("#dw-series271-list a[id^='dw-']").attr('title', "Safari series").attr('rel', 'dw-series271-list');
+  jQuery("#dw-series229-list a[id^='dw-']").attr('title', "SmarterMail 7.x series").attr('rel', 'dw-series229-list');
+  jQuery("#dw-series203-list a[id^='dw-']").attr('title', "SMF series").attr('rel', 'dw-series203-list');
+  jQuery("#dw-series208-list a[id^='dw-']").attr('title', "Softaculous series").attr('rel', 'dw-series208-list');
+  jQuery("#dw-series42-list a[id^='dw-']").attr('title', "SquirrelMail series").attr('rel', 'dw-series42-list');
+  jQuery("#dw-series288-list a[id^='dw-']").attr('title', "Twitter series").attr('rel', 'dw-series288-list');
+  jQuery("#dw-series49-list a[id^='dw-']").attr('title', "Updating DNS series").attr('rel', 'dw-series49-list');
+  jQuery("#dw-series33-list a[id^='dw-']").attr('title', "Virtuozzo (Linux) series").attr('rel', 'dw-series33-list');
+  jQuery("#dw-series37-list a[id^='dw-']").attr('title', "WHM 11 accounts series").attr('rel', 'dw-series37-list');
+  jQuery("#dw-series38-list a[id^='dw-']").attr('title', "WHM 11 management series").attr('rel', 'dw-series38-list');
+  jQuery("#dw-series22-list a[id^='dw-']").attr('title', "WHM 11 reseller series").attr('rel', 'dw-series22-list');
+  jQuery("#dw-series36-list a[id^='dw-']").attr('title', "WHM 11 services series").attr('rel', 'dw-series36-list');
+  jQuery("#dw-series35-list a[id^='dw-']").attr('title', "WHM 11 setup series").attr('rel', 'dw-series35-list');
+  jQuery("#dw-series73-list a[id^='dw-']").attr('title', "WHMCS 4 end-user series").attr('rel', 'dw-series73-list');
+  jQuery("#dw-series76-list a[id^='dw-']").attr('title', "WHMCS 4 Management series").attr('rel', 'dw-series76-list');
+  jQuery("#dw-series75-list a[id^='dw-']").attr('title', "WHMCS 4 Setup series").attr('rel', 'dw-series75-list');
+  jQuery("#dw-series217-list a[id^='dw-']").attr('title', "WordPress 3 series").attr('rel', 'dw-series217-list');
+  jQuery("#dw-series82-list a[id^='dw-']").attr('title', "YouTube series").attr('rel', 'dw-series82-list');
+  jQuery("#dw-series55-list a[id^='dw-']").attr('title', "ZenCart series").attr('rel', 'dw-series55-list');
+  if (typeof jQuery.fn.accordion !== 'undefined') {
+    accordionOptions = {
+      collapsible: true,
+      autoHeight: false,
+      icons: {
+        header: "ui-icon-circle-arrow-e",
+        headerSelected: "ui-icon-circle-arrow-s"
+      }
+    };
+    jQuery("#all-dw-series").accordion(accordionOptions);
+  }
+  
+  searching = null;
+  
+  jQuery("#search_query").change(function() {
+    processQuery(jQuery(this).val());
+  }).keyup(function() {
+    var elem = this;
+    clearTimeout(searching);
+    searching = setTimeout(function() {
+      jQuery(elem).change();
+    }, 300);
+  });
+  
+  jQuery("#dw-search").find("input[value='Search']").click(function() {
+    jQuery("#search_query").change();
+    return false;
+  }).end().find("input[name='reset']").click(function() {
+    jQuery("#search_query").val('').change();
+    return false;
+  });
+
+  jQuery("#dw-series265-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series178-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo2556-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2557-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2558-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2559-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2560-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2561-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2562-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2563-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2564-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2565-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2566-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2567-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2568-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2569-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2570-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2571-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2572-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2573-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2574-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2575-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2576-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2577-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2578-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo2579-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("#dw-series39-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series147-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series298-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series129-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series161-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series135-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series136-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series157-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series175-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series296-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series186-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series176-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series151-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series278-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series148-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series215-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series280-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series184-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series192-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series277-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series267-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series169-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series170-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series172-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series171-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series168-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series297-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series279-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series160-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series187-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series189-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series185-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series140-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series158-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series139-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series150-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series281-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series230-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series214-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series216-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series149-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series302-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("a#dw-demo2511-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2512-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2513-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2514-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2515-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2516-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2517-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2518-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2519-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2520-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2521-link").colorbox({fragment: "#demo", innerWidth:790, innerHeight: 446});
+  jQuery("a#dw-demo2522-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2523-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2524-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo2525-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series141-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series145-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series146-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series131-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series144-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series143-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series180-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series182-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series181-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series218-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series188-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series162-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series264-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series71-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo896-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo897-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo898-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo899-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo900-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo901-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo902-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo903-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo904-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo905-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo906-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo907-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo908-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo909-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo910-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo911-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo912-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo913-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo914-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo915-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo916-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo917-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo918-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("a#dw-demo919-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 524});
+  jQuery("#dw-series40-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series289-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series16-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series54-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series26-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series27-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo865-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo866-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo867-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo868-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo869-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo870-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo871-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo872-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo873-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo874-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo875-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo876-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo877-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo878-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo879-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo880-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo881-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series68-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series284-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series80-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series69-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series44-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series268-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series41-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series209-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series270-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series78-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series86-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series276-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series266-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series62-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series63-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series65-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series64-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series61-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series287-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series269-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series53-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series81-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series83-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series79-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series32-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo882-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo883-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo884-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo885-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo886-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo887-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo888-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo889-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo890-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo891-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo892-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo893-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo894-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo895-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo3320-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo3321-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo3322-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series31-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series43-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series271-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("#dw-series229-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series203-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series208-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series42-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series288-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:889, innerHeight: 524});
+  jQuery("a#dw-demo848-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo849-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo850-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo851-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo852-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo853-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo854-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo855-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo856-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo857-link").colorbox({fragment: "#demo", innerWidth:790, innerHeight: 446});
+  jQuery("a#dw-demo858-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo859-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo860-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo861-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("a#dw-demo862-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo863-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("a#dw-demo864-link").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series33-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+  jQuery("#dw-series37-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series38-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series22-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series36-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series35-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series73-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series76-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series75-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series217-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series82-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 474});
+  jQuery("#dw-series55-list a[id^='dw-']").colorbox({fragment: "#demo", innerWidth:776, innerHeight: 446});
+
+});

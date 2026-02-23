@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+	 <title>Champion CMS</title>
+	<parser>
+		<target>championcore/docs/tmp/target</target>
+		<extensions>
+			<extension>php</extension>
+			<extension>phtml</extension>
+		</extensions>
+	</parser>
+	<transformer>
+		<target>championcore/docs/api</target>
+	</transformer>
+	<files>
+		<file>*.php</file>
+		
+		<directory>admin</directory>
+		
+		<ignore>admin/css/*</ignore>
+		<ignore>admin/fonts/*</ignore>
+		<ignore>admin/img/*</ignore>
+		<ignore>admin/js/*</ignore>
+		<ignore>admin/redactor/*</ignore>
+		
+		<directory>inc</directory>
+		<directory>template</directory>
+		
+		<directory>championcore</directory>
+		
+		<ignore>championcore/asset/*</ignore>
+		<ignore>championcore/docs/*</ignore>
+		<ignore>championcore/storage/*</ignore>
+		<ignore>championcore/tests/*</ignore>
+		<ignore>championcore/vendor/*</ignore>
+		
+	</files>
+</phpdoc>

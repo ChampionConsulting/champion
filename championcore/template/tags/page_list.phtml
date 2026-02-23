@@ -1,0 +1,17 @@
+
+<div class="championcore tag grid flexbox page-list">
+	<h1 class="grid-item"><?php echo $GLOBALS['lang_pagelist'];?></h1>
+	
+	<?php foreach ($view_model->pages as $value) { ?>
+		<div class="grid-item">
+			<h3>
+				<a href="<?php echo CHAMPION_BASE_URL; ?>/<?php echo $value->relative_url; ?>">
+					<?php echo $this->escape($value->title); ?>
+				</a>
+			</h3>
+			<p><?php echo $this->escape($value->description); ?></p>
+		</div>
+	<?php } ?>
+	
+</div>
+<div class="championcore_float_barrier"></div>

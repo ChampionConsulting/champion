@@ -1,0 +1,54 @@
+
+/**
+ * CSS for blog featured image widget
+ */
+.championcore-blog-featured-image {
+	position: relative;
+	box-sizing: border-box;
+	
+	/*outline: 1px solid #55ff55;*/
+	
+	padding: 1px;
+}
+
+.championcore-blog-featured-image .add {
+	display: inline-block;
+	
+	cursor: pointer;
+	
+	background-color: #0000ff;
+	color: white;
+	padding: 2px 12px;
+	font-size: 12px;
+	border-radius: 2px;
+	float: none;
+	margin-bottom: 10px;
+}
+
+.championcore-vue-modal .championcore-vue-modal-container .modal-content .image_list {
+	width: 100%;
+	
+	display: grid;
+	grid-column-gap: 10px;
+	grid-row-gap:    10px;
+	
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.championcore-vue-modal .championcore-vue-modal-container .modal-content .image_list > .folder {
+	border: 1px solid #ddd;
+	cursor: pointer;
+}
+.championcore-vue-modal .championcore-vue-modal-container .modal-content .image_list > .folder > img {
+	display: block;
+	margin: 0 auto 0 auto;
+	
+}
+.championcore-vue-modal .championcore-vue-modal-container .modal-content .image_list > .folder > span {
+	display: block;
+	text-align: center;
+}
+
+.championcore-vue-modal .championcore-vue-modal-container .modal-content .image_list img {
+	width: auto;
+}

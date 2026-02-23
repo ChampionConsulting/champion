@@ -1,0 +1,103 @@
+/* XX. Large devices (less than 1200px) */
+@media (max-width: 1199.98px) {
+    
+}
+
+/* XX. Large tablets (less than  992px) */
+@media (max-width: 991.98px) {
+    .main-header { padding: 15px 0; }
+    .main-header .row { position: relative; }
+    .main-header .row > div { position: static; }
+    #menu-button {
+        position: relative;
+        display: inline-block;
+        width: 35px;
+        height: 27px;
+        border-top: 5px solid #000;
+        border-bottom: 5px solid #000;
+        margin-top: 5px;
+    }  
+    #menu-button:before {
+        content: '';
+        position: absolute;
+        background: #000;
+        height: 5px;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    #nav > ul {
+        display: none;
+        text-align: left;
+        position: absolute;
+        width: calc(100% - 30px);
+        left: 15px;
+        padding: 20px;
+        top: 76px;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
+    #nav > ul > li {
+        display: block;
+        margin: 0 !important;
+    }
+    #nav > ul > li > a {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    #nav li {
+        font-size: 16px;
+    }
+    #nav a {
+        padding: 5px 0;
+    }
+    .menu-caret {
+        position: absolute;
+        right: 0;
+        width: 35px;
+        height: 35px;
+    }
+    .menu-caret:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #000;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    #nav > ul ul {
+        display: none;
+        position: inherit;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        left: 0;
+        top: 0;
+    }
+    #nav > ul ul li a {
+        padding: 5px 15px;
+    }
+    aside { margin-top: 80px; }
+    .contact-right { margin-top: 80px; }
+}
+
+/* XX. Medium devices (less than  768px) */
+@media (max-width: 767.98px) {
+    .copyright {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* XX. Small devices (less than  576px) */
+@media (max-width: 575.98px) {
+    .banner h1 { font-size: 2rem; }
+}

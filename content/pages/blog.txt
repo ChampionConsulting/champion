@@ -1,0 +1,24 @@
+JSON_START{"description":"","html":"<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-8\">\r\n            <div class=\"main-blog\">\r\n                {{blog}}\r\n            <\/div>\r\n        <\/div>\r\n        <div class=\"col-lg-4\">\r\n            <aside>\r\n                {{search}}\r\n                {{blog-tags:\"blog\"}}\r\n                {{mailchimp}}\r\n                {{social}}\r\n            <\/aside>\r\n        <\/div>\r\n    <\/div>\r\n<\/div>","id":"blog","location":"\/pages\/blog","meta_custom_description":"","meta_indexed":"no","meta_language":"","meta_no_follow":"no","meta_searchable":"yes","page_template":"default","title":"The blog title","inline_css":"","inline_js":""}JSON_END
+
+The blog title
+
+
+<section class="blog">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="main-blog">
+                {{blog}}
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <aside>
+                {{search}}
+                {{blog-tags:"blog"}}
+                {{mailchimp}}
+                {{social}}
+            </aside>
+        </div>
+    </div>
+</div>
+</section>

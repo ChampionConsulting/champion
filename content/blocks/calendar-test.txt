@@ -1,0 +1,3 @@
+JSON_START{"html":"<p>Test calendar integration The first parameter is the google calendar ID. The second is the calendar timezone<\/p><p>{{google_calendar:\"12345678\":\"Africa\/Johannesburg\"}}<\/p>","meta_searchable":"yes","title":""}JSON_END
+
+<p>Test calendar integration The first parameter is the google calendar ID. The second is the calendar timezone</p><p>{{google_calendar:"12345678":"Africa/Johannesburg"}}</p>

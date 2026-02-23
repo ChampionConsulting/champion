@@ -1,0 +1,30 @@
+<!-- recentposts visual -->
+
+<div class="championcore tag recentposts_visual  grid flexbox">
+	<?php foreach ($view_model->items as $key => $value) { ?>
+		<div class="recentposts_visual_card grid-item ">
+			
+			<h3 class="recentposts_visual_card_title"><a href="<?php echo $view_model->base_url; ?>/<?php echo $this->escape($value->item->get_relative_url()); ?>"><?php echo $this->escape($value->item->title); ?></a></h3>
+			
+			<?php if (\strcmp('true', $view_model->no_date) !== 0) {  ?>
+				<h3 class="recentposts_visual_card_date"><?php echo $this->escape($value->formatted_date); ?></h3>
+			<?php } ?>
+			
+			<?php if ($value->image->url !== false) { ?>
+				<img class="recentposts_visual_card_preview" alt="preview image" src="<?php echo $this->escape($value->image->url); ?>" />
+			<?php } ?>
+			
+			<div class="recentposts_visual_card_text">
+				<?php echo \championcore\word_truncate( \championcore\strip_champion_tags(strip_tags($value->item->html)), $view_model->limit_text); ?>
+				
+				...
+				<br />
+				
+				<a href="<?php echo $view_model->base_url; ?>/<?php echo $this->escape($value->item->get_relative_url()); ?>"><?php echo \htmlentities($GLOBALS['lang_blog_read_more']); ?></a>
+			</div>
+		</div>
+	<?php } ?>
+</div>
+
+
+<div class="championcore_float_barrier"></div>

@@ -1,0 +1,164 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<div class="championcore manage_user_group_list">
+	<h1><?php echo $GLOBALS['lang_settings_user_group_list_title'];?></h1>
+	
+	<p>
+		<?php echo $GLOBALS['lang_settings_user_group_list_subtitle'];?>
+	</p>
+	
+	<ul class="management user_group_list">
+		<?php foreach ($view_model->user_group_list as $key => $value) { ?>
+			<li>
+				<span><?php echo $this->escape($value->group_name); ?></span>
+				<a class="op" href="index.php?p=manage_user_group_list&method=delete&group_name=<?php echo \urlencode($value->group_name); ?>&csrf_token=<?php echo \championcore\session\csrf\create(); ?>"><img alt="delete icon" src="img/icon-delete.svg" class="delete-user" /></a>
+				
+				<form name="textfile"
+				      method="post"
+				      action="index.php?p=manage_user_group_list&method=post">
+				
+					<label><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_group_name']); ?>:</label>
+					<input type="text" name="group_name" value="<?php echo htmlentities($value->group_name); ?>" placeholder="<?php echo $this->escape($GLOBALS['lang_settings_user_group_list_group_name']); ?>" required />
+					
+					<label><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_permissions']); ?>:</label>
+					
+					<h3></h3>
+					<div class="grid flexbox">
+						<?php foreach ($view_model->block_list as $block) { ?>
+							<div class="grid-item">
+								<label>
+									<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read']); ?></span>
+									<input type="radio" name="permissions[block][<?php echo $block->get_location(); ?>]" value="r"  <?php echo (isset($value->permissions->block) and isset($value->permissions->block->{$block->get_location()}) and ($value->permissions->block->{$block->get_location()} == 'r'))  ? 'checked' : ''; ?> />
+									
+									<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read_write']); ?></span>
+									<input type="radio" name="permissions[block][<?php echo $block->get_location(); ?>]" value="rw" <?php echo (isset($value->permissions->block) and isset($value->permissions->block->{$block->get_location()}) and ($value->permissions->block->{$block->get_location()} == 'rw')) ? 'checked' : ''; ?> />
+									
+									<span class="location-label"><?php echo \htmlentities($block->get_location()); ?></span>
+								</label>
+							</div>
+						<?php } ?>
+					</div>
+					
+					<h3></h3>
+					<div class="grid flexbox">
+						<?php foreach ($view_model->page_list as $page) { ?>
+							<div class="grid-item">
+								<label>
+									<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read']); ?></span>
+									<input type="radio" name="permissions[page][<?php echo $page->get_location(); ?>]" value="r"  <?php echo (isset($value->permissions->page) and isset($value->permissions->page->{$page->get_location()}) and ($value->permissions->page->{$page->get_location()} == 'r'))  ? 'checked' : ''; ?> />
+									
+									<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read_write']); ?></span>
+									<input type="radio" name="permissions[page][<?php echo $page->get_location(); ?>]" value="rw" <?php echo (isset($value->permissions->page) and isset($value->permissions->page->{$page->get_location()}) and ($value->permissions->page->{$page->get_location()} == 'rw')) ? 'checked' : ''; ?> />
+									
+									<span class="location-label"><?php echo \htmlentities($page->get_location()); ?></span>
+								</label>
+							</div>
+						<?php } ?>
+					</div>
+					
+					<h3></h3>
+					<div class="grid flexbox">
+						<?php foreach ($view_model->media_list as $mmm) { ?>
+							<div class="grid-item">
+								<label>
+									<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read']); ?></span>
+									<input type="radio" name="permissions[media][<?php echo $mmm; ?>]" value="r"  <?php echo (isset($value->permissions->media) and isset($value->permissions->media->{$mmm}) and ($value->permissions->media->{$mmm} == 'r'))  ? 'checked' : ''; ?> />
+									
+									<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read_write']); ?></span>
+									<input type="radio" name="permissions[media][<?php echo $mmm; ?>]" value="rw" <?php echo (isset($value->permissions->media) and isset($value->permissions->media->{$mmm}) and ($value->permissions->media->{$mmm} == 'rw')) ? 'checked' : ''; ?> />
+									
+									<span class="location-label"><?php echo \htmlentities($mmm); ?></span>
+								</label>
+							</div>
+						<?php } ?>
+					</div>
+					
+					<input type="hidden" name="permissions[dummy][item]" value="0" />
+					
+					<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+					
+					<br />
+					<br />
+					<button class="btn" type="submit" name="save_configs"><?php echo $GLOBALS['lang_save'];?></button>
+				</form>
+				
+			</li>
+		<?php } ?>
+	</ul>
+	
+	<hr />
+	
+	<form name="textfile"
+	      method="post"
+	      action="index.php?p=manage_user_group_list&method=post">
+		
+		<label><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_group_name']); ?>:</label>
+		<input type="text" name="group_name" value="" placeholder="<?php echo $this->escape($GLOBALS['lang_settings_user_group_list_group_name']); ?>" required />
+		
+		<label><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_permissions']); ?>:</label>
+		
+		<h3></h3>
+		<div class="grid flexbox">
+			<?php foreach ($view_model->block_list as $block) { ?>
+				<div class="grid-item">
+					<label>
+						<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read']); ?></span>
+						<input type="radio" name="permissions[block][<?php echo $block->get_location(); ?>]" value="r"  />
+						
+						<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read_write']); ?></span>
+						<input type="radio" name="permissions[block][<?php echo $block->get_location(); ?>]" value="rw" />
+						
+						<span class="location-label"><?php echo \htmlentities($block->get_location()); ?></span>
+					</label>
+				</div>
+			<?php } ?>
+		</div>
+		
+		<h3></h3>
+		<div class="grid flexbox">
+			<?php foreach ($view_model->page_list as $page) { ?>
+				<div class="grid-item">
+					<label>
+						<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read']); ?></span>
+						<input type="radio" name="permissions[page][<?php echo $page->get_location(); ?>]" value="r"  />
+						
+						<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read_write']); ?></span>
+						<input type="radio" name="permissions[page][<?php echo $page->get_location(); ?>]" value="rw" />
+						
+						<span class="location-label"><?php echo \htmlentities($page->get_location()); ?></span>
+					</label>
+				</div>
+			<?php } ?>
+		</div>
+		
+		<h3></h3>
+		<div class="grid flexbox">
+			<?php foreach ($view_model->media_list as $mmm) { ?>
+				<div class="grid-item">
+					<label>
+						<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read']); ?></span>
+						<input type="radio" name="permissions[media][<?php echo $mmm; ?>]" value="r"  <?php echo (isset($value->permissions->media) and isset($value->permissions->media->{$mmm}) and ($value->permissions->media->{$mmm} == 'r'))  ? 'checked' : ''; ?> />
+						
+						<span class="radio-label"><?php echo $this->escape($GLOBALS['lang_settings_user_group_list_read_write']); ?></span>
+						<input type="radio" name="permissions[media][<?php echo $mmm; ?>]" value="rw" <?php echo (isset($value->permissions->media) and isset($value->permissions->media->{$mmm}) and ($value->permissions->media->{$mmm} == 'rw')) ? 'checked' : ''; ?> />
+						
+						<span class="location-label"><?php echo \htmlentities($mmm); ?></span>
+					</label>
+				</div>
+			<?php } ?>
+		</div>
+		
+		<input type="hidden" name="permissions[dummy][item]" value="0" />
+		
+		<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+		
+		<br />
+		<br />
+		<button class="btn" type="submit" name="save_configs"><?php echo $GLOBALS['lang_save'];?></button>
+	</form>
+	
+</div>

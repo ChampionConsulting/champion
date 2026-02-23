@@ -1,0 +1,3 @@
+<p>	<strong>Address:</strong><br>        Kiyomizu Temple<br>Kyoto, Japan 🇯🇵 &nbsp;605-0862</p><p><a title="Send Email to me" href="/contact" class="mailcrypt">support{{at}}championcms.com</a></p>
+<p>{{googlemaps:address=kiyomizu temple-japan,width=600,height=400,zoom=13}}</p>
+<p><br></p>

@@ -1,0 +1,22 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<div class="championcore">
+	<div class='banner'><?php echo $GLOBALS['lang_delete']; ?> <?php echo $GLOBALS['lang_settings_custompostdelete'];?> <span><?php echo $this->escape($view_model->post_name); ?></span> ?</div>
+		
+	<p>
+		<a href="index.php?p=custom_post_types&post_type_name=<?php echo $this->escape($view_model->post_type_name); ?>&method=get">Back to the list page</a>
+	</p>
+	
+	<form class="delete-form" name="textfile" method="post" action="">	
+		<a class="btn cancel" href="index.php?p=custom_post_types&post_type_name=<?php echo $this->escape($view_model->post_type_name); ?>&method=get"><?php echo $GLOBALS['lang_cancel'];?></a>
+		<button class="btn" type="submit" name="savetext"><?php echo $GLOBALS['lang_del_button'];?></button>
+		
+		<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+		
+		<input type="hidden" name="field[tx]" value="1" />
+	</form>
+</div>

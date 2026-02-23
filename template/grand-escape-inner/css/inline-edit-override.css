@@ -1,0 +1,185 @@
+
+/**
+ * CSS for inline-edit widget
+ */
+
+ 
+.championcore-inline-edit {
+	position: relative;
+	box-sizing: border-box;
+	
+	/*outline: 1px solid #55ff55;*/
+	
+	padding: 0px;
+	
+	margin-top: 30px;
+}
+.championcore-inline-edit.block {
+}
+.championcore-inline-edit.blog {
+}
+.championcore-inline-edit.page {
+}
+/*
+.championcore-inline-edit > .championcore-inline-edit-global-save {
+	
+	position: absolute;
+	top:   -1px;
+	right: -3px;
+	padding: 5px;
+	background: #1AC16E;
+	color: #ffffff;
+	
+	display: block;
+	z-index: 99;
+	
+	cursor: pointer;
+}
+
+.championcore-inline-edit > .championcore-inline-edit-toolbar {
+	position: absolute;
+	top:   -1px;
+	right: 1px;
+	padding: 5px 40px 5px 5px;
+	background: #C11A6E;
+	color: #ffffff;
+
+	display: block;
+	z-index: 99;
+}
+*/
+
+.championcore-inline-edit > .championcore-inline-edit-toolbar .edit {
+	display: inline-block;
+	padding: 0 5px 0 5px;
+	cursor: pointer;
+	
+	display: none; /*remove*/
+}
+
+.championcore-inline-edit > .championcore-inline-edit-content {
+	/*padding: 3em 1px 1px 1px;/*
+	/* To make sure there's no extra space at top of page when inline-editing*/
+	padding: 0;
+	box-sizing: border-box;
+	border: 2px dashed #dddddd; /*To bring back boxes*/
+	padding: 5px;
+}
+
+.championcore-inline-edit > .championcore-inline-edit-content .btn {
+	display: inline-block;
+	margin: 5px 10px 5px 10px;
+}
+
+/** Adjust Gallery & Masonry images so not too huge on inline editing */
+.championcore-inline-edit > .championcore-inline-edit-content .gallery img {
+	max-width: 200px;
+	height: auto!important;
+}
+
+.championcore-inline-edit > .championcore-inline-edit-content div.grid.gallery_masonry a.grid-item {
+	max-width: 230px;
+	width: 100%
+}
+
+.championcore-inline-edit > .championcore-inline-edit-content div.grid.gallery_masonry img {
+}
+
+.championcore-inline-edit > .championcore-inline-edit-content div.grid.gallery_masonry a.grid-item img.imagelightbox {
+	max-width: 100%;
+}
+
+/**
+ * modal
+ */
+/*
+.championcore-inline-edit-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #999999;
+	background-color: rgba( 150, 150, 150, 0.9 );
+	z-index: 1050;
+	
+	box-sizing: border-box;
+}
+
+.championcore-inline-edit-modal .championcore-inline-edit-modal-container {
+	width: 79%;
+	height: 80%;
+	margin: 0 auto 0 auto;
+}
+
+.championcore-inline-edit-modal .championcore-inline-edit-modal-container footer.modal {
+}
+.championcore-inline-edit-modal .championcore-inline-edit-modal-container header.modal {
+	text-align: right;
+	cursor: pointer;
+	margin-top: 80px;
+	background-color: black;
+	height: auto;
+}
+.championcore-inline-edit-modal .championcore-inline-edit-modal-container .close {
+	color: white;
+	padding: 5px;
+}
+
+.championcore-inline-edit-modal .championcore-inline-edit-modal-container .modal-content {
+	box-sizing: border-box;
+	background-color: #ffffff;
+	overflow: auto;
+	height: 100%;
+	padding: 10px;
+	border-radius: 4px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px
+}
+
+.championcore-inline-edit-modal .championcore-inline-edit-modal-container .modal-content .row {
+	margin-top: auto;
+	margin-left: 0;
+	margin-right: 0;
+}
+.championcore-inline-edit-modal .championcore-inline-edit-modal-container .modal-content .row label {
+	display: block;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.championcore-inline-edit-modal .championcore-inline-edit-modal-container .modal-content .row input,
+.championcore-inline-edit-modal .championcore-inline-edit-modal-container .modal-content .row textarea {
+	display: block;
+	width: 100%;
+	font-family: Menlo, Lucida Console, monospace, serif;
+	padding: 5px;
+	border: 2px solid #ccc;
+	resize: none;
+	border-radius: 4px;
+}
+
+.championcore-inline-edit-modal .championcore-inline-edit-modal-container .modal-content .row .redactor-box {
+	border: 2px solid #ccc;
+	width: 100%;
+}
+
+.championcore-inline-edit-modal .championcore-inline-edit-modal-container .modal-content button {
+	display: inline;
+	margin: 40px auto 10px auto;
+	width: 8em;
+	padding: 5px;
+	cursor: pointer;
+	background-color: #E11F7E;
+	font-size: 14px;
+	color: white;
+	border: 0;
+	border-radius: 4px;
+}
+
+@media only screen and (max-width: 1078px)  {
+	.championcore-inline-edit-modal .championcore-inline-edit-modal-container {
+		    width: 85%;
+	}
+}
+*/

@@ -1,0 +1,30 @@
+
+*** How to install Champion ***
+
+UPLOAD CHAMPION TO YOUR REMOTE SERVER
+
+- Go to yoursite.com/admin/install.php
+- Go to yoursite.com/admin and login with username "administrator" and password "demo"
+- You’re in and installed!
+
+DONE
+
+Next, go to "settings" and change the password! 
+
+Then have fun setting up your site. You can do all this from the Champion admin. Installing in the root or a sub-folder should be auto-detected by running this install command.
+
+
+*Enjoy using Champion!*
+
+
+*************************************************************************
+
+
+NOTES:
+
+Some computers hide files that start with "." so the .htaccess file may not have been uploaded when you installed. In this case upload the sample.htaccess then rename to just .htaccess on your server.
+
+If you have trouble saving content or settings, check permissions on the content folder and the config.php file. As a general rule, permissions for folders should be set as 755 and files 644. Running yoursite.com/admin/install.php will help with this.
+
+
+*************************************************************************

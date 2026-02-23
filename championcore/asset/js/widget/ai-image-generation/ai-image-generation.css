@@ -1,0 +1,123 @@
+/**
+ * CSS for ai image generation widget
+ */
+.championcore-ai-image-generation {
+
+	box-sizing: border-box;
+
+	width: 100%;
+	padding: 1px;
+}
+
+.championcore-ai-image-generation > .championcore-ai-image-generation--header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: space-between;
+}
+.championcore-ai-image-generation > .championcore-ai-image-generation--header > h3 {
+	width: auto;
+}
+.championcore-ai-image-generation > .championcore-ai-image-generation--header > .btn {
+	width: auto;
+}
+
+.championcore-ai-image-generation > .prompt,
+.championcore-ai-image-generation > .source {
+
+	width: 100%;
+
+	padding: 1px;
+}
+
+.championcore-ai-image-generation label {
+	width: 100%;
+}
+
+.championcore-ai-image-generation input,
+.championcore-ai-image-generation select {
+	max-width: 400px;
+	width: 100%;
+}
+
+.championcore-ai-image-generation .button {
+	display: inline-block;
+	cursor: pointer;
+	background-color: #0000ff;
+	color: white;
+	padding: 2px 12px;
+	font-size: 12px;
+	border-radius: 2px;
+	float: none;
+	margin-bottom: 10px;
+}
+
+
+/** image list **/
+.championcore-ai-image-generation > .image_list {
+	width: 100%;
+	padding: 1px;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-between;
+}
+
+.championcore-ai-image-generation > .image_list > img {
+	border: 1px solid transparent;
+
+	flex-basis: 25%;
+
+	max-width: 25%;
+	height: auto;
+}
+
+.championcore-ai-image-generation > .image_list > img.picked {
+	border: 1px solid green;
+}
+
+/** messages **/
+.championcore-ai-image-generation > p {
+
+	text-align: left;
+	padding: 5px;
+}
+
+.championcore-ai-image-generation > p.info {
+	color: green;
+}
+.championcore-ai-image-generation > p.warn {
+	color: orange;
+}
+.championcore-ai-image-generation > p.error {
+	color: red;
+}
+
+/** progress **/
+.championcore-ai-image-generation > .progress {
+	width: 100%;
+
+	max-width: 400px;
+}
+.championcore-ai-image-generation > .progress > .bar {
+	width:   0%;
+	padding: 5px;
+
+	height: 1em;
+
+	animation-name: championcore-ai-image-generation-progress;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+
+	background-color: darkgreen;
+}
+@keyframes championcore-ai-image-generation-progress {
+	from {width:   0%;}
+	to   {width: 100%;}
+}
+

@@ -1,0 +1,7 @@
+<ul class="nav justify-content-center justify-content-md-end">
+    <li><a href="#" target="_blank"><em class="fab fa-facebook-f"></em></a></li>
+    <li><a href="#" target="_blank"><em class="fab fa-twitter"></em></a></li>
+    <li><a href="#" target="_blank"><em class="fab fa-google-plus-g"></em></a></li>
+    <li><a href="#" target="_blank"><em class="fab fa-instagram"></em></a></li>
+    <li><a href="#" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+</ul>

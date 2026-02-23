@@ -1,0 +1,10 @@
+JSON_START{"html":"<div class=\"team-member\">\r\n                    <img class=\"mx-auto rounded-circle\" src=\"\\/content\/media\/team\/3.jpg\" alt=\"\" \/>\r\n                    <h4>Diana Petersen<\/h4>\r\n                    <p class=\"text-muted\">Lead Developer<\/p>\r\n                    <a class=\"btn btn-dark btn-social mx-2\" href=\"#!\"><i class=\"fab fa-twitter\"><\/i><\/a>\r\n                    <a class=\"btn btn-dark btn-social mx-2\" href=\"#!\"><i class=\"fab fa-facebook-f\"><\/i><\/a>\r\n                    <a class=\"btn btn-dark btn-social mx-2\" href=\"#!\"><i class=\"fab fa-linkedin-in\"><\/i><\/a>\r\n                <\/div>","meta_searchable":"yes","title":""}JSON_END
+
+<div class="team-member">
+                    <img class="mx-auto rounded-circle" src="/content/media/team/3.jpg" alt="" />
+                    <h4>Diana Petersen</h4>
+                    <p class="text-muted">Lead Developer</p>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                </div>

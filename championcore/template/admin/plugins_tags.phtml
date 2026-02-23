@@ -1,0 +1,39 @@
+
+<h1><?php echo $GLOBALS['lang_plugins_tags']->page->title; ?></h1>
+
+
+<h3><?php echo $GLOBALS['lang_plugins_tags']->page->plugin_title; ?></h3>
+<table>
+	<tbody>
+		<?php foreach ($view_model->plugin_list as $value) { ?>
+			<tr>
+				<td style="padding-right:30px; color: orange;"><?php echo $this->escape($value); ?></td>
+				<td>
+					<?php if (isset($GLOBALS['lang_plugins_tags']->page->plugins->{$value})) {
+						echo $GLOBALS['lang_plugins_tags']->page->plugins->{$value};
+					} else {
+						echo $GLOBALS['lang_plugins_tags']->page->default_description;
+					} ?>
+				</td>
+			</tr>
+		<?php } ?>
+	</tbody>
+</table>
+
+<h3 style="margin-top: 50px;"><?php echo $GLOBALS['lang_plugins_tags']->page->tag_title; ?></h3>
+<table>
+	<tbody>
+		<?php foreach ($view_model->tag_list as $value) { ?>
+			<tr>
+				<td style="padding-right:20px; color: orange;"><?php echo $this->escape($value); ?></td>
+				<td>
+					<?php if (isset($GLOBALS['lang_plugins_tags']->page->tags->{$value})) {
+						echo $GLOBALS['lang_plugins_tags']->page->tags->{$value};
+					} else {
+						echo $GLOBALS['lang_plugins_tags']->page->default_description;
+					} ?>
+				</td>
+			</tr>
+		<?php } ?>
+	</tbody>
+</table>

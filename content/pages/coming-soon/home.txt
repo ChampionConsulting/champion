@@ -1,0 +1,8 @@
+JSON_START{"description":"The page description goes here.","html":"{{block:coming-soon\/coming-soon}}\r\n{{block:coming-soon\/social-icons}}","id":"coming","location":"\/pages\/coming","meta_custom_description":"","meta_indexed":"no","meta_language":"","meta_no_follow":"no","meta_searchable":"yes","page_template":"coming-soon","title":"Page Title","inline_css":"","inline_js":""}JSON_END
+
+Page Title
+
+The page description goes here.
+
+{{block:coming-soon/coming-soon}}
+{{block:coming-soon/social-icons}}

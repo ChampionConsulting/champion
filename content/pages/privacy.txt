@@ -1,0 +1,7 @@
+JSON_START{"description":"","html":"{{policy:Champion:Japan}}","id":"terms","location":"\/pages\/terms","meta_custom_description":"","meta_indexed":"no","meta_no_follow":"no","page_template":"default","title":"page title","inline_css":"","inline_js":""}JSON_END
+
+page title
+
+
+
+{{policy:Champion:Japan}}

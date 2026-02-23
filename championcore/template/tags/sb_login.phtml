@@ -1,0 +1,40 @@
+
+<style>
+	section.championcore_tag.sb_login {
+			font-family: sans-serif;
+			font-size: 16px;
+	}
+	section.championcore_tag.sb_login .sb_form {
+			font-family: sans-serif;
+			color: #444;
+			width: 380px;
+			margin: 0 auto;
+			background-color: #eee;
+			padding: 40px;
+			margin-top:40px;
+	}
+	section.championcore_tag.sb_login .sb_form input {
+			margin-bottom:20px;
+			border:0;
+			padding: 10px;
+	}
+	section.championcore_tag.sb_login .sb_form input:focus {
+			outline:none;
+	}
+	section.championcore_tag.sb_login .sb_form button {
+			background-color: #555;
+			border: 0;
+			color: white;
+			padding: 8px 16px;
+	}
+</style>
+
+<section class ="championcore_tag sb_login">
+	<form class="sb_form" name="login" method="post">
+		<p><?php echo $GLOBALS['lang_login_button'];?></p>
+		<input type="password" size="25" name="access_pass" placeholder="<?php echo $GLOBALS['lang_login_password']; ?>" autofocus />
+		<input type="password" size="25" name="otp"         placeholder="<?php echo $GLOBALS['lang_login_otp']; ?>" />
+		<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+		<button class="login-btn"><?php echo $GLOBALS['lang_login_button'];?></button>
+	</form>
+</section>

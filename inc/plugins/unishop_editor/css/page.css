@@ -1,0 +1,158 @@
+/**
+ * champion xml editor
+ */
+ 
+#champion_xml_editor_app {
+	box-sizing: border-box;  	
+	width: 100%;  	
+	padding: 10px;
+	margin: 0;    	
+	border: 1px solid #aaa; 	
+	z-index: 10;      	
+	overflow: auto;
+}
+
+/** general **/
+#champion_xml_editor_app .button {
+	width: auto;
+	padding: 6px;
+	text-align: center;  	
+	text-decorate: none;
+}
+
+/** components - root **/
+#champion_xml_editor_app .xml-editor {  	
+	overflow-x: visible;
+}
+
+#champion_xml_editor_app .xml-editor table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#champion_xml_editor_app .xml-editor table tbody tr th {
+	padding: 5px;
+	height: 1em;
+	text-align: left;
+}
+
+#champion_xml_editor_app .xml-editor table tbody tr td {
+	padding: 5px;
+}
+#champion_xml_editor_app .xml-editor table tbody tr:nth-child(even) td {
+	background-color: #ddd;
+}
+#champion_xml_editor_app .xml-editor table tbody tr:nth-child(odd) td {
+}
+
+#champion_xml_editor_app .xml-editor table tbody tr:nth-child(2n + 1) th {
+	border-top: 3px solid #aaa;
+}
+
+/** components - cell **/
+#champion_xml_editor_app .xml-editor .cell {
+	min-width: 6em;
+}
+
+#champion_xml_editor_app .xml-editor .cell .show {
+	position: relative;
+}
+#champion_xml_editor_app .xml-editor .cell .show .cell_tooltip {
+	display: none;
+}
+#champion_xml_editor_app .xml-editor .cell .show:hover .cell_tooltip {
+	display: block;
+	position: absolute;
+	top:  20px;
+	left: 10px;	
+	min-width: 15em;  	
+	background-color: #ccc;
+	color: #000;      	
+	padding: 10px;  	
+	z-index: 20;
+}
+#champion_xml_editor_app .xml-editor .cell .show .cell_trigger {
+}
+
+#champion_xml_editor_app .xml-editor .cell label {
+	color: #000000;
+}
+
+#champion_xml_editor_app .xml-editor .cell .edit {
+	display: flex;
+	flex-direction: column;
+}
+#champion_xml_editor_app .xml-editor .cell .edit .row {
+	display: flex;
+	flex-direction: column;
+}
+
+#champion_xml_editor_app .xml-editor .cell .edit .row input {
+	height: 2.5em;
+	display: block;
+}
+#champion_xml_editor_app .xml-editor .cell .edit .row label {
+	display: block;
+	font-weight: bold;
+	text-align: center;
+}
+#champion_xml_editor_app .xml-editor .cell .edit .row textarea {
+	min-height: 8em;
+	display: block;
+}
+#champion_xml_editor_app .xml-editor .cell .edit .row select {
+	display: block;
+}
+
+/** components - options **/
+#champion_xml_editor_app .xml-editor .options {   	
+	background-color: #9AE39A;
+	padding: 5px;
+	min-width: 12em;
+}
+
+#champion_xml_editor_app .xml-editor .options input,
+#champion_xml_editor_app .xml-editor .options select {
+	width: 100%;
+}
+#champion_xml_editor_app .xml-editor .options input[type="submit"] {
+	display: block;
+	width: 10em;
+	margin: 5px auto 0 auto;
+}
+
+#champion_xml_editor_app .xml-editor .options .options-option {
+}
+
+#champion_xml_editor_app .xml-editor .options .options-option > p {
+	font-weight: bold;
+}
+#champion_xml_editor_app .xml-editor .options .options-option > ul {
+	padding-left: 10px;
+}
+#champion_xml_editor_app .xml-editor .options .options-option > ul > li {
+	clear: both;
+	border-bottom: 1px solid #8d8;
+	list-style-type: none;
+}
+
+#champion_xml_editor_app .xml-editor .options .options-option .options-option-entry {
+}
+
+#champion_xml_editor_app .xml-editor .options .options-option .options-option-entry-add {
+	border: none;
+	padding-top: 10px;
+}
+
+#champion_xml_editor_app .xml-editor .options .options-option .options-option-entry .options-option-entry-delete {
+	display: inline-block;
+	float: right;
+	cursor: pointer;
+}
+
+/** components - quantity **/
+#champion_xml_editor_app .xml-editor .quantity {
+}
+#champion_xml_editor_app .xml-editor .quantity label {
+	min-width: 6em;
+}

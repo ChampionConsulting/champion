@@ -1,0 +1,65 @@
+
+<div class="championcore">
+
+	<h1><?php echo $GLOBALS['lang_update_title']; ?></h1>
+
+	<?php if (!isset($view_model->collected)) { ?>
+		<!-- upload the archive -->
+		<form action="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=update_start" method="post" enctype="multipart/form-data">
+			
+			<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+			
+			<h4><?php echo $GLOBALS['lang_update_title_pick_method']; ?></h4>
+			<p>
+				<label for="from_upload">
+					<input id="from_upload" type="radio" name="from_type" value="upload" checked /> <?php echo $GLOBALS['lang_update_type_upload']; ?>
+				</label>
+				
+				<label for="from_ftp">
+					<input id="from_ftp" type="radio" name="from_type" value="ftp" /> <?php echo $GLOBALS['lang_update_type_ftp']; ?>
+				</label>
+			</p>
+			
+			<div class="from_upload">
+				<h4><?php echo $GLOBALS['lang_update_title_sub']; ?></h4>
+				<p>
+					<input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
+					<input name="zipfile" type="file" />
+				</p>
+			</div>
+			
+			<div class="from_ftp" style="display: none;">
+				<h4><?php echo $GLOBALS['lang_update_title_from_ftp']; ?></h4>
+				<p>
+					<label for="path_to_zip"><?php echo $GLOBALS['lang_update_path_to_zip']; ?></label>
+					<input type="text" id="path_to_zip" name="path_to_zip" value="" />
+				</p>
+			</div>
+			
+			<p>
+				<button style="margin-left: 0;px" class="cancel btn toggle_duplicate_btn"><?php echo $GLOBALS['lang_update_button']; ?></button>
+			</p>
+		</form>
+	<?php } else { ?>
+		<!-- confirm changes -->
+		<form action="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=update" method="post" enctype="multipart/form-data">
+			
+			<table>
+				<tbody>
+					<?php foreach ($view_model->collected as $value) { ?>
+						<tr>
+							<td><?php echo $this->escape( ($value->important ? '!' : '') ); ?></td>
+							<td><?php echo $this->escape($value->filename); ?></td>
+						</tr>
+					<?php } ?>
+				</tbody>
+			</table>
+			
+			<p>
+				<input type="hidden" name="run_update" value="1" />
+				
+				<button style="margin-left: 0px;" class="cancel btn toggle_duplicate_btn"><?php echo $GLOBALS['lang_update_button']; ?></button>
+			</p>
+		</form>
+	<?php } ?>
+</div>

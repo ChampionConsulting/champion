@@ -1,0 +1,13 @@
+JSON_START{"description":"The page description goes here.","html":"{{block:onepage-creative\/header}}\r\n{{block:onepage-creative\/banner}}\r\n{{block:onepage-creative\/about}}\r\n{{block:onepage-creative\/services}}\r\n{{block:onepage-creative\/portfolio}}\r\n{{block:onepage-creative\/download}}\r\n{{block:onepage-creative\/contact}}","id":"home","location":"\/pages\/home","meta_custom_description":"","meta_indexed":"no","meta_no_follow":"no","meta_searchable":"yes","page_template":"onepage-creative","title":"Page Title","inline_css":"","inline_js":""}JSON_END
+
+Page Title
+
+The page description goes here.
+
+{{block:onepage-creative/header}}
+{{block:onepage-creative/banner}}
+{{block:onepage-creative/about}}
+{{block:onepage-creative/services}}
+{{block:onepage-creative/portfolio}}
+{{block:onepage-creative/download}}
+{{block:onepage-creative/contact}}

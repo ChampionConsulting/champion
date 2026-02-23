@@ -1,0 +1,26 @@
+/* Remove this when pasting into your Stylesheet! */
+
+/* END Remove This */
+
+/* Form style */
+#contact p, label, legend { color:#333; font: 1.0em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; }
+
+#contact label { display: inline-block; color:#333; float: left; height: 26px; line-height: 26px; width: 155px; font-size: 1.0em; -webkit-border-radius:5px; }
+#contact input, textarea, select { width: 190px; margin: 0; padding: 5px; color: #666; background: #f5f5f5; border: 1px solid #ccc; margin: 5px 0; font:1.0em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; webkit-border-radius:5px; }   
+#contact input:focus, textarea:focus, select:focus { border: 1px solid #999; background-color: #fff; color:#333; }
+#contact input.submit { width: 85px; cursor: pointer; border: 1px solid #222; background:#fff; color:#333; }
+#contact input.submit:hover { background:#444; }
+#contact input[type="submit"][disabled] { background:#888; }
+#contact fieldset { padding:20px; border:1px solid #eee; -webkit-border-radius:5px; -moz-border-radius:5px; }
+#contact legend { padding:7px 10px; font-weight:bold; color:#000; border:1px solid #eee; -webkit-border-radius:5px; -moz-border-radius:5px; margin-bottom:0 !important; margin-bottom:20px; }
+
+#contact span.required{ font-size: 10px; color: #ff0000; } /* Select the colour of the * if the field is required. */
+
+#message { margin: 20px 0; padding: 0; }
+
+.error_message { display: block; height: 35px; line-height: 10px; background: #FBE3E4 url('../assets/error.gif') no-repeat 10px center; padding: 13px 10px 13px 35px; color:#8a1f11;border: 1px solid #FBC2C4; -webkit-border-radius:5px; }
+
+.loader { padding: 0 10px; }
+
+#contact #success_page h1 { background: url('../assets/success.gif') left no-repeat; padding-left:22px; }
+

@@ -1,0 +1,13 @@
+
+<div class='banner'><?php echo $this->escape($GLOBALS['lang_delete']); ?><span> <?php echo $this->escape($view_model->item); ?></span> ?</div>
+
+<form class="delete-form" name="textfile" method="post" action="">
+	<a onclick="history.go(-1);" class="btn cancel"><?php echo $this->escape($GLOBALS['lang_cancel']);?></a>
+	
+	<input type="hidden" name="token"   value="<?php echo $this->escape($_SESSION["token"]); ?>" />
+	<input type="hidden" name="item"    value="<?php echo $this->escape($view_model->item); ?>" />
+	<input type="hidden" name="go_back" value="<?php echo $this->escape($view_model->go_back); ?>" />
+	<input type="hidden" name="ext"     value="<?php echo $this->escape($view_model->param_ext); ?>" />
+	
+	<button class="btn" type="submit" name="savetext"><?php echo $this->escape($GLOBALS['lang_del_button']);?></button>
+</form>

@@ -1,0 +1,39 @@
+.features {
+	WIDTH: 600px
+}
+.inner {
+	WIDTH: 55%
+}
+.dataTable A.dis {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 8px; DISPLAY: block; PADDING-LEFT: 8px; BACKGROUND: #fafafa; PADDING-BOTTOM: 8px; BORDER-LEFT: #e5e5e5 1px solid; WIDTH: 100px; CURSOR: pointer; PADDING-TOP: 8px; BORDER-BOTTOM: #e5e5e5 1px solid
+}
+.dataTable A.tl {
+	BORDER-TOP: #e5e5e5 1px solid
+}
+.dataTable A.bl {
+	BORDER-BOTTOM: #e5e5e5 1px solid
+}
+.dataTable A.hightl {
+	BORDER-TOP: #ccc 1px solid
+}
+.dataTable A.highlighted {
+	PADDING-RIGHT: 8px; DISPLAY: block; PADDING-LEFT: 8px; FONT-WEIGHT: bold; PADDING-BOTTOM: 8px; BORDER-LEFT: #ccc 1px solid; COLOR: #92473f! important; PADDING-TOP: 8px; BORDER-BOTTOM: #ccc 1px solid; BORDER-RIGHT-WIDTH: 0px! important
+}
+.dataTable A.highbot {
+	BORDER-BOTTOM: #ccc 1px solid
+}
+.dataTable A.dis:hover {
+	
+}
+.displayBox {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 0px solid; WIDTH: 560px; BORDER-BOTTOM: #ccc 1px solid
+}
+#display {
+	MARGIN-LEFT: auto; OVERFLOW: auto; WIDTH: 100%; MARGIN-RIGHT: auto; HEIGHT: 405px
+}
+.service_table CAPTION IMG {
+	BOTTOM: 5px; POSITION: relative
+}
+.service_table CAPTION {
+	MARGIN-TOP: 5px; PADDING-LEFT: 10px; PADDING-TOP: 5px; POSITION: relative
+}

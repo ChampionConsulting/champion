@@ -1,0 +1,45 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<div class="championcore">
+	<h1><?php echo $GLOBALS['lang_settings_mediaupload'];?></h1>
+	
+	<p><?php echo $GLOBALS['lang_settings_upload_max_size'];?>: <?php echo \htmlentities($view_model->max_file_size); ?></p>
+	
+	<?php
+		$tag = new \championcore\tags\Dropzone();
+		
+		$html = $tag->generate_html(
+			array(
+				'media_folder'       => \championcore\get_configs()->dir_content . "/media",
+				'allowed_file_types' => \implode(',', \championcore\wedge\config\get_json_configs()->json->allow),
+				'upload_handler'     => (CHAMPION_ADMIN_URL . '/index.php?p=media_upload_handler'),
+				
+				'show_uploaded_item_url' => true
+			),
+			array() # tag_runner_context
+		);
+		/*
+		$extra_html =<<<EOD
+<input type="file" name="imagename[]" id="imagename" multiple />
+<button class="btn" type="submit" name="submit">{$GLOBALS['lang_home_upload_button']}</button>
+EOD;
+		
+		$html = \str_replace(
+			'<!-- stub -->',
+			$extra_html,
+			$html
+		);
+		*/
+		echo $html;
+	?>
+	
+	<p class="text-align-right">
+		<a class="btn cancel" href="<?php echo $view_model->back_button_url; ?>"><?php echo \htmlentities($GLOBALS['lang_blog_back_button']); ?></a>
+	</p>
+	
+	<div class="championcore_float_barrier"></div>
+</div>

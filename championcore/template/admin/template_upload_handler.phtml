@@ -1,0 +1,24 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<div class="championcore">
+	<h1><?php echo $GLOBALS['lang_settings_themeuploader'];?></h1>
+	
+	<?php
+		$tag = new \championcore\tags\Dropzone();
+		
+		echo $tag->generate_html(
+			array(
+				'js_success_callback' => 'function () {window.location.href="' . CHAMPION_ADMIN_URL . '/index.php?p=settings#tab5";};',
+				'media_folder'        => '../template',
+				'allowed_file_types'  => 'zip',
+				'upload_handler'      => (CHAMPION_ADMIN_URL . '/index.php?p=template_upload_handler'),
+			),
+			array() # tag_runner_context
+		);
+	?>
+	
+</div>

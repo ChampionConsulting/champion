@@ -1,0 +1,22 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<script type="text/javascript">
+	var championcore = championcore || {};
+	
+	championcore.manage_navigation           = championcore.manage_navigation           || {};
+	championcore.manage_navigation.component = championcore.manage_navigation.component || {};
+	
+	championcore.manage_navigation.csrf_token = "<?php echo \championcore\session\csrf\create(); ?>";
+	championcore.manage_navigation.data = <?php echo $view_model->navigation_packed; ?>;
+</script>
+
+
+<div id="manage_navigation" class="championcore manage-navigation">
+	<h1><?php echo $GLOBALS['lang_settings_navigationtitle'];?></h1>
+	
+	<manage-navigation v-bind:menu="menu" v-bind:open_menus="open_menus"></manage-navigation>
+</div>

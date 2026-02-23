@@ -1,0 +1,13 @@
+
+<div class="championcore tag block_loop">
+	
+	<?php foreach ($view_model->blocks as $iii) {?>
+		<div class="block_loop_item" style="width: <?php echo $view_model->block_width; ?>">
+			<?php if (\strlen($iii->title) > 0) { ?>
+				<div class="block_loop_item_title"><?php echo $iii->title; ?></div>
+			<?php } ?>
+			<div class="block_loop_item_content"><?php echo $iii->html; ?></div>
+		</div>
+	<?php } ?>
+	
+</div>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?><shop>
+
+	<item>
+		<name>John Doe JD6457 - Round Sunglasses</name>
+		<price>10</price>
+		<sku>sku21334</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>4</rating>
+		<category>clear, round, aaa</category>
+		<thumbs>/content/media/unishop/pic01_1.jpg, /content/media/unishop/pic01_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic01_1.jpg, /content/media/unishop/pic01_2.jpg, /content/media/unishop/pic01_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Frame">
+				<entry price="10" value="Black">Black - $10</entry>
+				<entry price="12" value="Silver">Silver - $12</entry>
+				<entry price="11" value="Gold">Gold - $11</entry>
+			</option>
+		</options>
+	</item>
+	
+	<item>
+		<name>John Doe JD3674 - Outdoor Sunglasses</name>
+		<price sale="28">14</price>
+		<sku>sku49774</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>5</rating>
+		<category>square, mirror, sale</category>
+		<thumbs>/content/media/unishop/pic02_1.jpg, /content/media/unishop/pic02_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic02_1.jpg, /content/media/unishop/pic02_2.jpg, /content/media/unishop/pic02_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>3</shipping>
+		<options>
+			<option name="Lenses">
+				<entry value="Gray">Gray</entry>
+				<entry value="Green">Green</entry>
+				<entry value="Brown">Brown</entry>
+				<entry value="Clear">Clear</entry>
+				<entry value="Gold">Gold</entry>
+				<entry value="Yellow">Yellow</entry>
+			</option>
+		</options>
+	</item>
+
+	<item>
+		<name>John Doe JD2343 - Frameless Sunglasses</name>
+		<price>20</price>
+		<sku>sku79492</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>4.5</rating>
+		<category>pilot, rimless</category>
+		<thumbs>/content/media/unishop/pic03_1.jpg, /content/media/unishop/pic03_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic03_1.jpg, /content/media/unishop/pic03_2.jpg, /content/media/unishop/pic03_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Lenses">
+				<entry value="Gray">Gray</entry>
+				<entry value="Green">Green</entry>
+				<entry value="Brown">Brown</entry>
+				<entry value="Clear">Clear</entry>
+				<entry value="Gold">Gold</entry>
+				<entry value="Yellow">Yellow</entry>
+			</option>
+			<option name="Frame">
+				<entry price="20" value="Black">Black - $20</entry>
+				<entry price="25" value="Silver">Silver - $25</entry>
+				<entry price="26" value="Gold">Gold - $26</entry>
+			</option>
+		</options>
+	</item>
+
+	<item>
+		<name>John Doe JD2646 - Aviator Sunglasses</name>
+		<price>35</price>
+		<sku>sku16659</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>4</rating>
+		<category>pilot</category>
+		<thumbs>/content/media/unishop/pic01_1.jpg, /content/media/unishop/pic01_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic01_1.jpg, /content/media/unishop/pic01_2.jpg, /content/media/unishop/pic01_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Lenses">
+				<entry value="Gray">Gray</entry>
+				<entry value="Green">Green</entry>
+				<entry value="Brown">Brown</entry>
+				<entry value="Clear">Clear</entry>
+				<entry value="Gold">Gold</entry>
+				<entry value="Yellow">Yellow</entry>
+			</option>
+			<option name="Frame">
+				<entry price="35" value="Black">Black - $35</entry>
+				<entry price="37" value="Silver">Silver - $37</entry>
+				<entry price="35" value="Gold">Gold - $35</entry>
+			</option>
+		</options>
+	</item>
+	
+	<item>
+		<name>John Doe JD8473 - Aviator Sunglasses</name>
+		<price>25</price>
+		<sku>sku60071</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>3.5</rating>
+		<category>pilot</category>
+		<thumbs>/content/media/unishop/pic02_1.jpg, /content/media/unishop/pic02_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic02_1.jpg, /content/media/unishop/pic02_2.jpg, /content/media/unishop/pic02_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Lenses">
+				<entry value="Gray">Gray</entry>
+				<entry value="Green">Green</entry>
+				<entry value="Brown">Brown</entry>
+				<entry value="Clear">Clear</entry>
+				<entry value="Gold">Gold</entry>
+				<entry value="Yellow">Yellow</entry>
+			</option>
+			<option name="Frame">
+				<entry price="25" value="Black">Black - $25</entry>
+				<entry price="26" value="Silver">Silver - $26</entry>
+				<entry price="25" value="Gold">Gold - $25</entry>
+			</option>
+		</options>
+	</item>
+	
+	<item>
+		<name>John Doe JD2746 - Kids Sunglasses</name>
+		<price sale="28">20</price>
+		<sku>sku36907</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>2</rating>
+		<category>square, sale</category>
+		<thumbs>/content/media/unishop/pic03_1.jpg, /content/media/unishop/pic03_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic03_1.jpg, /content/media/unishop/pic03_2.jpg, /content/media/unishop/pic03_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Lenses">
+				<entry value="Gray">Gray</entry>
+				<entry value="Green">Green</entry>
+				<entry value="Brown">Brown</entry>
+				<entry value="Clear">Clear</entry>
+				<entry value="Gold">Gold</entry>
+				<entry value="Yellow">Yellow</entry>
+			</option>
+		</options>
+	</item>
+	
+	<item>
+		<name>John Doe JD2343 - Retro Sunglasses</name>
+		<price>39</price>
+		<sku>sku41210</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>4</rating>
+		<category>retro</category>
+		<thumbs>/content/media/unishop/pic01_1.jpg, /content/media/unishop/pic01_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic01_1.jpg, /content/media/unishop/pic01_2.jpg, /content/media/unishop/pic01_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Lenses">
+				<entry value="Gray">Gray</entry>
+				<entry value="Brown">Brown</entry>
+				<entry value="Gold">Gold</entry>
+				<entry value="Yellow">Yellow</entry>
+			</option>	
+		</options>
+	</item>
+	
+	<item>
+		<name>John Doe JD2343 - "Colorado" Sunglasses</name>
+		<price>23</price>
+		<sku>sku60449</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>3.5</rating>
+		<category>square</category>
+		<thumbs>/content/media/unishop/pic02_1.jpg, /content/media/unishop/pic02_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic02_1.jpg, /content/media/unishop/pic02_2.jpg, /content/media/unishop/pic02_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Lenses">
+				<entry value="Gray">Gray</entry>
+				<entry value="Green">Green</entry>
+				<entry value="Brown">Brown</entry>
+				<entry value="Clear">Clear</entry>
+				<entry value="Gold">Gold</entry>
+				<entry value="Yellow">Yellow</entry>
+			</option>	
+		</options>
+	</item>
+	
+	<item>
+		<name>John Doe JD2943 - "Ozzy" Sunglasses</name>
+		<price>25</price>
+		<sku>sku43681</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>2</rating>
+		<category>round, retro, mirror</category>
+		<thumbs>/content/media/unishop/pic03_1.jpg, /content/media/unishop/pic03_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic03_1.jpg, /content/media/unishop/pic03_2.jpg, /content/media/unishop/pic03_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Lenses">
+				<entry value="Gray">Gray</entry>
+				<entry value="Green">Green</entry>
+				<entry value="Brown">Brown</entry>
+				<entry value="Clear">Clear</entry>
+				<entry value="Gold">Gold</entry>
+				<entry value="Yellow">Yellow</entry>
+			</option>
+			<option name="Frame">
+				<entry price="25" value="Black">Black - $25</entry>
+				<entry price="32" value="Silver">Silver - $32</entry>
+				<entry price="34" value="Gold">Gold - $34</entry>
+			</option>
+		</options>
+	</item>
+	
+	<item>
+		<name>John Doe JD2834 - "California" Sunglasses</name>
+		<price sale="30">17</price>
+		<sku>sku19833</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>5</rating>
+		<category>square, sale</category>
+		<thumbs>/content/media/unishop/pic01_1.jpg, /content/media/unishop/pic01_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic01_1.jpg, /content/media/unishop/pic01_2.jpg, /content/media/unishop/pic01_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Lenses">
+				<entry value="Gray">Gray</entry>
+				<entry value="Green">Green</entry>
+				<entry value="Brown">Brown</entry>
+				<entry value="Clear">Clear</entry>
+				<entry value="Gold">Gold</entry>
+				<entry value="Yellow">Yellow</entry>
+			</option>	
+		</options>
+	</item>
+	
+	<item>
+		<name>John Doe JD8343 - Surfing Sunglasses</name>
+		<price>30</price>
+		<sku>sku64591</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>3</rating>
+		<category>square, mirror</category>
+		<thumbs>/content/media/unishop/pic02_1.jpg, /content/media/unishop/pic02_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic02_1.jpg, /content/media/unishop/pic02_2.jpg, /content/media/unishop/pic02_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Lenses">
+				<entry value="Gray">Gray</entry>
+				<entry value="Green">Green</entry>
+				<entry value="Brown">Brown</entry>
+				<entry value="Clear">Clear</entry>
+				<entry value="Gold">Gold</entry>
+				<entry value="Yellow">Yellow</entry>
+			</option>	
+		</options>
+	</item>
+	
+	<item>
+		<name>John Doe JD8369 - Clear Sunglasses</name>
+		<price>30</price>
+		<sku>sku00096</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>4.5</rating>
+		<category>clear, square</category>
+		<thumbs>/content/media/unishop/pic03_1.jpg, /content/media/unishop/pic03_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic03_1.jpg, /content/media/unishop/pic03_2.jpg, /content/media/unishop/pic03_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Frame">
+				<entry price="30" value="Black">Black - $30</entry>
+				<entry price="32" value="Silver">Silver - $32</entry>
+				<entry price="32" value="Gold">Gold - $32</entry>
+			</option>
+		</options>
+	</item>
+	
+	<item>
+		<name>John Doe JD8369 - Sport Sunglasses</name>
+		<price>25</price>
+		<sku>sku71074</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>2.5</rating>
+		<category>square, mirror</category>
+		<thumbs>/content/media/unishop/pic01_1.jpg, /content/media/unishop/pic01_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic01_1.jpg, /content/media/unishop/pic01_2.jpg, /content/media/unishop/pic01_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options>
+			<option name="Lenses">
+				<entry value="Gray">Gray</entry>
+				<entry value="Green">Green</entry>
+				<entry value="Brown">Brown</entry>
+				<entry value="Clear">Clear</entry>
+				<entry value="Gold">Gold</entry>
+				<entry value="Yellow">Yellow</entry>
+			</option>
+		</options>
+	</item>
+	
+	<item>
+		<name>John Doe JD8784 - Elite Sunglasses</name>
+		<price sale="20">10</price>
+		<sku>sku40616</sku>
+		<description>The lenses of polarized sunglasses reduce glare reflected at some angles off shiny non-metallic surfaces, such as water. They allow wearers to see into water when only surface glare would otherwise be seen, and eliminate glare from a road surface when driving into the sun.</description>
+		<rating>3</rating>
+		<category>clear, square, sale</category>
+		<thumbs>/content/media/unishop/pic02_1.jpg, /content/media/unishop/pic02_2.jpg</thumbs>
+		<photos>/content/media/unishop/pic02_1.jpg, /content/media/unishop/pic02_2.jpg, /content/media/unishop/pic02_3.jpg</photos>
+		<quantity min="1" max="10">1</quantity>
+		<shipping>0</shipping>
+		<options/>
+	</item>
+	
+</shop>

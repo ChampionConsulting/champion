@@ -1,0 +1,84 @@
+
+<?php /*
+<div id="nav" class="championcore tag <?php echo $this->escape($view_model->label); ?> <?php echo $this->escape($view_model->css_classes); ?>">
+	<div id="menu-button"></div>
+	<ul>
+		<?php foreach ($view_model->navigation as $key => $value) { ?>
+				<?php if (($value instanceof \stdClass) and isset($value->url) and ($value->active === true)) { ?>
+					<li>
+						<a class="<?php echo \championcore\get_context()->theme->active_nav->render( array('probe' => $key) ); ?>"
+							 target="<?php if (\stripos($value->url, '//') !== false) { echo '_blank'; } else { echo '_self'; } ?>"
+							 href="<?php if (\stripos($value->url, '//') !== false) { echo $value->url; } else { ?>//<?php echo $view_model->domain, $view_model->port, \championcore\url_join(\championcore\maybe_base_url($view_model->url_base_path), $value->url); } ?>">
+							<?php echo \htmlentities( \championcore\filter\navigation(\trim($key))); ?></a>
+					</li>
+				<?php } ?>
+				
+				<?php if (($value instanceof \stdClass) and !isset($value->url)) { ?>
+					<li>
+						<?php foreach ($value as $sm_name => $sm_url) { ?>
+							<?php if ($sm_url->active === true) { ?>
+								<a href="<?php if (\stripos($sm_url->url, '//') !== false) { echo $value->url; } else { ?>//<?php echo $view_model->domain, $view_model->port, \championcore\url_join(\championcore\maybe_base_url($view_model->url_base_path), $sm_url->url); } ?>"
+								   onclick="return false;"><?php echo \htmlentities( \championcore\filter\navigation($key) ); ?></a>
+							<?php
+									break;
+								}
+							?>
+						<?php } ?>
+						<ul>
+							<?php foreach ($value as $sm_name => $sm_url) { ?>
+								<?php if ($sm_url->active === true) { ?>
+									<li>
+										<a class="<?php echo \championcore\get_context()->theme->active_nav->render( array('probe' => $key) ); ?>"
+											 target="<?php if (\stripos($sm_url->url, '//') !== false) { echo '_blank'; } else { echo '_self'; } ?>"
+											 href="<?php   if (\stripos($sm_url->url, '//') !== false) { echo $sm_url->url; } else { ?>//<?php echo $view_model->domain, $view_model->port, \championcore\url_join(\championcore\maybe_base_url($view_model->url_base_path), $sm_url->url); } ?>">
+											<?php echo \htmlentities( \championcore\filter\navigation(\trim( \basename($sm_name) )) ); ?></a>
+									</li>
+								<?php } ?>
+							<?php } ?>
+						</ul>
+					</li>
+				<?php } ?>
+		<?php } ?>
+	</ul>
+</div>
+*/ ?>
+
+<!-- navigation main menu BEGIN -->
+<div id="nav" class="championcore tag <?php echo $this->escape($view_model->label); ?> <?php echo $this->escape($view_model->css_classes);?>">
+
+	<div id="menu-button"></div>
+	<ul class="<?php echo $this->escape($view_model->css_classes_ul); ?>">
+		<?php foreach ($view_model->navigation as $key => $value) { ?>
+				<?php if (($value instanceof \stdClass) and isset($value->url) and ($value->active === true)) { ?>
+					<li class="<?php echo $this->escape($view_model->css_classes_li); ?>">
+						<a class="<?php echo \championcore\get_context()->theme->active_nav->render( array('probe' => $key) ); ?> <?php echo $this->escape($view_model->css_classes_a); ?>"
+							 target="<?php if ((\stripos($value->url, '//') !== false) or (\intval($value->open_in_new_tab ?? '0') > 0)) { echo '_blank';    } else { echo '_self'; } ?>"
+							 href="<?php   if (\stripos($value->url, '//') !== false) { echo $value->url; } else { ?>//<?php echo $view_model->domain, $view_model->port, \championcore\url_join(\championcore\maybe_base_url($view_model->url_base_path), $value->url); } ?>">
+							<?php echo \htmlentities( \championcore\filter\navigation(\trim($key), TRUE)); ?></a>
+						<!--  -->
+					
+					</li>
+				<?php } 
+				/*
+				@logic 	Above, we (1) checked if the current link should get the 'active' class if its the current page (`active_nav->render`).
+						and (2) we added any class specified for "a href" from the navigation tag parameters (`$view_model->css_classes_a`).
+					    finally (3) we render links appropriately, considering things like port number (`echo $view_model->domain, $view_model->port`).
+				*/
+				?>
+				
+				<?php if (($value instanceof \stdClass) and !isset($value->url) and ($key != 'pending')) {
+					echo $this->navigation_sub_menu(
+						$key,
+						$value,
+						[
+							'css_classes_ul' => $view_model->css_classes_ul,
+							'css_classes_li' => $view_model->css_classes_li,
+							'css_classes_a'  => $view_model->css_classes_a
+						]
+					);
+				} ?>
+		<?php } ?>
+	</ul>
+</div>
+<!-- navigation main menu END -->
+

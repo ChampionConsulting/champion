@@ -1,0 +1,37 @@
+JSON_START{"description":"","html":"<div class=\"top-holder\"><header class=\"masthead inner-page\"><div class=\"container\"><h1 class=\"masthead-heading text-uppercase\">Build It Fast.<\/h1> <h2 class=\"masthead-subheading\">This template lets you get started quickly.<\/div> <a href=\"#\" class=\"btn btn-primary btn-xl rounded-pill mt-5\">Learn More<\/a><\/div><\/header>\r\n\r\n<div class=\"holder-items pt-3 pt-md-0\">\r\n  <div class=\"container\">\r\n    <div class=\"row justify-content-between\">\r\n      <div class=\"col-md-3 my-2 my-md-0 box-info\">\r\n        <div class=\"holder-box text-center text-md-left mr-md-2 pl-md-4 p-4 pr-md-4 pt-md-3\">\r\n        <h2 class=\"text-center mb-2 mb-md-1 mb-lg-0\">Customize<\/h2>\r\n<p class=\"text-center\">Change the <a href=\"admin\/index.php?p=open&f=pages\/home&e=txt\">Meta settings of this page<\/a> to change its template.<\/p>\r\n        <\/div>\r\n      <\/div>\r\n      <div class=\"col-md-3 my-2 my-md-0 box-info\">\r\n        <div class=\"holder-box text-center text-md-left mr-md-2 pl-md-4 p-4 pr-md-4 pt-md-3\">   \t\t\t<h2 class=\"text-center mb-2 mb-md-1 mb-lg-0\">Templates<\/h2>\r\n        \t<p class=\"text-center\">Pages can have different templates. Default is in <a href=\"admin\/index.php?p=settings\">Settings<\/a>&#10132;Extend.<\/p>\r\n        <\/div>\r\n      <\/div>\r\n      <div class=\"col-md-3 my-2 my-md-0 box-info\">\r\n        <div class=\"holder-box text-center text-md-left mr-md-2 pl-md-4 p-4 pr-md-4 pt-md-3\">\t\t   <h2 class=\"text-center mb-2 mb-md-1 mb-lg-0\">Just Text<\/h2>\r\n          <p class=\"text-center\">No databases. Change pages by editing text files.<\/p>\r\n        <\/div><\/div>\r\n      <div class=\"col-md-3 my-2 my-md-0 box-info\">\r\n        <div class=\"holder-box text-center text-md-left pl-md-4 p-4 pr-md-4 pt-md-3\">\r\n          <h2 class=\"text-center mb-2 mb-md-1 mb-lg-0\">More Help<\/h2>\r\n          <p class=\"text-center\">Visit the help site <a href=\"https:\/\/championcms.com\/help\/\">here<\/a> or read the <a href=\"https:\/\/docs.championcms.com\/\">official docs<\/a>.<\/p>\r\n        <\/div>\r\n      <\/div>\r\n    <\/div>\r\n  <\/div> \r\n<\/div>\r\n\r\n<\/div>","id":"home","location":"\/pages\/home","meta_custom_description":"","meta_indexed":"no","meta_language":"","meta_no_follow":"no","meta_searchable":"yes","page_template":"default","title":"Homepage","inline_css":"","inline_js":""}JSON_END
+
+Homepage
+
+
+
+<div class="top-holder"><header class="masthead inner-page"><div class="container"><h1 class="masthead-heading text-uppercase">Build It Fast.</h1> <h2 class="masthead-subheading">This template lets you get started quickly.</h2> <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a></div></header>
+
+<div class="holder-items pt-3 pt-md-0">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-md-3 my-2 my-md-0 box-info">
+        <div class="holder-box text-center text-md-left mr-md-2 pl-md-4 p-4 pr-md-4 pt-md-3">
+        <h2 class="text-center mb-2 mb-md-1 mb-lg-0">Customize</h2>
+<p class="text-center">Change the <a href="admin/index.php?p=open&f=pages/home&e=txt">Meta settings of this page</a> to change its template.</p>
+        </div>
+      </div>
+      <div class="col-md-3 my-2 my-md-0 box-info">
+        <div class="holder-box text-center text-md-left mr-md-2 pl-md-4 p-4 pr-md-4 pt-md-3">   			<h2 class="text-center mb-2 mb-md-1 mb-lg-0">Templates</h2>
+        	<p class="text-center">Pages can have different templates. Default is in <a href="admin/index.php?p=settings">Settings</a>&#10132;Extend.</p>
+        </div>
+      </div>
+      <div class="col-md-3 my-2 my-md-0 box-info">
+        <div class="holder-box text-center text-md-left mr-md-2 pl-md-4 p-4 pr-md-4 pt-md-3">		   <h2 class="text-center mb-2 mb-md-1 mb-lg-0">Just Text</h2>
+          <p class="text-center">No databases. Change pages by editing text files.</p>
+        </div></div>
+      <div class="col-md-3 my-2 my-md-0 box-info">
+        <div class="holder-box text-center text-md-left pl-md-4 p-4 pr-md-4 pt-md-3">
+          <h2 class="text-center mb-2 mb-md-1 mb-lg-0">More Help</h2>
+          <p class="text-center">Visit the help site <a href="https://championcms.com/help/">here</a> or read the <a href="https://docs.championcms.com/">official docs</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+</div>

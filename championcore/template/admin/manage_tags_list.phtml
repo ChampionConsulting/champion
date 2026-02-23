@@ -1,0 +1,43 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<div class="championcore">
+	<h1><?php echo $GLOBALS['lang_settings_tags_title'];?></h1>
+	
+	<p>
+		<?php echo $GLOBALS['lang_settings_tags_subtitle'];?>
+	</p>
+	
+	<dl class="tags">
+		<?php foreach ($view_model->tags as $key => $value) { ?>
+			<dt>
+				<?php echo $this->escape($value->name); ?>
+				<a href="index.php?p=manage_tags&method=delete&name=<?php echo \urlencode($value->name); ?>&csrf_token=<?php echo \championcore\session\csrf\create(); ?>"><img alt="delete icon" src="img/icon-delete.svg" /></a>
+			</dt>
+			<dd>
+				<?php echo $this->escape($value->description); ?>
+			</dd>
+		<?php } ?>
+	</dl>
+	
+	<form name="textfile"
+				method="post"
+				action="index.php?p=manage_tags&method=post">
+				
+		<label><?php echo $this->escape($GLOBALS['lang_settings_tags_name']); ?>:</label>
+		<input type="text" name="name" value="" placeholder="<?php echo $this->escape($GLOBALS['lang_settings_tags_name']); ?>" required />
+			
+		<label><?php echo $this->escape($GLOBALS['lang_settings_tags_description']); ?>:</label>
+		<textarea name="description" placeholder="<?php echo $this->escape($GLOBALS['lang_settings_tags_description']); ?>" required></textarea>
+		
+		<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+		
+		<br />
+		<br />
+		<button class="btn" type="submit" name="save_configs"><?php echo $GLOBALS['lang_save'];?></button>
+	</form>
+	
+</div>

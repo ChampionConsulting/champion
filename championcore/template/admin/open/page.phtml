@@ -1,0 +1,139 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+	
+	<a class="rename" href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=rename&d=<?php echo \htmlentities($view_model->param_get_f); ?>&e=<?php echo \htmlentities($view_model->param_get_ext); ?>">[<?php echo \htmlentities($GLOBALS['lang_rename_btn']); ?>]</a>
+</div>
+
+<div class="championcore">
+	
+	<br />
+	
+	<?php if (!$view_model->flag_has_content) {
+		echo $GLOBALS['lang_no_content'];
+	} else { ?>
+		
+		<a class="embed_toggle" href="#"><?php echo $GLOBALS['lang_pages_options']; ?></a>
+		
+		<form class="" id="textfile" name="textfile" method="post" action=""> <!-- animated zoomIn -->
+			
+			<div class="hide">
+				<!-- -->
+				<label>
+					<input type="hidden"   value="no"  name="meta_draft_mode" />
+					<input type="checkbox" value="yes" name="meta_draft_mode" <?php echo (($view_model->draft_mode == 'yes') ? 'checked' : ''); ?> />
+					<?php echo $GLOBALS['lang_open_meta_draft_mode']; ?>
+				</label>
+				<!-- -->
+				<label><?php echo $GLOBALS['lang_pages_description']; ?></label>
+				<input class="page-desc-input" type="text" value="<?php echo \htmlentities($view_model->datum_item->description); ?>" name="head2" />
+				<!-- -->
+				<label>
+					<input type="hidden"   value="no"  name="meta_indexed" />
+					<input type="checkbox" value="yes" name="meta_indexed" <?php echo (($view_model->datum_item->meta_indexed == 'yes') ? 'checked' : ''); ?> />
+				 <?php echo $GLOBALS['lang_blog_index']; ?>
+				</label>
+				<!-- -->
+				<label>
+					<input type="hidden"   value="no"  name="meta_no_follow" />
+					<input type="checkbox" value="yes" name="meta_no_follow" <?php echo (($view_model->datum_item->meta_no_follow == 'yes') ? 'checked' : ''); ?> />
+					<?php echo $GLOBALS['lang_blog_nofollow']; ?>
+				</label>
+				<!-- -->
+				<label><?php echo $GLOBALS['lang_blog_custom']; ?></label>
+				<input class="blog-tag-input" type="text" value="<?php echo \htmlentities($view_model->datum_item->meta_custom_description); ?>" name="meta_custom_description" />
+				
+				<br />
+				
+				<!-- searchable meta -->
+				<label><?php echo $GLOBALS['lang_settings_user_group_list_permissions']; ?></label>
+				<ul>
+					<?php foreach (\championcore\wedge\config\get_json_configs()->json->user_group_list as $group) { ?>
+						<li>
+							<input type="hidden"   value="-"                                                name="meta_access_user_group[<?php echo \htmlentities($group->group_name); ?>]" />
+							<input type="checkbox" value="<?php echo \htmlentities($group->group_name); ?>" name="meta_access_user_group[<?php echo \htmlentities($group->group_name); ?>]" <?php echo (isset($group->permissions->page->{$view_model->param_get_f}) ? 'checked' : ''); ?> />
+							<?php echo \htmlentities($group->group_name); ?>
+						</li>
+					<?php } ?>
+				</ul>
+				<!-- -->
+				<label>
+					<input type="hidden"   value="no"  name="meta_searchable" />
+					<input type="checkbox" value="yes" name="meta_searchable" <?php echo (($view_model->datum_item->meta_searchable == 'yes') ? 'checked' : ''); ?> />
+					<?php echo $GLOBALS['lang_open_meta_searchable']; ?>
+				</label>
+				<!-- -->
+				<label><?php echo $GLOBALS['lang_pages_css']; ?></label>
+				<textarea class="blog-tag-input"  name="inline_css"><?php echo \htmlentities($view_model->datum_item->inline_css); ?></textarea>
+				<!-- -->
+				<label><?php echo $GLOBALS['lang_pages_js']; ?></label>
+				<textarea class="blog-tag-input"  name="inline_js"><?php echo \htmlentities($view_model->datum_item->inline_js); ?></textarea>
+				
+				<!-- -->
+				<label for="page_template"><?php echo $GLOBALS['lang_pages_template']; ?></label>
+				<select id="page_template" class="page-template-input" name="page_template">
+					<?php foreach (\championcore\theme\get_themes() as $page_template) {
+						$page_template_selected = (($page_template == $view_model->datum_item->page_template) ? 'selected': '');
+					?>
+						<option value="<?php echo \htmlentities($page_template); ?>" <?php echo \htmlentities($page_template_selected); ?>><?php echo \htmlentities($page_template); ?></option>
+					<?php } ?>
+				</select>
+				<br />
+				<br />
+				
+				<!-- page - language selector -->
+				<label for="meta_language"><?php echo $GLOBALS['lang_pages_language']; ?></label>
+				<select id="meta_language" class="page-template-input" name="meta_language">
+					<?php foreach (\array_merge( array(''), \championcore\get_configs()->languages) as $lll) {
+						$page_language_selected = (($lll == $view_model->datum_item->meta_language) ? 'selected': '');
+					?>
+						<option value="<?php echo \htmlentities($lll); ?>" <?php echo \htmlentities($page_language_selected); ?>><?php echo \htmlentities($lll); ?></option>
+					<?php } ?>
+				</select>
+				<br />
+				
+				<?php echo (isset($header_form_fields) ? $header_form_fields: ''); ?>
+			</div>
+			
+			<input type="hidden" name="filename" value="<?php echo $view_model->param_get_f . ".txt"; ?>" />
+			<input type="hidden" name="fname"    value="<?php echo $view_model->fname[0]; ?>" />
+			
+			<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+			
+			<?php
+				$content = $view_model->datum_item->html;
+				
+				$editor  = (\championcore\wedge\config\get_json_configs()->json->wysiwyg_on_page == true) ? 'id="wysiwyg"' : 'id="textblock"';
+				
+				# handle forcing of textblock for editor
+				$editor = (($view_model->force_textblock === true) ? 'id="textblock"' : $editor);
+			?>
+			
+			<!-- -->
+			<div>
+				<label><?php echo $GLOBALS['lang_pages_title']; ?></label>
+				<input class="page-title-input" type="text" value="<?php echo \htmlentities($view_model->datum_item->title); ?>" name="head1" />
+			</div>
+			<!-- -->
+				
+			<textarea spellcheck="false" <?php echo $editor;?> name="textblock"><?php echo htmlentities($content); ?></textarea>
+			
+			<button class="btn save" type="submit" name="savetext"><?php echo $GLOBALS['lang_save']; ?></button>
+			
+			<a class="btn preview-button" target="_blank" href="<?php echo CHAMPION_BASE_URL; ?>/<?php echo \htmlentities(\str_replace('pages/','',$view_model->param_get_f)); ?>"><?php echo $GLOBALS['lang_home_preview']; ?></a>
+			
+			<a href="index.php?p=duplicate_content&item_file=<?php echo \htmlentities($view_model->param_get_f); ?>" class="cancel btn toggle_duplicate_btn"><?php echo $GLOBALS['lang_duplicate']; ?></a>
+			
+			<a class="btn create-new" href="index.php?p=export-html-website&url=<?php echo \urlencode( CHAMPION_BASE_URL . '/' . \str_replace('pages/','',$view_model->param_get_f)); ?>"><?php echo \htmlentities($GLOBALS['lang_export_html_button']); ?></a>
+
+			<a target="_blank" class="media-manager" href="index.php?f=media"><?php echo $GLOBALS['lang_nav_img']; ?></a>
+			
+			<div class="float_barrier"></div>
+		</form>
+		
+		<br />
+		
+	<?php } ?>
+	
+</div>

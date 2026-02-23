@@ -1,0 +1,33 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<div class="championcore">
+	<h1><?php echo $GLOBALS['lang_settings_pluginuploader']; ?></h1>
+	
+	<?php if (isset($_SESSION['error-uploading']) and !(empty($_SESSION['error-uploading']))) { 
+		$errors = array();
+		$errors = $_SESSION['error-uploading'];
+		foreach ($errors as $error){
+				print($error);
+		 }
+		 unset($_SESSION['error-uploading']);   
+		}
+	?>
+	
+	<?php
+		$tag = new \championcore\tags\Dropzone();
+		
+		echo $tag->generate_html(
+			array(
+				'media_folder'       => '../inc/tags',
+				'allowed_file_types' => 'zip',
+				'upload_handler'     => (CHAMPION_ADMIN_URL . '/index.php?p=plugin_upload_handler'),
+			),
+			array() # tag_runner_context
+		);
+	?>
+	
+</div>

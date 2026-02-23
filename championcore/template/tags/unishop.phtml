@@ -1,0 +1,30 @@
+
+
+<section class="championcore tag unishop">
+	
+	<!-- UNISHOP CONTAINER -->
+	<div id="shop"></div>
+	<!-- UNISHOP CONTAINER -->
+	
+	<footer class="footer clearfix">
+		<a class="top" href="#top"></a>
+	</footer> 
+	
+	<script type="text/javascript">
+		$(function(){
+			$('.top').click(function(){
+				$('body, html').stop().animate({scrollTop: 0}, 500, 'swing');
+				return false;
+			});
+			$(window).scroll(function(){
+				var top = $(this).scrollTop();
+				if(top > 0 && top > $('#shop').offset().top + 50) {
+					$('.top').fadeIn('slow');
+				} else {
+					$('.top').hide();
+				}
+			});
+		});
+	</script>
+	
+</section>

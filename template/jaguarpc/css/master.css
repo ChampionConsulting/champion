@@ -1,0 +1,365 @@
+
+/* body {
+	color: #333;
+	font-size: 18px;
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+#header {
+	background-color: #2a2a2a;
+	width: 100%;
+	color: white;
+	padding: 20px 30px;
+}
+
+p {
+	color: #444;
+}
+
+h1,h2,h3 {
+	font-family: 'Roboto Condensed', serif;
+	font-weight: 400;
+}
+*/
+.feature {
+	max-width: 31.33%;
+	float: left;
+	background-color: #eee;
+	margin: 0 1%;
+	padding: 20px;
+}
+
+.feature:last-child {
+	margin-right: 0px;
+}
+
+.feature:first-of-type {
+	margin-left: 0px;
+}
+.feature {
+	max-width: 31.33%;
+	float: left;
+	background-color: #eaeaea;
+	margin: 0 1%;
+	padding: 20px;
+	min-height: 180px;
+	margin-bottom: 20px;
+	border-radius: 3px;
+}
+
+.feature h3 {
+	color: #444;
+}
+
+.feature p {
+	color: #666;
+}
+
+/*
+.logo {
+	float: left;
+}
+
+#nav {
+	float: right;
+	padding-top: 10px;
+}
+
+#nav li {
+	display: inline;
+	margin-left: 20px;
+	font-family: 'Roboto Condensed', serif;
+	font-weight: 300;
+}
+
+#nav a {
+	color: white;
+	text-decoration: none;
+}
+/*
+#footer {
+	max-width: 1000px;
+	margin: 0px auto;
+	border-top: 1px solid #ddd;
+	padding: 30px 0;
+}
+
+#footer p {
+	color: #999;
+	font-size: 14px;
+}
+
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	/* background-color: white;*
+	width: 100%;
+	font-size: 14px;
+	color: #777;
+	padding: 2px 30px;
+}
+*/
+.ver {
+	float: left;
+}
+
+.help {
+	float: right;
+}
+
+.help a {
+	color: #777;
+}
+a.trial {
+	color: #438dcd;
+	margin-left: 20px;
+	font-weight: bold;
+}
+
+.headline {
+	text-align: center;
+	color: white;
+	font-size: 60px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin-top: 160px;
+	font-weight: 400;
+	font-family: 'Roboto Condensed', serif;
+}
+
+.intro {
+	font-size: 24px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.inner {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 40px 20px;
+}
+
+.soc {
+	float: right;
+	margin-left: 10px;
+}
+
+.circle {
+    width:70px;
+    height:70px;
+    border-radius:250px;
+    font-size:20px;
+    color:#fff;
+    line-height:70px;
+    text-align:center;
+    background-color:#e67548;
+    margin-bottom: 15px;
+}
+/*
+.copyright {
+	float: left;
+	margin-left: 10px;
+}
+*/
+.portfolio {
+	padding: 20px;
+	margin-top: 40px;
+	background-color: #eee;
+}
+
+input {
+	border: 1px solid #ddd;
+}
+
+textarea {
+	border: 1px solid #ddd;
+}
+
+#human {
+	display: none;
+}
+
+
+.buttons {
+	text-align: center;
+}
+
+a.demo {
+	background-color: #3a414a;
+	padding: 8px;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	margin-bottom: 35px;
+	width: 200px;
+	margin-left: 10px;
+	border-radius: 2px;
+}
+
+a.buy {
+	background-color: #59adf6;
+	padding: 8px;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	width: 200px;
+	border-radius: 2px;
+	text-align: center;
+}
+
+.dl-block {
+	background-color: #eaeaea;
+	border-radius: 3px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.dl-block a {
+	margin-bottom: 0px;
+	color: #333;
+	padding: 30px 10px;
+	display: block;
+}
+
+.dl-block p {
+	margin-bottom: 0px;
+	color: #333;
+}
+
+.buy-block {
+	background-color: #eaeaea;
+	padding: 10px;
+	border-radius: 2px;
+}
+
+.buy-block a {
+	margin-bottom: 10px;
+	text-align: center;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+.support-icon {
+	background-color: #59adf6;
+	margin-bottom: 0;
+	border-radius: 4px;
+}
+
+.support-icon img {
+	float: left;
+	margin-right: 10px;
+}
+
+.support a {
+	padding-top: 7px;
+	display: block;
+	padding: 15px;
+	color: white;
+}
+
+.cert {
+	float: left;
+	margin-right: 20px;
+}
+
+.shot {
+	border: 1px solid #e5e5e5;
+}
+
+a.lang-link {
+	padding: 6px 20px;
+	margin-bottom: 2px;
+	display: inline-block;
+	background-color: #eee;
+	width: 120px;
+}
+
+.home-screens {
+	text-align: center;
+	padding-top: 20px;
+	clear: both;
+}
+
+.home-screens h2 {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 20px;
+	margin-bottom: 25px;
+}
+
+.home-screens img {
+	border: 1px solid #ddd;	
+}
+
+/* SMALL SCREENS ---------------------------------------------------- */
+
+@media only screen and (max-width: 800px) {
+
+.inner {
+	padding: 30px 10px;
+}
+
+.intro {
+	font-size: 20px;
+}
+/*
+.logo {
+	float: none;
+}
+
+#nav {
+	float: none;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#nav li {
+	margin: 0 7px;
+	font-size: 16px;
+}
+*/
+.headline {
+	font-size: 42px;
+	margin-top: 200px;
+}
+/*
+#footer {
+	margin: 0 10px;
+}
+
+.copyright {
+	float: none;
+}
+*/
+.soc {
+	float: left;
+}
+
+.feature {
+	max-width: 100%;
+	float: none;
+	margin: 1%;
+}
+
+.feature:last-child {
+	margin-right: 1%;
+}
+
+.feature:first-of-type {
+	margin-left: 1%;
+}
+
+.unit-80 {
+	width: 100%;
+} 
+a.demo {
+	margin-left: 0px;
+	margin-top: 10px;
+
+}
+
+}

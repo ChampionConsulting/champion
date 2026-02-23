@@ -1,0 +1,10 @@
+JSON_START{"description":"","html":"{{gal:gallery1}}","id":"Portfolio","location":"\/pages\/Portfolio","meta_custom_description":"","meta_indexed":"yes","meta_language":"","meta_no_follow":"no","meta_searchable":"yes","page_template":"default","title":"Portfolio","inline_css":"","inline_js":""}JSON_END
+
+Portfolio
+
+
+<section class="gallery-section">
+    <div class="container">
+        {{gal:gallery1}}
+    </div>
+</section>

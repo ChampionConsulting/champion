@@ -1,0 +1,50 @@
+
+<section class ="championcore tag search">
+	<form class="search" name="search" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
+		<p><?php echo $GLOBALS['lang_search_title'];?></p>
+		<input type="text" size="25" name="search" placeholder="<?php echo $GLOBALS['lang_search_placeholder'];?>" value="<?php echo $this->escape($view_model->search); ?>" required />
+		<input type="hidden" name="csrf_token" value="<?php echo $this->escape($view_model->csrf_token); ?>" />
+		<button class="login-btn"><?php echo $GLOBALS['lang_search_cta'];?></button>
+	</form>
+	
+	<?php if ((\sizeof($view_model->results) == 0) and (\strlen($view_model->search) > 0)) { ?>
+		<p><?php echo $GLOBALS['lang_search_noresults'];?></p>
+	<?php } ?>
+	
+	<?php if (\sizeof($view_model->results) > 0) { ?>
+		
+		<h3><?php echo $GLOBALS['lang_search_results'];?></h3>
+		
+		<?php foreach ($view_model->results as $value) { ?>
+			<div class="result">
+				<h4>
+					<?php if (\stripos($value['url'], '(BLOCK)') === false) { ?>
+						<?php echo $this->escape($value['title']); ?>
+					<?php } else { ?>
+						
+							<?php if (\stripos($value['title'], '/about/') !== false) { ?>
+								<a href="<?php echo \championcore\wedge\config\get_json_configs()->json->path; ?>/about">/about</a>
+								/<?php echo \str_replace('/about/', '', $value['title'] ); ?>
+							<?php } else if (\stripos($value['title'], '/home/') !== false) { ?>
+								<a href="<?php echo \championcore\wedge\config\get_json_configs()->json->path; ?>/home">/home</a>
+								/<?php echo \str_replace('/home/', '', $value['title'] ); ?>
+							<?php } else { ?>
+								<?php echo $this->escape($value['title']); ?>
+							<?php } ?>
+					<?php } ?>
+				</h4>
+				<p>
+					<?php if (\stripos($value['url'], '(BLOCK)') === false) { ?>
+						<a href="<?php echo $this->escape($value['url']); ?>"><?php echo $GLOBALS['lang_search_links'];?> <?php echo $this->escape($value['url']); ?></a>
+					<?php } else { ?>
+						<!-- No link provided -->
+					<?php } ?>
+				</p>
+				<?php foreach ($value['snippet'] as $snippet) { ?>
+					<p><?php echo $this->escape($snippet); ?></p>
+				<?php } ?>
+			</div>
+		<?php } ?>
+	<?php } ?>
+	
+</section>

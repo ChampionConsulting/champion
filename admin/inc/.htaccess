@@ -1,0 +1,29 @@
+<FilesMatch '\.(php|json)$'>
+	Order allow,deny
+	Deny from all
+</FilesMatch>
+
+<Files data_json.php>
+	Order allow,deny
+	Allow from all
+</Files>
+
+<Files editor_files.php>
+	Order allow,deny
+	Allow from all
+</Files>
+
+<Files editor_images.php>
+	Order allow,deny
+	Allow from all
+</Files>
+
+<Files gal-sort.php>
+	Order allow,deny
+	Allow from all
+</Files>
+
+<Files tracker.php>
+	Order allow,deny
+	Allow from all
+</Files>

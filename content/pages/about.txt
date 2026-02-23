@@ -1,0 +1,23 @@
+JSON_START{"description":"","html":"<!-- Masthead-->\r\n<div class=\"top-holder\" style=\"max-height: 550px;\">\r\n    <header class=\"masthead inner-page\" style=\"max-height: 50px;\">\r\n            <div class=\"masthead-heading text-uppercase\">About<\/div>\r\n            <div class=\"masthead-subheading\">The evolution of a fine firm<\/div>\r\n    <\/header>\r\n<\/div>\r\n<!-- About-->\r\n<section class=\"page-section\" id=\"about\">\r\n    <div class=\"container\">\r\n        <div class=\"text-center\">\r\n            <h2 class=\"section-heading text-uppercase\">Our timeline<\/h2>\r\n            <h3 class=\"section-subheading text-muted\">Lorem ipsum dolor sit amet consectetur.<\/h3>\r\n        <\/div>\r\n        {{block:\"about-timeline\"}}\r\n    <\/div>\r\n<\/section>","id":"about","location":"\/pages\/about","meta_custom_description":"","meta_indexed":"no","meta_language":"","meta_no_follow":"no","meta_searchable":"yes","page_template":"default","title":"About","inline_css":"","inline_js":""}JSON_END
+
+About
+
+
+
+<!-- Masthead-->
+<div class="top-holder">
+    <header class="masthead inner-page">
+            <h1 class="masthead-heading text-uppercase">About</h1>
+            <h2 class="masthead-subheading">The evolution of a fine firm</h2>
+    </header>
+</div>
+<!-- About-->
+<section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Our timeline</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        {{block:"about-timeline"}}
+    </div>
+</section>

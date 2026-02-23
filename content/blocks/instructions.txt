@@ -1,0 +1,37 @@
+<p><strong>General Instructions</strong>
+</p><ul>
+	<li>To edit any areas,
+	<ul>
+		<li>just open the folder for that page</li>
+	</ul>
+	<ul>
+		<li>click on the file you want to edit</li>
+		<li>don't forget to hit "save" at the bottom when you are finished</li>
+		<li>when adding photos - click the "center" of the photo to add a description, or to center photos, and to add links.</li>
+	</ul></li>
+	<li>files that start with the name sb_ are "super blocks" for adding "code blocks" to the page.
+	<ul>
+		<li>Things like a"calendar embed" code, Google Analytics code, etc.</li>
+	</ul></li>
+</ul><p><strong>Media:</strong>
+</p><ul>
+	<li>Add new photos to the media folder. This can be done through Champion, or through FTP
+	<ul>
+		<li>good practice - use all lowercase, and no spaces in the file name. </li>
+	</ul>
+	<ul>
+		<li>also - I put the "size" of the photo in the name in px <ul><li>ex. "logo-300X125.jpg" is a 300px wide by 125px tall file</li></ul></li>
+		<li>If you are replacing a picture - try to match the previous pictures dimensions</li>
+	</ul></li>
+	<li>You can also add other types of files like pdfs into the media folder as well</li>
+	<li>Some media "sub-folders" contain special pictures that are tied to a slideshow or "special effect" on the website. </li>
+</ul><p><strong>Blog Posts:</strong>
+</p><ul>
+	<li>create new blog posts by adding a new file in the "blog" folder</li>
+	<li>Also include "meta" content - Date (in the format mm-dd-yyyy) from the Date Picker pop-up & Title of the post</li>
+	<li>Add "draft-" before the blog file name to put it in draft mode. So, for example, with "draft-1.txt" and "draft-2.txt" both these posts will be in draft mode.
+	</li>
+	<li>##more## can be used to truncate a post and only reveal a portion of it and have the rest hidden with a 'Read More' button.
+	</li>
+</ul><p>Full documentation on the Champion CMS can be found here - <a href="http://help.championcms.com/">http://help.championcms.com/</a>
+</p><p><strong></strong>If you have any questions  - please contact me at <a href="mailto:myemail@myemail.com">myemail@myemail.com</a> or call me at (123) 555-1212</p>

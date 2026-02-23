@@ -1,0 +1,23 @@
+
+<style><?php include (__DIR__ . '/asset/plugin.css'); ?></style>
+
+<section class="sb_login animated fadeInDown">
+
+	<img src="<?php echo $view_model->base_url; ?>/content/media/branding/logo.png" width="80" height="auto" alt="Site logo" />
+	
+	<form class="sb_form" name="login" action="" method="post">
+			<?php if (\strlen($view_model->state->message) > 0) { ?>
+				<p><?php echo \htmlentities($view_model->state->message); ?></p>
+			<?php } ?>
+			
+			<input type="password" size="25" name="standalone_sb_login_password" placeholder="<?php echo $GLOBALS['lang_login_password']; ?>" autofocus required />
+			<?php if (\strlen($view_model->state->otp_shared_secret) > 0) { ?>
+				<input type="password" size="25" name="standalone_sb_login_otp"    placeholder="<?php echo $GLOBALS['lang_login_otp']; ?>" required />
+				<?php /*echo $view_model->otp_now;*/  ?>
+			<?php } else { ?>
+				<input type="hidden" name="standalone_sb_login_otp" value="" />
+			<?php } ?>
+			<input type="submit" name="standalone_sb_login_tx" class="btn login-btn" value="<?php echo $GLOBALS['lang_login_button'];?>" />
+			<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+	</form>
+</section>

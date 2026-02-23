@@ -1,0 +1,23 @@
+
+<div class="championcore">
+
+	<h1><?php echo $GLOBALS['lang_update_updating_title']; ?></h1>
+
+	<div class="championcore">
+
+		<!-- tracking progress -->
+		<form action="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=update_updating" method="post">
+			
+			<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+			
+			
+			<div class="spinner">
+				<div class="animated"></div>
+				<div class="content">
+					<p><?php echo \htmlentities( \sprintf( $GLOBALS['lang_update_updating_progress'], 0, 0, 0) ); ?></p>
+				</div>
+			</div>
+		
+		</form>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+
+<h1><?php echo $GLOBALS['lang_debug_info_title']; ?></h1>
+
+<p><?php echo $GLOBALS['lang_debug_info_path']; ?>: <?php echo \championcore\wedge\config\get_json_configs()->json->path; ?></p>
+
+<h3><?php echo $GLOBALS['lang_debug_info_title_sub']; ?></h3>
+
+<table>
+	<tbody>
+		<?php foreach ($view_model->dirs as $key => $value) { ?>
+			<tr>
+				<td><?php echo $this->escape($key); ?></td>
+				<td><?php echo $this->escape($value); ?></td>
+			</tr>
+		<?php } ?>
+	</tbody>
+</table>
+
+<form action="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=debug_info" method="post">
+	<h4><?php echo $GLOBALS['lang_debug_info_text']; ?></h4>
+	<p>
+		<button style="margin-left: 0px; cursor: pointer;" class="cancel btn toggle_duplicate_btn"> <?php echo $GLOBALS['lang_debug_info_title']; ?> <?php echo $GLOBALS['lang_debug_info_button']; ?></button>
+		
+	</p>
+</form>
+<p>
+	 <a href="index.php?p=log_viewer" style="margin-left: 0px; cursor: pointer;" class="cancel btn toggle_duplicate_btn"> <?php echo $GLOBALS['lang_settings_manage_log_viewer']; ?></a>
+ </p>

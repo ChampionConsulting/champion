@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- Begin JaguarPC -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<!-- Begin Header -->
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dedicated Server Overview - Supermicro, Linux, Windows Servers @ JaguarPC</title>
+<meta name= "description" content= "We've been providing hosting since 1998. We own all our own equipment and keep a vast stock of spare hardware onsite with our own onsite technicians. #@" />
+<meta name= "keywords" content= "dedicated servers" />
+		
+		<!-- Stylesheets -->
+		<link type="text/css" rel="stylesheet" href="../cssfiles/main.css" media="screen" />
+<script src="../js/contentslider.js" type="text/javascript"></script>
+		<link type="text/css" rel="stylesheet" href="../cssfiles/jquery.fancybox.css" media="screen" />
+		
+		<!-- Javascripts -->
+		<script type="text/javascript" src="../http/ajax.googleapis.com/ajax/libs/jquery/1.3.2/MS_9.js"></script>
+		<script type="text/javascript" src="../jsfiles/typeface.js"></script>
+		<script type="text/javascript" src="../jsfiles/dakota_regular.typeface.js"></script>
+		<script type="text/javascript" src="../jsfiles/easing.js"></script>
+		<script type="text/javascript" src="../jsfiles/jquery.flow.1.2.min.js"></script>
+		<script type="text/javascript" src="../jsfiles/fancybox.js"></script>
+		<script type="text/javascript" src="../jsfiles/ready.js"></script>
+		
+		<script type="text/javascript" src="../js/prototype.js"></script>
+<script type="text/javascript" src="../js/MS_20.html"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<link rel="stylesheet" href="../cssfiles/lightbox.css" type="text/css" media="screen" />
+
+	</head>
+	<!-- /Header -->
+
+<!-- Begin Body -->	
+<body>
+	
+	<!-- Page Header -->
+	<!-- ClickTale Top part -->
+<script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script>
+
+<!-- Page Header -->
+<div id="header-wrap-bkg">
+  <div id="header-wrap">
+    <!-- Logo -->
+    <div id="Left-Tab"> <a href="../index.html"><img src="../images/logo-top.png" alt="Jaguarpc Web Hosting"/></a> </div>
+    <!-- Top Icons -->
+    <div id="top-tab">
+      <ul class="Top-Tabs-List">
+        <li> <a href="https://secure.jaguarpc.com/clients/" class="Top-Tabs"> <img src="../images/icons/client-login.png" class="Unbordered Top-Image-Align" alt="Client Login" /> Client Login </a> </li>
+        <li> <a href="http://forums.jaguarpc.com/" class="Top-Tabs"> <img src="../images/icons/live-chat.png" class="Unbordered Top-Image-Align" alt="Community Forum" /> Community </a> </li>
+        <li> <a href="../contact.php.html" class="Top-Tabs"> <img src="../images/icons/contact-us.png" class="Unbordered Top-Image-Align" alt="Contact JaguarPC" /> Contact Us </a> </li>
+        <li> <a href="http://blog.jaguarpc.com/" class="Top-Tabs"> <img src="../images/icons/live-chat.png" class="Unbordered Top-Image-Align" alt="JaguarPC Blog" /> Blog </a> </li>
+      </ul>
+    </div>
+	
+    <div id="top-tab02" style="padding-left:25px">
+	<script type="text/javascript" src="../https/apis.google.com/js/MS_1187.js"></script>
+     <g:plusone count="false"></g:plusone>
+    </div>
+	
+	
+    <!-- <div id="top-tab02">
+      <ul class="Top-Tabs-List">
+       
+        <li> <div style="width:52px;overflow:hidden;"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/jaguarpc" send="false" width="90" show_faces="false" font=""></fb:like></div></li>
+		
+      </ul>
+    </div> -->
+	
+    <div style="font-size:20px; float:right; margin-top:3px; width:460px; color:#808080; font-weight:bold;text-align: right;">
+     CALL US: (888) 338-5261<br />
+    </div>
+  </div>
+  <div class="Clear-Both"></div>
+</div>
+<!-- /Page Header -->
+<!-- Navigation -->
+<div id="nav">
+  <ul>
+    <li><a href="../web-hosting/index.html" title="Web Hosting">Web Hosting</a></li>
+    <li><a href="../vps-hosting/index.html" title="VPS Hosting">VPS Hosting</a></li>
+    <li><a href="../hybrid-server/index.html" title="Hybrid Server Hosting">Hybrid Servers</a></li>
+    <li><a href="index.html" title="Dedicated Server Hosting">Dedicated Servers</a></li>
+    <li><a href="../about/whyjag.php.html" title="Web Host">Why Jag</a></li>
+    <li><a href="../support/index.html" title="Best Hosting Support">Support</a></li>
+  </ul>
+</div>
+<!-- /Navigation -->
+	<div class="Clear-Both"></div>
+	<div id="divBottomRight" style="position:absolute">
+<!-- Codes by Quackit.com -->
+<script type="text/javascript">
+// Popup window code
+function newPopup(url) {
+	popupWindow = window.open(
+		url,'popUpWindow','height=375,width=508,left=10,top=10,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no,status=yes')
+}
+</script>
+
+<a href="JavaScript:newPopup('../chatsupport.html');"><img src="../https/secure.jaguarpc.com/images/MS_3.html" alt="" /></a></div>
+<script type="text/javascript">
+var ns = (navigator.appName.indexOf("Netscape") != -1);
+var d = document;
+var px = document.layers ? "" : "px";
+function JSFX_FloatDiv(id, sx, sy)
+{
+	var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id];
+	window[id + "_obj"] = el;
+	if(d.layers)el.style=el;
+	el.cx = el.sx = sx;el.cy = el.sy = sy;
+	el.sP=function(x,y){this.style.left=x+px;this.style.top=y+px;};
+	el.flt=function()
+	{
+		var pX, pY;
+		pX = (this.sx >= 0) ? 0 : ns ? innerWidth : 
+		document.documentElement && document.documentElement.clientWidth ? 
+		document.documentElement.clientWidth : document.body.clientWidth;
+		pY = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+		document.documentElement.scrollTop : document.body.scrollTop;
+		if(this.sy<0) 
+		pY += ns ? innerHeight : document.documentElement && document.documentElement.clientHeight ? 
+		document.documentElement.clientHeight : document.body.clientHeight;
+		this.cx += (pX + this.sx - this.cx)/8;this.cy += (pY + this.sy - this.cy)/8;
+		this.sP(this.cx, this.cy);
+		setTimeout(this.id + "_obj.flt()", 40);
+	}
+	return el;
+}
+
+JSFX_FloatDiv("divBottomRight", -200, -100).flt();
+
+</script>
+	
+	<!-- Navigation -->
+	<!-- /Navigation -->
+
+	<!-- Slider -->
+	<div id="Small-Slider-Green">
+		
+		<div id="Small-Slider-Content">
+		
+		<h1>Our Dedicated Servers...</h1>
+		<div class="typeface-js" style="font-family: Dakota">We're proud to detail our server offerings. We own all our equipment! </div>
+		
+		<!-- Links -->
+		<ul>
+			<li class="Slider-List">
+				<a href="index.html" class="Slider-Links">Dedicated Servers</a>
+			</li>
+			<li class="Slider-List">
+				<a href="addons.php.html" class="Slider-Links">Server Addons</a>
+			</li>
+			<li class="Slider-List">
+				<a href="specials.php.html" class="Slider-Links">Server Bargains</a>
+			</li>
+			<li class="Slider-List">
+				<a href="../services/backups.php.html" class="Slider-Links">Backups</a>
+			</li>
+			<li class="Slider-List">
+				<a href="../about/network.php.html" class="Slider-Links">Network &amp; Datacenters</a>
+			</li>
+		</ul>
+		
+		</div>
+		
+	</div>	
+	
+	<div class="bred-crumb">
+	<ul>
+	<li style="color:#000000;">You are here &nbsp;  &raquo;&raquo;</li>
+	<li><a href="../index.html">Home</a></li>
+	<li><a href="index.html">Dedicated Server</a></li>
+	<li><a href="overview.php.html" class="active">Our Servers overview</a></li>
+	</ul>
+	</div>
+
+	<!-- Definition  -->
+	<div id="Definition">
+		<img src="../images/boxes/big-box-three.png" alt="" class="Float-Left" />
+		<p>
+			<span style="color:#333333;">Dedicated Servers Done Right!</span> - Unlike the competition, we're excited to show and detail exactly what we sell here at JaguarPC. Real quality Supermicro servers supported by real talented people.</p>
+	</div>	
+	
+	<!-- Content -->
+	
+	<div id="Subpage-Wrapper">
+		
+		<!-- Content Box -->
+		<div id="Left-Content">
+			
+        	<div class="Content-Header">
+			<h2><span style="color: #7A9900;">SuperMicro Servers</span> Quality Matters!</h2>
+			</div>
+			<p class="Content-Paragraph">
+				We own all our own equipment and keep a vast stock of spare hardware onsite with our own onsite technicians. When
+				it comes to equipment quality matters. SuperMicro equipment may cost more but when it comes to uptime and hardware
+				there is no substitute. We've been providing hosting since 1998 and thanks to our partners, size, and purchasing power
+				we are able to deliver these quality products at competitive prices. In short JaguarPC dedicated servers are a 
+				tremendous value. 
+	    </p>
+			
+			<p class="Content-Header">
+				<span style="color: #7A9900;">Intel Processors,</span> Multi Core:
+		  </p>
+			
+			<table class="Plan-Comparison">
+                    
+                    <tr>
+                        <td width="20%" class="Table-Header Centre"><p style="color: #7A9900;">Processor</p></td>
+                        <td width="15%" class="Table-Header Centre"><p style="color: #7A9900;">CPU Speed</p></td>
+                        <td width="15%" class="Table-Header Centre"><p style="color: #7A9900;">CPU Cache</p></td>
+                        <td width="20%" class="Table-Header Centre"><p style="color: #7A9900;">Hard Disk</p></td>		
+                        <td width="15%" class="Table-Header Centre"><p style="color: #7A9900;">Memory</p></td>
+                        <td width="15%" class="Table-Header Centre">&nbsp;</td>
+                    </tr>		
+                    
+                    <tr>
+                        <td class="Table-Cell-One Centre"><p>Intel i5-2500</p></td>
+                        <td class="Table-Cell-One Centre"><p>4 x 3.3Ghz</p></td>
+                        <td class="Table-Cell-One Centre"><p>6 MB</p></td>
+                        <td class="Table-Cell-One Centre"><p>1 x 1TB Sata</p></td>					
+                        <td class="Table-Cell-One Centre"><p>8GB DDR3</p></td>
+                        <td class="Table-Cell-One Centre"><a href="details/i5.php.html"><img class="valign" src="../images/details.png" alt="More Information" width="100" height="25" /></a></td>
+                    </tr>				
+                    <tr>
+                        <td class="Table-Cell-One Centre"><p>Intel Xeon E3-1230</p></td>
+                        <td class="Table-Cell-One Centre"><p>4 x 3.2Ghz</p></td>
+                        <td class="Table-Cell-One Centre"><p>8 MB</p></td>
+                        <td class="Table-Cell-One Centre"><p>2 x 500GB Sata</p></td>					
+                        <td class="Table-Cell-One Centre"><p>4GB ECC</p></td>
+                        <td class="Table-Cell-One Centre"><a href="details/e3.php.html"><img class="valign" src="../images/details.png" alt="More Information" width="100" height="25" /></a></td>
+                    </tr>				
+                    <tr>
+                        <td class="Table-Cell-One Centre"><p>Intel Xeon E5606</p></td>
+                        <td class="Table-Cell-One Centre"><p>4 x 2.13Ghz</p></td>
+                        <td class="Table-Cell-One Centre"><p>8 MB</p></td>
+                        <td class="Table-Cell-One Centre"><p>4 x 1TB Sata</p></td>					
+                        <td class="Table-Cell-One Centre"><p>16GB ECC</p></td>
+                        <td class="Table-Cell-One Centre"><a href="details/e5.php.html"><img class="valign" src="../images/details.png" alt="More Information" width="100" height="25" /></a></td>
+                    </tr>				
+                    <tr>
+                        <td colspan="6"><br /></td>
+                    </tr>
+                    
+        </table>
+        
+        
+        <p class="Content-Header">
+				<span style="color: #7A9900;">JaguarPC Servers</span> Images:
+		  </p>
+			
+			<div>
+            	<div class="pb Float-Left">
+				<a href="../images/screenshots/fs/dc-1.jpg" rel="lightbox" title="Our servers"><img src="../images/screenshots/thumb/dc-1.jpg" width="200" height="100" alt="" /></a>
+                 <div class="text"><p>Server Isle Two</p></div>
+				</div>
+				
+				<div class="pb Float-Left">
+				<a href="../images/screenshots/fs/dc-7.jpg" rel="lightbox" title="Our servers"><img src="../images/screenshots/thumb/dc-7.jpg" alt="" width="200" height="100" /></a>
+                <div class="text"><p>Our Servers</p></div>
+				</div>
+				
+	  			<div class="pb Float-Left">
+				<a href="../images/screenshots/fs/dc-8.jpg" rel="lightbox" title="Our servers"><img src="../images/screenshots/thumb/dc-8.jpg" alt="" width="200" height="100" /></a>
+                <div class="text"><p>Our Servers</p></div>
+				</div>
+                
+            	<div class="pb Float-Left">
+				<a href="../images/screenshots/fs/dc-9.jpg" rel="lightbox" title="Our servers"><img src="../images/screenshots/thumb/dc-9.jpg" alt="" width="200" height="100" /></a>
+                <div class="text"><p>Our Servers</p></div>
+	  			</div>
+				
+				<div class="pb Float-Left">
+				<a href="../images/screenshots/fs/dc-10.jpg" rel="lightbox" title="Our servers"><img src="../images/screenshots/thumb/dc-10.jpg" alt="" width="200" height="100" /></a>
+                <div class="text"><p>Our Servers</p></div>
+	  			</div>
+				
+	  			<div class="pb Float-Left">
+				<a href="../images/screenshots/fs/uk-1.jpg" rel="lightbox" title="Our servers"><img src="../images/screenshots/thumb/uk-1.jpg" alt="" width="200" height="100" /></a>
+                <div class="text"><p>Our Servers</p></div>
+	  			</div>
+				
+            	<div class="pb Float-Left">
+				<a href="../images/screenshots/fs/boxed.jpg" rel="lightbox" title="new in box"><img src="../images/screenshots/thumb/boxed.jpg" width="200" height="100" alt="" /></a>
+                 <div class="text"><p>Server Isle Two</p></div>
+				</div>
+				
+				<div class="pb Float-Left">
+				<a href="../images/screenshots/fs/top.jpg" rel="lightbox" title="server top view"><img src="../images/screenshots/thumb/top.jpg" alt="" width="200" height="100" /></a>
+                <div class="text"><p>Our Servers</p></div>
+				</div>
+				
+	  			<div class="pb Float-Left">
+				<a href="../images/screenshots/fs/2u.jpg" rel="lightbox" title="2u"><img src="../images/screenshots/thumb/2u.jpg" alt="" width="200" height="100" /></a>
+                <div class="text"><p>Our Servers</p></div>
+				</div>
+                
+                
+			</div>
+			
+    </div>
+		
+		<!-- Right Bar -->
+		<div id="Right-Bar">
+			
+   <div class="Right-Content-Box">
+      <div class="Clear-Both"><a href="JavaScript:newPopup('../chatsupport.html');"><img src="../images/live-chat.gif" alt="" border="0" /></a></div>
+    </div><div class="Right-Content-Box">
+      <div class="Clear-Both"> <a href="../contact.php.html"><img src="../images/callus.gif" alt="" width="203" height="73" border="0" /></a> </div>
+    </div><div class="Right-Content-Box">
+      <div class="Clear-Both"> <a href="http://www.facebook.com/jaguarpc" target="_new"><img src="../images/facebook.gif" alt="" width="207" height="74" border="0" /></a> </div>
+    </div>
+	<div class="Right-Content-Box">
+      <div class="Clear-Both"> <a href="http://twitter.com/" target="_new"><img src="../images/twitter.gif" alt="" width="199" height="78" border="0" /></a> </div>
+    </div>
+	<div class="Right-Content-Box">
+      <div class="Clear-Both"><img src="../images/authorize.jpg" alt="" width="197" height="66" border="0" /></div>
+    </div>
+			<div class="Clear-Both"></div>
+
+			
+	<div class="shadow-box">
+      <div class="shd-curv1"><span class="Bold">Award Winning Support</span></div>
+      <div class="shd-mid">
+        <img src="../images/icons/aws.png" alt="best customer support" width="36" height="36" class="Float-Left Icon-Margins" />
+				
+				<p>
+					Since 1998 JaguarPC has won hundreds of awards across the industry for our stellar support. Call us 24x7 to give it a try!
+				</p>
+      </div>
+      <div class="shd-curv"><img src="../images/shadow-btm.gif" alt="" width="268" height="6" /></div>
+    </div>
+											
+			<div class="shadow-box">
+      <div class="shd-curv1"><span class="Bold">100% Network Uptime</span></div>
+      <div class="shd-mid">
+        <img src="../images/icons/uptime-guarantee.png" alt="XCART Ready Hosting" width="36" height="36" class="Float-Left Icon-Margins-16" />
+            
+            <p>Simple 100% network uptime guarantee or 10x credit for a network problem. </p>
+      </div>
+      <div class="shd-curv"><img src="../images/shadow-btm.gif" alt="" width="268" height="6" /></div>
+    </div>
+						
+			<div class="shadow-box">
+      <div class="shd-curv1"><span class="Bold">FREE Migration Assistance </span></div>
+      <div class="shd-mid">
+       <img src="../images/icons/migration.png" alt="XCART Ready Hosting" width="36" height="36" class="Float-Left Icon-Margins-16" />
+                
+			  <p>We are migration experts. We will help you move all your sites and clients seemlessly without downtime. </p>
+      </div>
+      <div class="shd-curv"><img src="../images/shadow-btm.gif" alt="" width="268" height="6" /></div>
+    </div>
+	
+	<div class="rgt-box01">
+      <div class="shd-curv1">Other Areas.</div>
+      <div class="shd-mid">
+        <p class="Right-List"><img src="../images/icons/account.png" alt="" width="24" height="24" class="Float-Left Icon-Margins" /><a href="managed.php.html">Managed Service</a></p>
+        <p class="Right-List"> <img src="../images/icons/group_data.png" alt="" width="24" height="24" class="Float-Left Icon-Margins"/><a href="../about/network.php.html">Network &amp; Datacenters</a></p>
+        <p class="Right-List"><img src="../images/icons/Refresh.png" alt="" width="24" height="24" class="Float-Left Icon-Margins"/><a href="../affiliates/index.html">Affiliates Program</a></p>
+        <p class="Right-List"><img src="../images/icons/special-offer.png" alt="" width="24" height="24" class="Float-Left Icon-Margins" /><a href="../about/policy-sla.php.html">Server Level Agreement</a></p>  
+        <p class="Right-List"><img src="../images/icons/forum_24.png" alt="" width="24" height="24" class="Float-Left Icon-Margins"/><a href="../forums/index.html">Community Forum</a></p>
+        <p class="Right-List"><img src="../images/icons/blogger.png" alt="" width="24" height="24" class="Float-Left Icon-Margins" /><a href="https://blog.jaguarpc.com/">Blog</a></p>
+      </div>
+      <div class="shd-curv"><img src="../images/shadow-btm.gif" alt="" width="268" height="6" /></div>
+    </div>
+
+				<!-- Begin Right List -->
+	<script type="text/javascript">
+
+featuredcontentslider.init({
+	id: "slider1",  //id of main slider DIV
+	contentsource: ["inline", ""],  //Valid values: ["inline", ""] or ["ajax", "path_to_file"]
+	toc: "#increment",  ../http/valid values/MS_1188.html "#increment", "markup", ["label1", "label2", etc]
+	nextprev: ["", ""],  //labels for "prev" and "next" links. Set to "" to hide.
+	revealtype: "mouseover", ../http/behavior of pagination links to reveal the slides/MS_1189.html "click" or "mouseover"
+	enablefade: [true, 0.1],  //[true/false, fadedegree]
+	autorotate: [true, 5000],  //[true/false, pausetime]
+	onChange: function(previndex, curindex){  //event handler fired whenever script changes slide
+		//previndex holds index of last slide viewed b4 current (1=1st slide, 2nd=2nd etc)
+		//curindex holds index of currently shown slide (1=1st slide, 2nd=2nd etc)
+	}
+})
+
+</script>
+				
+	</div>
+		<!-- /Right Bar -->
+		
+	<div class="Clear-Both"></div>	
+		
+	</div>
+	<!-- /Content -->	
+	
+<div class="Clear-Both"></div>
+
+<!-- Begin Footer -->
+<!-- Begin Footer -->
+
+<div id="Footer">
+  <div class="Top-Awards">
+    <div class="Logo-Types">
+      <!-- Icons ->
+      Left -->
+      <div style="float:left; width:500px;"> <br />
+<a name="trustlink" href="http://secure.trust-guard.com/certificates/5785" target="_blank"
+onclick="var nonwin=navigator.appName!='Microsoft Internet Explorer'?'yes':'no'; window.open(this.href.replace('http', 'https'),'welcome','location='+nonwin+',scrollbars=yes,width=517,height='+screen.availHeight+',menubar=no,toolbar=no'); return false;">
+<img name="trustseal" alt="Security Seal" style="border: 0;" src="../https/secure.trust-guard.com/seals/5785/pci/mini/MS_1190.html" /></a>
+
+<a name="trustlink" href="http://secure.trust-guard.com/certificates/5785" target="_blank"
+onclick="var nonwin=navigator.appName!='Microsoft Internet Explorer'?'yes':'no'; window.open(this.href.replace('http', 'https'),'welcome','location='+nonwin+',scrollbars=yes,width=517,height='+screen.availHeight+',menubar=no,toolbar=no'); return false;">
+<img name="trustseal" alt="Trust Guard Certified" style="border: 0;" src="../https/secure.trust-guard.com/seals/5785/certified/mini/MS_1191.html" /></a>
+
+<a name="trustlink" href="http://secure.trust-guard.com/certificates/5785" target="_blank"
+onclick="var nonwin=navigator.appName!='Microsoft Internet Explorer'?'yes':'no'; window.open(this.href.replace('http', 'https'),'welcome','location='+nonwin+',scrollbars=yes,width=517,height='+screen.availHeight+',menubar=no,toolbar=no'); return false;">
+<img name="trustseal" alt="Privacy Verified Seal" style="border: 0;" src="../https/secure.trust-guard.com/seals/5785/privacy/mini/MS_1192.html" /></a>
+
+<a name="trustlink" href="http://secure.trust-guard.com/certificates/5785" target="_blank"
+onclick="var nonwin=navigator.appName!='Microsoft Internet Explorer'?'yes':'no'; window.open(this.href.replace('http', 'https'),'welcome','location='+nonwin+',scrollbars=yes,width=517,height='+screen.availHeight+',menubar=no,toolbar=no'); return false;">
+<img name="trustseal" alt="Business Verified Seal" style="border: 0;" src="../https/secure.trust-guard.com/seals/5785/business/mini/MS_1193.html" /></a>
+
+	<!--<a href="#"><img src="http://www.jaguarpc.com/images/footer/truste.gif" alt="" width="108" height="33" border="0" /></a>#-->
+	
+	</div>
+      <!-- <a target='_blank'  rel="nofollow" href='http://www.bbbonline.org/cks.asp?id=1081022121914'><img src="images/footer/bbb.jpg" class="Float-Left Award-Spacing" alt="" title='Click to verify BBB accreditation and to see a BBB report.' /></a> #-->
+      <!-- Icons ->
+      Right -->
+      <div style="float:right; width:280px; height:auto;">
+        <div style="font-family:Arial, Helvetica, sans-serif ; font-size:16px; font-weight:bold; float:left; padding-right:10px; color:#605f5f; padding-top:17px;">Get Social:</div>
+		<div style="float:left;"> 
+		<a href="http://forums.jaguarpc.com"><img src="../images/footer/vbulletin-icon.png" alt="Community Forum" width="33" height="35" border="0" class="Float-Right Award-Spacing" /></a>
+		<a href="http://blog.jaguarpc.com/"><img src="../images/footer/blg-icon.gif" alt="JaguarPC Blog" width="33" height="35" border="0" class="Float-Right Award-Spacing" /></a>
+		<a href="http://twitter.com/"><img src="../images/footer/twitter-icon.png" alt="JaguarPC twitter" width="33" height="35" border="0" class="Float-Right Award-Spacing" /></a>
+		<a href="http://www.facebook.com/jaguarpc"><img src="../images/footer/facebook-icon.gif" alt="JaguarPC facebook" width="33" height="35" border="0" class="Float-Right Award-Spacing" /></a>
+          <!--<img src="/images/footer/del.png" alt="delicious" width="33" height="35" class="Float-Right Award-Spacing" />#-->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="Clear-Both"></div>
+  <!-- Footer ->
+  Content -->
+  <div id="Footer-Content">
+    <!-- Footer ->
+    Content -> Block 1 -->
+    <div class="Footer-Block">
+      <ul class="Footer-Links">
+        <li class="Unbulleted-List"><a href="../web-hosting/index.html" title="Hosting Services" class="Footer-Link">Web Hosting</a></li>
+        <li class="Unbulleted-List"><a href="../reseller-hosting/index.html" title="cpanel Reseller Hosting" class="Footer-Link">Reseller Hosting</a></li>
+        <li class="Unbulleted-List"><a href="index.html" title="Dedicated Servers" class="Footer-Link">Dedicated Servers</a></li>
+        <li class="Unbulleted-List"><a href="../vps-hosting/linux-vps.php.html" title="Linux vps Hosting" class="Footer-Link">Linux VPS Hosting</a></li>
+        <li class="Unbulleted-List"><a href="../vps-hosting/index.html" title="vps Hosting" class="Footer-Link">VPS Hosting</a></li>
+      </ul>
+    </div>
+    <!-- Footer ->
+    Content -> Separator -->
+    <div class="Footer-Separator"> &nbsp; </div>
+    <!-- Footer ->
+    Content -> Block 2 -->
+    <div class="Footer-Block">
+      <ul class="Footer-Links">
+        <li class="Unbulleted-List"><a href="../articles.php.html" title="Specialty Hosting" class="Footer-Link">Hosting Specialties</a></li>
+        <li class="Unbulleted-List"><a href="../affiliates/index.html" title="Hosting Affiliate program" class="Footer-Link">Affiliate Program</a></li>
+        <li class="Unbulleted-List"><a href="../about/index.html" title="The Company" class="Footer-Link">About Our Company</a></li>
+        <li class="Unbulleted-List"><a href="../about/team.php.html" title="About Hosting" class="Footer-Link">Talented Hosting Team</a></li>
+        <li class="Unbulleted-List"><a href="../about/network.php.html" title="Datacenter and Network" class="Footer-Link">Datacenter &amp; Network</a></li>
+      </ul>
+    </div>
+    <!-- Footer ->
+    Content -> Separator -->
+    <div class="Footer-Separator"> &nbsp; </div>
+    <!-- Footer ->
+    Content -> Block 3 -->
+    <div class="Footer-Block">
+      <ul class="Footer-Links">
+        <li class="Unbulleted-List"><a href="../services/index.html" title="Hosting Services" class="Footer-Link">Hosting Services</a></li>
+        <li class="Unbulleted-List"><a href="http://blog.jaguarpc.com/" title="Web Hosting Blog" class="Footer-Link">Hosting Blog</a></li>
+        <li class="Unbulleted-List"><a href="http://forums.jaguarpc.com" title="Hosting community" class="Footer-Link">WebHost Community</a></li>
+        <li class="Unbulleted-List"><a href="../about/policy-tos.php.html" title="TOS" class="Footer-Link">Terms Of Service</a></li>
+        <li class="Unbulleted-List"><a href="../sitemap.php.html" title="Hosting Sitemap" class="Footer-Link">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="Copyright">
+  <p class="Paragraph-Padding" align="center">Copyright &copy; 2012 JaguarPC.com</p>
+</div>
+<!-- /Footer -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2067038-1']);
+  _gaq.push(['_setDomainName', 'jaguarpc.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https/MS_1238.html' : 'http/MS_1239.html') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- ClickTale Bottom part -->
+<div id="ClickTaleDiv" style="display: none;"></div>
+<script type='text/javascript'>
+document.write(unescape("%3Cscript%20src='"+
+ (document.location.protocol=='https:'?
+  'https://clicktale.pantherssl.com/':
+  'http://s.clicktale.net/')+
+ "WRc5.js'%20type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var ClickTaleSSL=1;
+if(typeof ClickTale=='function') ClickTale(1272,1,"www08");
+</script>
+<!-- ClickTale end of Bottom part -->
+
+<script type="text/javascript">
+adroll_adv_id = "OT62MHCQUFDXPKN5TXCDPV";
+adroll_pix_id = "LQHM2CORIBD3JEQS4MRVCL";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "../https/MS_1194.html" : "../http/MS_1195.html");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "../j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+<!-- /Footer -->
+</body>
+<!-- /Body -->
+
+</html>
+<!-- /JaguarPC -->

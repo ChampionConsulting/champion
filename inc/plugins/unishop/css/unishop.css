@@ -1,0 +1,1036 @@
+/* ==== Shop Grid === */
+
+.unishop *, .unishop::after, .unishop::before{
+ box-sizing: unset;  /* added so full width on standard width */
+}
+
+.unishop, 
+.unishop-item, 
+.unishop-sizer,
+.unishop-list,
+.unishop-cart-orders {
+	list-style: none!important;
+	margin: 0;
+	padding: 0;
+}
+
+.unishop-item-info a,
+.unishop-item-info a:hover,
+.unishop-overlay a,
+.unishop-overlay a:hover,
+.unishop-menu a,
+.unishop-menu a:hover,
+.unishop-modal a,
+.unishop-modal a:hover {
+	text-decoration: none;
+	outline: none;
+	color: inherit;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+.unishop-sizer {
+	height: 0!important;
+	padding: 0!important;
+	margin: 0!important;
+}
+
+.unishop {
+  position: relative;
+  width: 85%;
+  max-width: 450px;
+  margin: 25px auto;
+  /* shop base font size */
+  font-size: 16px; 
+  line-height: 24px;
+}
+
+.unishop-menu::after,
+.unishop::after,
+.unishop-modal-content::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.unishop-col-one,
+.unishop-col-two,
+.unishop-col-three {
+  float: left;
+  width: 100%;
+}
+
+/* larger than smartphone */
+@media only screen and (min-width: 540px) { 
+	.unishop { }
+}
+
+/* larger than tablet */
+@media only screen and (min-width: 720px) {
+	.unishop { max-width: none; }
+	.unishop-col-two,
+	.unishop-col-three { width: 50%; }
+}
+
+/* larger than desktop */
+@media only screen and (min-width: 960px) {
+	.unishop { max-width: 1024px; }
+	.unishop-col-one { width: 100%; }
+	.unishop-col-two { width: 50%; }
+	.unishop-col-three { width: 33.33%; }
+}
+
+/* ===== Buttons ==== */
+
+.unishop .unishop-button,
+.unishop .unishop-button-secondary {
+	display: inline-block;
+	padding: 7px 15px;
+	margin: 0 0 5px 7px;
+	border-radius: 3px;
+	border: 1px solid transparent;
+	font-weight: bold;
+	color: #fff;
+	font-size: 14px;
+	min-width: 80px;
+	text-align: center;
+	background-color: #333;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.unishop .unishop-button:hover {
+	background-color: #222;
+	color: #fff;
+}
+
+.unishop .unishop-button-secondary {
+	background: none;
+	color: #555;
+	border: 1px solid #eee;
+}
+
+.unishop .unishop-button-secondary:hover {
+	color: #222;
+	border-color: #999;
+}
+
+/* ===== Input Elements ===== */
+
+.unishop input[type="text"] {
+	border: 1px solid #eee;
+	background-color: #f8f8f8;
+	outline: none;
+	padding: 7px;
+	line-height: inherit;
+	margin: 0 0 10px 0;
+	border-radius: 3px;
+}
+
+
+
+/* ===== Items ==== */
+
+.unishop-list {
+	position: relative;
+	width: 100%;
+	-webkit-transition: -webkit-transform 0.5s ease;
+	-moz-transition: -moz-transform 0.5s ease;
+	-o-transition: -o-transform 0.5s ease;
+	transition: transform 0.5s ease;
+}
+
+.unishop-item {
+	position: relative;
+	padding: 5px;
+	box-sizing: border-box;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.unishop-item .unishop-item-photo {
+	position: relative;
+	overflow: hidden;
+}
+
+.unishop-item .unishop-item-thumbs img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+}
+
+.unishop-item .unishop-thumbs-multiple a:last-child {
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 100%;
+	opacity: 0;
+}
+
+.unishop-item-thumbs.unishop-thumbs-loading .unishop-modal-link {
+	opacity: 0!important;
+}
+
+.unishop-item-thumbs.unishop-thumbs-loading {
+	min-height: 240px;
+	background: url('data:image/gif;base64,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') no-repeat center;
+}
+
+
+.unishop-thumbs-pagination {
+	position: absolute; 
+	bottom: 10px;
+	left: 50%;
+	margin-left: -17px;
+	z-index: 20;
+	color: #fff;
+	line-height: 0;
+}
+
+.unishop-thumbs-pagination span {
+	display: inline-block;
+	width: 15px;
+	height: 2px;
+	margin-right: 4px;
+	background: #fff;
+	-webkit-transition: background 0.3s ease 0.3s;
+	-moz-transition: background 0.3s ease 0.3s;
+	-o-transition: background 0.3s ease 0.3s;
+	transition: background 0.3s ease 0.3s;
+}
+
+.unishop-thumbs-pagination span:first-child {
+	background: #333;
+}
+
+.unishop-thumbs-hover .unishop-thumbs-pagination span:last-child {
+	background: #333;
+}
+
+.unishop-thumbs-hover .unishop-thumbs-pagination span:first-child {
+	background: #fff;
+}
+
+.unishop-item .unishop-thumbs-multiple a {
+	display: block;
+	-webkit-transition: opacity 0.6s linear 0.1s;
+	-moz-transition: opacity 0.6s linear 0.1s;
+	-o-transition: opacity 0.6s linear 0.1s;
+	transition: opacity 0.6s linear 0.1s;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.unishop-item .unishop-thumbs-hover a:first-child {
+	opacity: 0;
+}
+
+.unishop-item .unishop-thumbs-hover a:last-child {
+	opacity: 1;
+}
+
+.unishop-item .unishop-sale-discount {
+	position: absolute;
+	top: 20px; 
+	right: 20px;
+	padding: 2% 5%;
+	color: #fff;
+	font-weight: bold;
+	background: #d15658;
+	text-align: center;
+	font-size: 14px;
+	border-radius: 50px;
+}
+
+.unishop-item .unishop-item-info {
+	position: relative;
+	padding: 20px 10px 20px 5px;
+	overflow: hidden;
+}
+
+.unishop-rating {
+	clear: both;
+}
+
+.unishop-rating span {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-right: -5px;
+}
+
+.unishop-rating .unishop-star {
+	background: url('../images/unishop-icons-24.png') no-repeat 0 -72px;
+}
+
+.unishop-rating .unishop-halfstar {
+	background: url('../images/unishop-icons-24.png') no-repeat 0 -96px;
+}
+
+.unishop-item .unishop-item-name {
+	position: relative;
+	float: left;
+	width: 70%;
+	font-size: 100%;
+	line-height: 1.2;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #555;
+	letter-spacing: 0.5px;
+}
+
+.unishop-item .unishop-item-name:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 60%;
+	height: 1px;
+	background-color: #eee;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.unishop-item:hover .unishop-item-name:after {
+	background-color: #555;
+	
+	width: 100%;
+}
+
+.unishop-item:hover .unishop-item-name {
+	color: #222;
+}
+
+.unishop-item .unishop-item-price {
+	float: right;
+	color: #333;
+	font-size: 150%;
+	font-weight: bold;
+	margin-top: 5px;
+} 
+
+.unishop-item .unishop-item-sale span {
+	color: #ccc;
+	margin-right: 7px;
+	text-decoration: line-through;
+	font-size: 85%;
+}
+
+/* ===== Menu ==== */
+
+
+.unishop-menu {
+	position: relative;
+	margin-bottom: 35px;
+	padding: 0 5px 0 35px;
+}
+
+.unishop-menu .unishop-filters,
+.unishop-menu .unishop-cart {
+	display: block;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	opacity: 1;
+}
+
+.unishop-menu .unishop-filters {
+	float: left;
+	background: url(../images/unishop-icons-32.png) no-repeat 0 0;
+}
+
+.unishop-menu .unishop-cart {
+	float: right;
+	background: url(../images/unishop-icons-32.png) no-repeat 0 -64px;
+	padding-left: 40px;
+}
+
+.unishop-menu .unishop-cart span {
+	display: inline-block;
+	background: #333;
+	color: #fff;
+	font-size: 12px;
+	line-height: 1;
+	padding: 4px 6px;
+	border-radius: 3px;
+}
+
+.unishop-cart-empty .unishop-cart span {
+	display: none!important;
+}
+
+/* ===== Cart Wrap ===== */
+
+.unishop-cart-wrap {
+	position: absolute;
+	top: 60px;
+	right: 5px;
+	width: 100%;
+	max-width: 400px;
+	box-sizing: border-box;
+	padding: 35px 25px;
+	background: #f8f8f8;
+	border-radius: 5px;
+	border: 1px solid #eee;
+	font-size: 100%;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	-webkit-transform: translate3d(0, 10px, 0);
+	-moz-transform: translate3d(0, 10px, 0);
+	-o-transform: translate3d(0, 10px, 0);
+	transform: translate3d(0, 10px, 0);
+	visibility: hidden;
+	opacity: 0;
+	z-index: 30;
+	box-shadow: 5px 15px 10px 0 rgba(0,0,0,0.1);
+}
+
+.unishop-cart-wrap:before {
+	content: "";
+	position: absolute;
+	top: -12px;
+	right: 43px;
+	width: 20px;
+	height: 20px;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	background: #f8f8f8; 
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.unishop-show-cart .unishop-cart-wrap {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.unishop-cart-wrap .unishop-empty-message {
+	display: none;
+	font-weight: bold;
+	color: #999;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 30px 0;
+}
+
+.unishop-cart-empty .unishop-empty-message {
+	display: block;
+}
+
+.unishop-cart-wrap .unishop-paypal-checkout {
+	min-width: 130px;
+}
+
+.unishop-cart-empty .unishop-cart-buttons .unishop-paypal-checkout {
+	display: none;
+}
+
+.unishop-cart-buttons {
+	border-top: 1px solid #eee;
+	padding-top: 25px;
+	text-align: right;
+
+}
+
+.unishop-cart-buttons a {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+/* ===== Filters ==== */
+
+.unishop-unifilter {
+	position: absolute;
+	left: 5px; 
+	top: 0;
+	margin-right: 5px;
+	max-width: 400px;
+	min-width: 250px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	background: #fff;
+	box-sizing: border-box;
+	padding: 30px;
+	margin-bottom: 40px;
+	opacity: 0;
+	-webkit-transition: all 0s ease;
+	-moz-transition: all 0s ease;
+	-o-transition: all 0s ease;
+	transition: all 0s ease;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+	visibility: hidden;
+}
+
+.unishop-unifilter:before {
+	content: "";
+	position: absolute;
+	top: -11px; 
+	left: 35px;
+	width: 20px;
+	height: 20px;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	background: #fff;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.unishop-show-filters .unishop-unifilter  {
+	position: relative;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	visibility: visible;
+}
+
+.unishop-show-filters .unishop-menu .unishop-filters {
+	background-position: 0 -32px;
+}
+
+.unishop-unifilter .uf-filter .uf-tags li {
+	margin: 0 5px 5px 0;
+}
+
+.unishop-unifilter .uf-filter .uf-tags a {
+	border: 0;
+	font-size: 14px;
+	border-radius: 0;
+}
+
+.unishop-unifilter .uf-filter .uf-selected a {
+	background-color: #333;
+	color: #eee;
+}
+
+.unishop-unifilter > div:last-child {
+	margin-bottom: 0;
+}
+
+.unishop-unifilter .uf-title {
+	color: #333;
+}
+
+.unishop-show-filters .unishop-list {
+	margin-top: 0;
+	min-height: 700px;
+}
+
+
+/* larger than smartphone */
+@media only screen and (min-width: 540px) { 
+		
+}
+
+/* larger than tablet */
+@media only screen and (min-width: 720px) {
+
+	.unishop  {
+		overflow: hidden;
+	}
+	
+	.unishop-unifilter {
+		position: absolute!important;
+		top: 70px;
+	}
+	
+	.unishop-show-filters .unishop-list {
+		-webkit-transform: translateX(420px);
+		-moz-transform: translateX(420px);
+		-o-transform: translateX(420px);
+		transform: translateX(420px);
+		-webkit-transition-delay: 0s;
+		-moz-transition-delay: 0s;
+		-o-transition-delay: 0s;
+		transition-delay: 0s;
+	}
+	
+	.unishop-show-filters .unishop-item {
+		pointer-events: none;
+	}
+
+}
+
+
+/* ===== Modal Box ===== */
+
+.unishop-modal {
+	position: fixed;
+	top: 0; 
+	left: -200%;
+	width: 100%;
+	height: 100%;
+	z-index: 500;
+	background-color: rgba(0,0,0,0.0);
+	-webkit-transition: background 0.5s ease 0.5s;
+	-moz-transition: background 0.5s ease 0.5s;
+	-o-transition: background 0.5s ease 0.5s;
+	transition: background 0.5s ease 0.5s;
+}
+
+.unishop-show-modal .unishop-modal {
+	left: 0;
+}
+
+.unishop-show-wrap .unishop-modal {
+	background-color: rgba(0,0,0,0.6);
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.unishop-modal-close {
+	position: absolute;
+	right: 15px;
+	top: 0px;
+	width: 32px;
+	height: 32px;
+	background: url(../images/unishop-icons-32.png) no-repeat 0 -32px;
+}
+
+.unishop-modal-wrap {
+	position: absolute;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	width: 85%;
+	height: auto;
+	margin: 20px auto;
+	background-color: #fff;
+	padding: 25px 55px 25px 40px;
+	border-top: 25px solid #fff;
+	border-bottom: 25px solid #fff;
+	box-sizing: border-box;
+	opacity: 0;
+	overflow: hidden;
+	border-radius: 3px;
+	-webkit-transition: all 0.5s ease 0.3s;
+	-moz-transition: all 0.5s ease 0.3s;
+	-o-transition: all 0.5s ease 0.3s;
+	transition: all 0.5s ease 0.3s;
+	-webkit-transform: scale(0.6) translateY(50px);
+	-moz-transform: scale(0.6) translateY(50px);
+	-o-transform: scale(0.6) translateY(50px);
+	transform: scale(0.6) translateY(50px);
+}
+
+.unishop-show-wrap .unishop-modal-wrap {
+	-webkit-transform: scale(1) translateY(0px);
+	-moz-transform: scale(1) translateY(0px);
+	-o-transform: scale(1) translateY(0px);
+	transform: scale(1) translateY(0px);
+	opacity: 1;
+}
+
+.unishop-modal-content {
+	position: relative;
+	top: 0; left: 0;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.unishop-modal-slider,
+.unishop-modal-item {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.unishop-modal-slider {
+	margin-bottom: 50px;	
+}
+
+.unishop-modal-slider img {
+	display: block;
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.unishop-modal-separator {
+	margin: 35px 0 25px;
+	padding: 15px 10px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+	text-align: center;
+}
+
+.unishop-modal-rating {
+	clear: none;
+	padding-top: 10px;
+}
+
+.unishop-modal-item .unishop-modal-name {
+	margin: 10px 0 25px;
+	font-size: 130%;
+	line-height: 1.3;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-weight: bold;
+}
+
+.unishop-modal-options {
+	margin-bottom: 35px;
+}
+
+.unishop-modal-option {
+	margin-bottom: 25px;
+}
+
+.unishop-modal-options .unishop-option-label {	
+	display: block;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.unishop-modal-price {
+	color: #333;
+	font-size: 150%;
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+/* ===== Modal Buttons ===== */
+
+.unishop-modal-buttons {
+	clear: both;
+}
+
+/* ===== Modal Scroll ===== */
+
+.unishop-scroll-path {
+	position: absolute;
+	right: 15px;
+	margin-right: 10px;
+	top: 50px;
+	bottom: 25px;
+	width: 5px;
+	background-color: #eee;
+}
+
+.unishop-scroll-path .unishop-scroll-handle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 5px;
+	height: 50px;
+	background-color: #555;
+}
+
+
+/* ===== Modal Quantity ===== */
+
+.unishop-modal-label {
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	min-width: 110px;	
+	color: #999;
+}
+
+.unishop-modal-quantity {
+	margin-bottom: 25px;
+}
+
+.unishop-quantity-wrap {
+	display: inline-block;
+}
+
+.unishop-modal-quantity input[type="text"] {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+
+.unishop-modal-quantity a {
+	display: inline-block;
+	width: 24px; 
+	height: 24px;
+	vertical-align: middle;
+}
+
+.unishop-modal-quantity a[href="#add"] {
+	background: #fff url(../images/unishop-icons-24.png) no-repeat 0 0;
+	margin-left: 7px;
+}
+
+.unishop-modal-quantity a[href="#subtract"] {
+	background: #fff url(../images/unishop-icons-24.png) no-repeat 0 -24px;
+	margin-right: 7px;
+}
+
+
+/* ===== Modal Options =====*/
+
+.unishop-modal-options {}
+
+.unishop-modal-option { 
+	margin-bottom: 10px;
+}
+
+.unishop-select-wrap { 
+	display: inline-block; 
+}
+
+.unishop-modal-option .unishop-select-wrap:after {
+	content: "";
+	display: inline-block;
+	position: relative;
+	left: -20px;
+	top: 3px;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-top-color: #222;
+	pointer-events: none;
+}
+
+.unishop-select-wrap select {
+	position: relative;
+	display: inline-block;
+   	border: 1px solid #eee;
+	background-color: #f8f8f8;
+	outline: none;
+	padding: 7px 10px;
+	line-height: inherit;
+	margin: 0 0 10px 0;
+	border-radius: 3px;
+	min-width: 100px; 
+	padding-right: 30px;
+	outline: none;
+	-webkit-appearance: none;
+  	-moz-appearance: none;
+   	appearance: none;
+   	cursor: pointer;
+}
+
+/* ===== Modal Summary ===== */
+
+.unishop-modal-summary {
+	float: right;
+	padding: 15px 0;
+	width: 70%;
+	margin-bottom: 35px;
+	border-top: 1px solid #eee;
+	text-align: right;
+	color: #555;
+}
+
+.unishop-modal-summary span {
+	margin-right: 5px;	
+}
+.unishop-modal-summary .unishop-modal-total {
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+.unishop-modal-reset {
+	float: left;
+	padding-top: 15px;
+	color: #ff4b6e;
+	text-decoration: underline;
+}
+
+/* ====== Cart Items ===== */
+
+.unishop-cart-orders {
+	margin-bottom: 35px;
+}
+
+.unishop-cart-orders .unishop-order-remove {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 24px;
+	height: 24px;
+	background: #eee url(../images/unishop-icons-24.png) no-repeat 0 -48px;		
+}
+
+.unishop-cart-orders li {
+	position: relative;
+	border-bottom: 1px dashed #eee;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+
+.unishop-cart-orders li:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.unishop-cart-orders .unishop-order-thumb {
+	float: left;
+	width: 80px;
+	height: 80px;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.unishop-cart-orders .unishop-order-desc {	
+	font-size: 95%;
+	padding-left: 95px;
+	position: relative;
+}
+
+.unishop-cart-orders .unishop-order-name {
+	padding-right: 50px;
+	margin-bottom: 15px;
+	font-weight: bold;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.unishop-cart-orders .unishop-order-name span {
+	display: block;
+	color: #aaa;
+	font-size: 70%;
+	font-weight: normal;
+	line-height: 1;
+	padding-top: 3px;
+}
+
+.unishop-cart-orders .unishop-order-price {
+	margin-bottom: 10px;
+	line-height: 1.4em;
+}
+
+.unishop-cart-orders .unishop-order-price span {
+	margin-right: 10px;
+}
+
+.unishop-cart-orders .unishop-order-options {
+	color: #555;
+	text-transform: uppercase;
+	font-size: 85%;
+}
+
+.unishop-cart-orders .unishop-order-options:before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 2px;
+	background: #eee;
+	margin-bottom: 5px;
+}
+
+.unishop-cart-orders .unishop-order-subtotal {
+	font-weight: bold;
+	font-size: 105%;
+	line-height: 1.2;
+	margin-top: 15px;
+	color: #a93838;
+}
+
+.unishop-cart-orders .unishop-order-subtotal span:last-child {
+	color: #999;
+}
+
+.unishop-cart-wrap .unishop-cart-total {
+	padding: 10px 0;
+	border-top: 1px solid #eee;
+	line-height: 1.4;
+	text-align: right;
+	text-transform: uppercase;
+	padding-right: 25px;
+}
+
+.unishop-cart-wrap .unishop-cart-total span {
+	display: block;
+	color: #222;
+	font-size: 100%;
+}
+
+/* larger than smartphone */
+@media only screen and (min-width: 540px) {
+		.unishop-modal-wrap { 
+			margin: 50px auto;
+			padding: 25px 75px 25px 40px;
+		}	
+		
+		.unishop-modal-close,
+		.unishop-scroll-path {
+			right: 25px;
+		}
+		
+		.unishop-modal-slider a {
+			background-size: 64px 64px;		
+		}
+		
+		.unishop-modal-rating {
+			float: right;
+			padding-top: 5px;
+		}
+		
+		.unishop-modal-price {
+			float: left;
+		}
+		
+		.unishop-cart-orders .unishop-order-subtotal {
+			position: absolute;
+			top: 0;
+			right: 5px;
+			margin-top: 0;
+		}
+	
+	
+		.unishop-cart-orders .unishop-order-subtotal span {
+			display: block;
+		}
+}
+
+/* larger than tablet */
+@media only screen and (min-width: 720px) {
+
+	.unishop-thumbs-pagination {
+		display: none;
+	}
+
+	.unishop-modal-wrap {
+		width: 90%;
+		max-width: 1000px;
+	}
+	
+	.unishop-modal-slider {
+		float: left;
+		width: 55%;
+		margin-bottom: 0;
+	}
+	
+	.unishop-modal-item {
+		float: left;
+		width: 45%;
+		padding-left: 40px;
+	}
+
+}

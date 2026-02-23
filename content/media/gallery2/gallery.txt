@@ -1,0 +1,8 @@
+in-river.jpg|1000000|In the river||
+rocks.jpg|1000000|Rocky||
+sticker.jpg|1000000|Stickers!||
+trumpet.jpg|1000000|Trumpet||
+upside-down.jpg|1000000|Upside down||
+view.jpg|1000000|Nice view||
+wind.jpg|1000000|Windy||
+woman.jpg|1000000|Fashion||

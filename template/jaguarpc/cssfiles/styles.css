@@ -1,0 +1,111 @@
+.hdr_btns {
+	MARGIN: 42px 0px 0px 40px
+}
+.hdr_btns IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; MARGIN-RIGHT: 3px; BORDER-RIGHT-WIDTH: 0px
+}
+.hid_box {
+	PADDING-RIGHT: 0px; DISPLAY: none; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.homebanner {
+	WIDTH: 586px; POSITION: center; HEIGHT: 168px
+}
+.slider {
+	WIDTH: 586px; HEIGHT: 168px; FLOAT: center; 
+}
+.slider IMG {
+	DISPLAY: none; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.controls {
+	Z-INDEX: 100; LEFT: 0px; MARGIN: 152px 0px 0px; WIDTH: 938px; POSITION: absolute; TOP: 0px; HEIGHT: 15px
+}
+.controls LI {
+	DISPLAY: inline
+}
+.controls LI A {
+	DISPLAY: block; FLOAT: left; WIDTH: 13px; HEIGHT: 15px
+}
+.controls LI.prev A {
+	BACKGROUND: url(images/arrow_left.gif) no-repeat; MARGIN: 0px 0px 0px 8px
+}
+.controls LI.prev A:hover {
+	BACKGROUND: url(images/arrow_left_over.gif)
+}
+.controls LI.pause A {
+	BACKGROUND: url(images/pause.gif); MARGIN: 0px 0px 0px 24px
+}
+.controls LI.pause A:hover {
+	BACKGROUND: url(images/pause_over.gif)
+}
+.controls LI.play A {
+	BACKGROUND: url(images/play.gif); MARGIN: 0px 0px 0px 24px
+}
+.controls LI.play A:hover {
+	BACKGROUND: url(images/play_over.gif)
+}
+.controls LI.next A {
+	BACKGROUND: url(images/arrow_right.gif); MARGIN: 0px 0px 0px 24px
+}
+.controls LI.next A:hover {
+	BACKGROUND: url(images/arrow_right_over.gif)
+}
+UL.btns {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+LI {
+	LIST-STYLE-IMAGE: url(images/bluebullet.gif)
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #ffffff; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+#main_nav {
+	MARGIN: auto; BORDER-BOTTOM: #c9c9c9 1px solid
+}
+#main_nav A {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+#main_nav .actbutton {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 10px; BACKGROUND-IMAGE: url(images/activembuttonfill.gif); COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+#main_nav .actbutton A {
+	COLOR: #555555
+}
+#main_nav .actbutton H1 {
+	COLOR: #555555
+}
+#main_nav .button {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #1b5fb0; HEIGHT: 19px
+}
+#subnav {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-IMAGE: url(images/submenufill.gif); PADDING-BOTTOM: 5px; MARGIN: 0px 1px; PADDING-TOP: 5px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 31px
+}
+#subnav .footnav {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 11px; VISIBILITY: hidden; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: middle; WIDTH: 750px; COLOR: #ffffff; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; POSITION: absolute
+}
+#subnav UL {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-TOP: 5px
+}
+#subnav LI {
+	DISPLAY: inline; LIST-STYLE-TYPE: none
+}
+#subnav A {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; PADDING-BOTTOM: 5px; COLOR: #FFFFFF; PADDING-TOP: 5px; TEXT-DECORATION: none
+}
+#subnav A:hover {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 11px; BACKGROUND: #999999; COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+#mainmenu {
+	MARGIN-TOP: 1px
+}
+#mainmenu A {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+#mainmenu .actbutton {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 11px; BACKGROUND-COLOR: #1b5fb0; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+#mainmenu .actbutton A {
+	COLOR: #555555
+}
+#mainmenu .button {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BACKGROUND-COLOR: #1b5fb0;
+}

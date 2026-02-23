@@ -1,0 +1,30 @@
+<!-- navigation sub menu BEGIN -->
+<li class="nav-item">
+	<?php foreach ($view_model->value as $sm_name => $sm_url) { ?>
+		<?php if ($sm_url->active === true) { ?>
+			<a href="<?php if (\stripos($sm_url->url, '//') !== false) { echo $sm_url->url; } else { ?>//<?php echo $view_model->domain, $view_model->port, \championcore\url_join(\championcore\maybe_base_url($view_model->url_base_path),$sm_url->url); } ?>"
+			   onclick="return false;"><?php echo \htmlentities( \championcore\filter\navigation($view_model->key, true) ); ?></a>
+		<?php
+				break;
+			}
+		?>
+	<?php } ?>
+	<ul class="<?php echo $this->escape( (isset($view_model->css_classes_ul) ? $view_model->css_classes_ul : '') );?>">
+		<?php foreach ($view_model->value as $sm_name => $sm_url) { ?>
+			<?php if (($sm_url instanceof \stdClass) and isset($sm_url->url) and ($sm_url->active === true)) { ?>
+				<li class="<?php echo $this->escape( (isset($view_model->css_classes_li) ? $view_model->css_classes_li : '') );?>">
+					<a class="<?php echo \championcore\get_context()->theme->active_nav->render( ['probe' => $view_model->key] ); ?> <?php echo $this->escape( (isset($view_model->css_classes_a) ? $view_model->css_classes_a : '') );?>"
+					   target="<?php if (\stripos($sm_url->url, '//') !== false) { echo '_blank';     } else { echo '_self'; } ?>"
+					   href="<?php   if (\stripos($sm_url->url, '//') !== false) { echo $sm_url->url; } else { ?>//<?php echo $view_model->domain, $view_model->port, \championcore\url_join(\championcore\maybe_base_url($view_model->url_base_path), $sm_url->url); } ?>">
+						<?php echo \htmlentities( \championcore\filter\navigation(\trim( \basename($sm_name) ),true) ); ?></a>
+				</li>
+			<?php } ?>
+			
+			<?php if (($sm_url instanceof \stdClass) and !isset($sm_url->url)) {
+					echo $this->navigation_sub_menu( $sm_name, $sm_url );
+				} ?>
+			
+		<?php } ?>
+	</ul>
+</li>
+<!-- navigation sub menu END -->

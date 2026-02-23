@@ -1,0 +1,70 @@
+<style>
+
+.gallery_masonry {
+	
+	overflow: hidden;
+	margin: -2.5px;
+}
+.gallery_masonry:after {
+	content: '';
+	flex-grow: 999999999;
+	min-width: 300px;
+	height: 0;
+}
+
+.gallery_masonry a.grid-item {
+	
+	outline: 0;
+	width: auto;
+	
+	position: relative;
+	height: 300px;
+	margin: 2.5px;
+}
+.gallery_masonry a.grid-item img {
+	
+	display: block;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	height: <?php echo isset(\championcore\wedge\config\get_json_configs()->json->thumbnail_height) ? \championcore\wedge\config\get_json_configs()->json->thumbnail_height . 'px': 'auto'; ?>;
+	
+	height: 300px;
+	object-fit: cover;
+	max-width: 100%;
+	min-width: 100%;
+	vertical-align: bottom;
+}
+
+.gallery_masonry.gallery_masonry-margin {
+	margin: 2.5px;
+}
+
+</style>
+
+<div class="championcore tag grid flexbox gallery_masonry  gallery_masonry-margin">
+	
+	<?php foreach ($view_model->images->lines as $iii) {?>
+		<a class="grid-item"
+		   title="<?php echo \htmlentities($iii->caption); ?>"
+		   href="<?php echo $view_model->url_path; ?><?php echo $iii->url; ?>">
+			<img class="imagelightbox"
+			     alt="<?php echo \htmlentities($iii->alt); ?>"
+			     src="<?php echo $view_model->url_path; ?><?php echo $iii->url_thumbnail; ?>" />
+		</a>
+	<?php } ?>
+	
+	<?php foreach ($view_model->hidden_images_for_popup as $iii) { ?>
+		<?php if (!\in_array($iii, $view_model->images->lines)) { ?>
+			<a title="<?php echo \htmlentities($iii->caption); ?>"
+			   href="<?php echo $view_model->url_path; ?><?php echo $iii->url; ?>" style="display: none; visibility: hidden;">
+				<img
+					class="imagelightbox"
+					alt="<?php echo \htmlentities($iii->alt); ?>"
+					src="<?php echo $view_model->url_path; ?><?php echo $iii->url_thumbnail; ?>"
+					style="height: <?php echo isset(\championcore\wedge\config\get_json_configs()->json->thumbnail_height) ? \championcore\wedge\config\get_json_configs()->json->thumbnail_height . 'px': 'auto'; ?>"
+				/>
+			</a>
+		<?php } ?>
+	<?php } ?>
+	
+</div>

@@ -1,0 +1,40 @@
+<style>
+.thumbnail img {
+	margin-right: 20px;
+	margin-bottom: 20px;
+	height: <?php echo isset(\championcore\wedge\config\get_json_configs()->json->thumbnail_height) ? \championcore\wedge\config\get_json_configs()->json->thumbnail_height . 'px': 'auto'; ?>;
+}
+.thumbnail a {
+    outline: 0;
+}
+</style>
+
+<div class="championcore tag thumbnail">
+
+	<?php foreach ($view_model->images->lines as $iii) {?>
+		<a class="<?php echo ((\strlen($iii->link_url) > 0) ? '' : 'imagelightbox'); ?>"
+		   title="<?php echo \htmlentities($iii->caption); ?>"
+		   href="<?php echo ((\strlen($iii->link_url) > 0) ? $iii->link_url : ($view_model->url_path . $iii->url)); ?>">
+			<img class="imagelightbox"
+			     alt="<?php echo \htmlentities($iii->alt); ?>"
+				 src="<?php echo $view_model->url_path; ?><?php echo $iii->url_thumbnail; ?>" />
+		</a>
+	<?php } ?>
+	
+	<?php foreach ($view_model->hidden_images_for_popup as $iii) { ?>
+		<?php if (!\in_array($iii, $view_model->images->lines)) { ?>
+			<a class="<?php echo ((\strlen($iii->link_url) > 0) ? '' : 'imagelightbox'); ?>"
+			   title="<?php echo \htmlentities($iii->caption); ?>"
+			   href="<?php echo $view_model->url_path; ?><?php echo $iii->url; ?>"
+			   style="display: none; visibility: hidden;">
+				<img
+					class="imagelightbox"
+					alt="<?php echo \htmlentities($iii->alt); ?>"
+					src="<?php echo $view_model->url_path; ?><?php echo $iii->url_thumbnail; ?>"
+					style="height: <?php echo isset(\championcore\wedge\config\get_json_configs()->json->thumbnail_height) ? \championcore\wedge\config\get_json_configs()->json->thumbnail_height . 'px': 'auto'; ?>"
+				/>
+			</a>
+		<?php } ?>
+	<?php } ?>
+	
+</div>

@@ -1,0 +1,3 @@
+JSON_START{"html":"<footer class=\"py-5 bg-black\"><div class=\"container\"><p class=\"m-0 text-center text-white small\">Copyright \u00a9 Your Website 2020<\/p><\/div><\/footer>","meta_searchable":"yes","title":"new_footer"}JSON_END
+
+<footer class="py-5 bg-black"><div class="container"><p class="m-0 text-center text-white small">Copyright © Your Website 2020</p></div></footer>

@@ -1,0 +1,53 @@
+
+<div class="championcore">
+	<h1><?php echo $GLOBALS['lang_update_results_title']; ?></h1>
+
+	<!-- confirm changes -->
+	<form action="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=update_results" method="post">
+		
+		<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+		
+		<p>
+			<input type="submit" style="margin-left: 0px;" class="cancel btn toggle_duplicate_btn" name="update_all"      value="<?php echo $GLOBALS['lang_update_results_button_all']; ?>" />
+			
+			<input type="submit" style="margin-left: auto" class="cancel btn toggle_duplicate_btn" name="update_selected" value="<?php echo $GLOBALS['lang_update_results_button_selected']; ?>" />
+			
+			<input type="submit" style="margin-left: auto" class="cancel btn toggle_duplicate_btn" name="update_cancel"   value="<?php echo $GLOBALS['lang_update_button_cancel']; ?>" />
+		</p>
+		
+		<h3>
+			<?php echo \htmlentities( \sprintf($GLOBALS['lang_update_results_changed_files'], \sizeof($view_model->file_list) ) ); ?>
+			
+			<a style="font-size: smaller;" class="select_all"><?php echo $GLOBALS['lang_update_results_select_all']; ?></a>
+			
+			<a style="font-size: smaller;" class="select_none"><?php echo $GLOBALS['lang_update_results_select_none']; ?></a>
+		</h3>
+		
+		<table>
+			<tbody>
+				<?php foreach ($view_model->file_list as $key => $packed) { ?>
+					<tr>
+						<td>
+							<label for="<?php echo \htmlentities($key); ?>">
+								<input type="hidden"                                           name="pick_list[<?php echo \htmlentities($key); ?>]"  value="0" />
+								<input type="checkbox" id="<?php echo \htmlentities($key); ?>" name="pick_list[<?php echo \htmlentities($key); ?>]"  value="1" />
+								<?php echo \htmlentities($key); ?>
+							</label>
+						</td>
+						<td>
+							<?php if ($packed->action == 'changed') { ?>
+								<a href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=update_download&from=old&target=<?php echo \urlencode($key); ?>"><?php echo $GLOBALS['lang_update_results_download_current']; ?></a>
+							<?php } else { ?>
+								<?php echo $GLOBALS['lang_update_results_download_current']; ?>
+							<?php } ?>
+						</td>
+						<td>
+								<a href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=update_download&from=new&target=<?php echo \urlencode($key); ?>"><?php echo $GLOBALS['lang_update_results_download_new']; ?></a>
+						</td>
+					</tr>
+				<?php } ?>
+			</tbody>
+		</table>
+		
+	</form>
+</div>

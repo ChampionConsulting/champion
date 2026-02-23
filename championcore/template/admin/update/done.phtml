@@ -1,0 +1,15 @@
+
+<div class="championcore">
+
+	<h1><?php echo $GLOBALS['lang_update_done_title']; ?></h1>
+
+	<!-- confirm changes -->
+	<form action="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=update_done" method="post">
+		
+		<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+		
+		<p>
+			<a href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=update_download&from=log"><?php echo \htmlentities($GLOBALS['lang_update_done_download']); ?></a>
+		</p>
+	</form>
+</div>

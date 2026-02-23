@@ -1,0 +1,69 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<div class="championcore">
+	<h1><?php echo $GLOBALS['lang_settings_user_list_title'];?></h1>
+	
+	<p>
+		<?php echo $GLOBALS['lang_settings_user_list_subtitle'];?>
+	</p>
+	
+	<ul class="management user_list">
+		<?php foreach ($view_model->user_list as $key => $value) { ?>
+			<li>
+				<?php echo $this->escape($value->username); ?>
+				(<?php echo $this->escape($value->acl_role); ?>)
+				
+				<?php foreach ($value->user_group_list as $ug) { ?>
+					<span class="btn btn-secondary"><?php echo \htmlentities($ug); ?></span>
+				<?php } ?>
+				
+				<a class="op" href="index.php?p=manage_user_list&method=delete&username=<?php echo \urlencode($value->username); ?>&csrf_token=<?php echo \championcore\session\csrf\create(); ?>"><img alt="delete icon" src="img/icon-delete.svg" class="delete-user" /></a>
+			</li>
+		<?php } ?>
+	</ul>
+	
+	<hr />
+	
+	<form name="textfile"
+	      method="post"
+	      action="index.php?p=manage_user_list&method=post">
+		
+		<label><?php echo $this->escape($GLOBALS['lang_settings_user_list_username']); ?>:</label>
+		<input type="text" name="username" value="" placeholder="<?php echo $this->escape($GLOBALS['lang_settings_user_list_username']); ?>" required />
+			
+		<label><?php echo $this->escape($GLOBALS['lang_settings_user_list_password']); ?>:</label>
+		<input type="text" name="password" value="" placeholder="<?php echo $this->escape($GLOBALS['lang_settings_user_list_password']); ?>" required />
+		
+		<label><?php echo $this->escape($GLOBALS['lang_settings_user_list_otp_activate']); ?>:</label>
+		<input type="hidden"   name="otp_activate" value="0" />
+		<input type="checkbox" name="otp_activate" value="1" />
+		
+		<label><?php echo $this->escape($GLOBALS['lang_settings_user_list_acl_role']); ?>:</label>
+		<select name="acl_role" required>
+			<option value="" disabled></option>
+			<?php foreach ($view_model->acl_role as $value) { ?>
+				<option value="<?php echo \htmlentities($value); ?>"><?php echo \htmlentities($value); ?></option>
+			<?php } ?>
+		</select>
+		
+		<label><?php echo $GLOBALS['lang_settings_user_group_list_title'];?></label>
+		<ul class="management">
+			<?php foreach ($view_model->user_group_list as $value) { ?>
+				<li><input type="checkbox" name="user_group_list[<?php echo $this->escape($value->group_name); ?>]" value="<?php echo $this->escape($value->group_name); ?>" /> <?php echo \htmlentities($value->group_name); ?></li>
+			<?php } ?>
+		</ul>
+		
+		<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+		<br />
+		<a style="margin-left:0px;" href='index.php?p=manage_user_group_list' class="cancel btn toggle_duplicate_btn"><?php echo $GLOBALS['lang_settings_manage_user_group_list']; ?></a>
+		<a style="margin-left:0px;" href='index.php?p=settings#tab4' class="cancel btn toggle_duplicate_btn"><?php echo $GLOBALS['lang_settings_editor']; ?></a>
+		<br />
+		<br />
+		<button class="btn" type="submit" name="save_configs"><?php echo $GLOBALS['lang_save'];?></button>
+	</form>
+	
+</div>

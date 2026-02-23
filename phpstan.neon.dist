@@ -1,0 +1,28 @@
+parameters:
+	level: 1
+	paths:
+		- config.php
+		- dropzone_upload_handler.php
+		- end_point.php
+		- index.php
+		- rss.php
+		- symlink_safe.php
+		- admin
+		- inc
+		- championcore/bootstrap.php
+		- championcore/custom_post_type.php
+		- championcore/otp.php
+		- championcore/password_compat.php
+		- championcore/sitemap.php
+		- championcore/zzz_generate_otp.php
+		- championcore/zzz_generate_random_string.php
+		- championcore/page
+		- championcore/src
+		- championcore/standalone
+		- championcore/tags
+		- championcore/template
+		- championcore/wedge
+	ignoreErrors:
+		- "#Constant CHAMPION_ADMIN_DIR not found.#"
+		- "#Constant CHAMPION_BASE_URL not found.#"
+		- "#Constant CHAMPION_BASE_DIR not found.#"

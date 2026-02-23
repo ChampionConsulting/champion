@@ -1,0 +1,18 @@
+JSON_START{"html":"<footer class=\"footer py-4\">\r\n    <div class=\"container\">\r\n        <div class=\"row align-items-center\">\r\n            <div class=\"col-lg-4 text-lg-left\">Copyright \u00a9 Your Great&nbsp;Website 2020<\/div>\r\n            <div class=\"col-lg-4 my-3 my-lg-0\">\r\n                <a class=\"btn btn-dark btn-social mx-2\" href=\"#!\"><em class=\"fab fa-twitter\"><\/em><\/a>\r\n                <a class=\"btn btn-dark btn-social mx-2\" href=\"#!\"><em class=\"fab fa-facebook-f\"><\/em><\/a>\r\n                <a class=\"btn btn-dark btn-social mx-2\" href=\"#!\"><em class=\"fab fa-linkedin-in\"><\/em><\/a>\r\n            <\/div>\r\n            <div class=\"col-lg-4 text-lg-right\">\r\n                <a class=\"mr-3\" href=\"#!\">Privacy Policy<\/a>\r\n                <a href=\"#!\">Terms of Use<\/a>\r\n            <\/div>\r\n        <\/div>\r\n    <\/div>\r\n<\/footer>","meta_searchable":"yes","title":""}JSON_END
+
+<footer class="footer py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-lg-left">Copyright © Your Great&nbsp;Website 2020</div>
+            <div class="col-lg-4 my-3 my-lg-0">
+                <a class="btn btn-dark btn-social mx-2" href="#!"><em class="fab fa-twitter"></em></a>
+                <a class="btn btn-dark btn-social mx-2" href="#!"><em class="fab fa-facebook-f"></em></a>
+                <a class="btn btn-dark btn-social mx-2" href="#!"><em class="fab fa-linkedin-in"></em></a>
+            </div>
+            <div class="col-lg-4 text-lg-right">
+                <a class="mr-3" href="#!">Privacy Policy</a>
+                <a href="#!">Terms of Use</a>
+            </div>
+        </div>
+    </div>
+</footer>

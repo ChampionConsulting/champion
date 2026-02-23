@@ -1,0 +1,13 @@
+LiveAgentTracker.initTimeOffset(2014,11,09,10,25,23);
+LiveAgentTracker.setFastBusEnabled('Y');
+LiveAgentTracker.setVisitorId('60e7b855be3cf3d97721cf004wQ9B0kP');
+LiveAgentTracker.setSid('3e494b7e13383970c744c400JJaNGac1');
+LiveAgentTracker.getWidget('b_ebb63741_548').setHtml('<div style="width:1px; height:1px;"></div>');
+LiveAgentTracker.getWidget('b_ebb63741_548').setDateChanged('1375369220');
+LiveAgentTracker.getWidget('b_ebb63741_548').initContactForm('http://livechat.eleven2.com/accounts/default1/cache/contactwidgets/ebb63741_onlineform.html', '500', '320');
+LiveAgentTracker.getWidget('b_ebb63741_548').initChat('http://livechat.eleven2.com/accounts/default1/cache/contactwidgets/ebb63741_chat.html', 'E', '340', '440', 'BR');
+LiveAgentTracker.getWidget('b_ebb63741_548').initialize();
+LiveAgentTracker.getWidget('b_12e9e52f_467').setHtml('<div style="width:1px; height:1px;"></div>');
+LiveAgentTracker.getWidget('b_12e9e52f_467').setDateChanged('1375112679');
+LiveAgentTracker.getWidget('b_12e9e52f_467').initContactForm('http://livechat.eleven2.com/accounts/default1/cache/contactwidgets/12e9e52f_form.html', '500', '530');
+LiveAgentTracker.getWidget('b_12e9e52f_467').initialize();

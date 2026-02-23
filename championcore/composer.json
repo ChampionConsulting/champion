@@ -1,0 +1,44 @@
+{
+    "platform": {
+        "php": "8.0.0"
+
+    },
+
+    "repositories": [
+    {
+        "type": "package",
+        "package":
+        {
+            "name": "radiergummi/octopus",
+            "version": "1.0",
+            "dist":
+            {
+                "url": "https://github.com/Radiergummi/octopus/archive/master.zip",
+                "type": "zip"
+            },
+            "autoload":
+            {
+                "classmap": ["src/"]
+            }
+        }
+
+
+    }],
+
+    "require":
+    {
+        "spomky-labs/otphp": "^11.3.0",
+
+        "phpxmlrpc/phpxmlrpc": "^4.11.1",
+
+        "radiergummi/octopus": "1.0",
+        "whichbrowser/parser": "^2.1.8",
+        "phpmailer/phpmailer": "^6.9.3",
+        "guzzlehttp/guzzle": "^7.9.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
+    }
+}

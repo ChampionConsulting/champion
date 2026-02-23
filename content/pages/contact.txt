@@ -1,0 +1,17 @@
+Contact Us
+
+This is the contact us description.
+
+<h2>Contact Us</h2>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="contact-left">
+            {{block:contact/contact-left}}
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="contact-right">
+            {{block:contact/contact-right}}
+        </div>
+    </div>
+</div>

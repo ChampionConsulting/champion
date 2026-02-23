@@ -1,0 +1,135 @@
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+	
+	<a class="rename" href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=rename&d=<?php echo \htmlentities($view_model->param_get_f); ?>&e=<?php echo \htmlentities($view_model->param_get_ext); ?>">[<?php echo \htmlentities($GLOBALS['lang_rename_btn']); ?>]</a>
+</div>
+
+<div class="championcore">
+	
+	<br />
+	
+	<?php if (!$view_model->flag_has_content) {
+		echo $GLOBALS['lang_no_content'];
+	} else { ?>
+		
+		<a class="embed_toggle" href="#"><?php echo $GLOBALS['lang_pages_options']; ?></a>
+		
+		<form class="" id="textfile" name="textfile" method="post" action=""> <!-- animated zoomIn -->
+			
+			<div class="hide">
+				<!-- -->
+				<label>
+					<input type="hidden"   value="no"  name="meta_draft_mode" />
+					<input type="checkbox" value="yes" name="meta_draft_mode" <?php echo (($view_model->draft_mode == 'yes') ? 'checked' : ''); ?> />
+					<?php echo $GLOBALS['lang_open_meta_draft_mode']; ?>
+				</label>
+				
+				<!-- -->
+				<label><?php echo $GLOBALS['lang_settings_user_group_list_permissions']; ?> </label>
+				
+				<ul>
+					<?php foreach (\championcore\wedge\config\get_json_configs()->json->user_group_list as $group) { ?>
+						<li>
+							<input type="hidden"   value="-"                                                name="meta_access_user_group[<?php echo \htmlentities($group->group_name); ?>]" />
+							<input type="checkbox" value="<?php echo \htmlentities($group->group_name); ?>" name="meta_access_user_group[<?php echo \htmlentities($group->group_name); ?>]" <?php echo (isset($group->permissions->block->{$view_model->param_get_f}) ? 'checked' : ''); ?> />
+							<?php echo \htmlentities($group->group_name); ?>
+						</li>
+					<?php } ?>
+				</ul>
+				
+				<label>
+					<input type="hidden"   value="no"  name="meta_searchable" />
+					<input type="checkbox" value="yes" name="meta_searchable" <?php echo (($view_model->datum_item->meta_searchable == 'yes') ? 'checked' : ''); ?> />
+					<?php echo $GLOBALS['lang_open_meta_searchable']; ?>
+				</label>
+				
+			</div>
+			
+			
+			<input type="hidden" name="filename" value="<?php echo $view_model->param_get_f . ".txt"; ?>" />
+			<input type="hidden" name="fname"    value="<?php echo $view_model->fname[0]; ?>" />
+			
+			<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+			
+			<?php
+				$content = $view_model->datum_item->html;
+				
+				# expand instances of {{show_var:path}}
+				$content = \str_replace( '{{show_var:path}}', \championcore\wedge\config\get_json_configs()->json->path, $content );
+				
+				$editor  = (\championcore\wedge\config\get_json_configs()->json->wysiwyg == true) ? 'id="wysiwyg"' : 'id="textblock"';
+				
+				if (\preg_match("/sb_/", $view_model->fname[\sizeof($view_model->fname) - 1])) {
+					$editor = 'id="textblock"';
+				}
+				
+				# handle forcing of textblock for editor
+				$editor = (($view_model->force_textblock === true) ? 'id="textblock"' : $editor);
+			?>
+			<textarea spellcheck="false" <?php echo $editor;?> name="textblock"><?php echo htmlspecialchars($content); ?></textarea>
+			
+			<p>
+				<label><?php echo $GLOBALS['lang_create_block_move']; ?></label>
+				<select class="page-template-input" type="text" name="block_move">
+					<option value=""></option>
+					<?php foreach ($view_model->block_piles as $value) { ?>
+							<option value="<?php echo \htmlentities($value->get_location()); ?>" <?php echo (($view_model->block_pile_directory == $value->get_location()) ? 'selected' : ''); ?>>
+								<?php echo \htmlentities($value->get_location()); ?>
+							</option>
+					<?php } ?>
+				</select>
+			</p>
+			
+			
+			<button class="btn save" type="submit" name="savetext"><?php echo $GLOBALS['lang_save']; ?></button>
+			
+			<a href="#" class="btn toggle_duplicate_btn    btn toggle_embed_btn"><?php echo $GLOBALS['lang_create_embed']; ?></a>
+			
+			<a href="index.php?p=duplicate_content&item_file=<?php echo $view_model->param_get_f; ?>" class="cancel btn toggle_duplicate_btn"><?php echo $GLOBALS['lang_duplicate']; ?></a>
+			
+			<a target="_blank" class="media-manager" href="index.php?f=media"><?php echo $GLOBALS['lang_nav_img']; ?></a>
+			
+			<div class="float_barrier"></div>
+		</form>
+		
+		<br />
+		
+		<div class="float_barrier"></div>
+		
+		<div class="toggle_meta_payload">
+			 <?php
+				$embed_path = array_slice($view_model->fname,1); 
+				$embed_path = implode('/', $embed_path);
+			?>
+			
+			<div class="tagdiv">
+				<span><?php echo $GLOBALS['lang_create_embed_tag']; ?>:</span>
+				<input onclick="this.select()" type="text" class="embed_tag" value="<?php echo '{{block:'. $embed_path; ?>}}" />
+			</div>
+			
+			<div class="tagdiv">
+				<span><?php echo $GLOBALS['lang_create_embed_url']; ?></span>
+				<input onclick="this.select()" type="text" class="embed_url" value="<?php echo "https://{$_SERVER['HTTP_HOST']}" . \championcore\wedge\config\get_json_configs()->json->path . "/end_point.php?item=",\urlencode($view_model->param_get_f); ?>" />
+			</div>
+			<?php /*
+			<div class="tagdiv">
+				<span>Embed Url (Relative):</span>
+				<input onclick="this.select()" type="text" class="embed_url" value="{{end_point:<?php echo $_GET['f']; ?>}}" />
+			</div>
+			*/ ?>
+			<div class="tagdiv">
+				<span><?php echo $GLOBALS['lang_create_embed_html']; ?></span>
+				<input onclick="this.select()" type="text" class="embed_url" value="<?php echo "<iframe id='iframe_embed_responsive' src='https://{$_SERVER['HTTP_HOST']}" . \championcore\wedge\config\get_json_configs()->json->path . "/end_point.php?item=",\urlencode($view_model->param_get_f), "' style='width: 100%; height: auto;'></iframe>"; ?>" />
+			</div>
+			
+			<div class="tagdiv">
+				<span><?php echo $GLOBALS['lang_create_embed_php']; ?></span>
+				<input onclick="this.select()" type="text" class="embed_url" value="<?php echo "<?php readfile('https://{$_SERVER['HTTP_HOST']}" . \championcore\wedge\config\get_json_configs()->json->path . "/end_point.php?item=", \urlencode($view_model->param_get_f), "'); ?>"; ?>" />
+			</div>
+		</div>
+		
+	<?php } ?>
+	
+</div>
+

@@ -1,0 +1,31 @@
+
+<?php if ($view_model->display === true) { ?>
+	<div class="championcore tag navigation_logged_in clearfix <?php echo $this->escape($view_model->label); ?> <?php echo $this->escape($view_model->css_classes); ?>">
+		<a class="logo" href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php">
+			<img alt="logo" src="<?php echo CHAMPION_BASE_URL; ?>/content/media/branding/logo.png" />
+		</a>
+		
+		<nav id="admin-navbar">
+			<ul>
+				<li><a class="logo" href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php">
+					<img alt="logo" src="<?php echo CHAMPION_BASE_URL; ?>/content/media/branding/logo.png" /></a>
+				</li>
+				<li>
+					<a href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?f=blocks"><?php echo \htmlentities($GLOBALS['lang_nav_logged_in_add_block']); ?></a>
+				</li>
+				<li>
+					<a href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?f=pages"><?php echo \htmlentities($GLOBALS['lang_nav_logged_in_add_page']); ?></a>
+				</li>
+				<li>
+					<a href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?f=media"><?php echo \htmlentities($GLOBALS['lang_nav_logged_in_add_media']); ?></a>
+				</li>
+				<li>
+					<a href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?f=blog"><?php echo \htmlentities($GLOBALS['lang_nav_logged_in_add_blog_post']); ?></a>
+				</li>
+				<li>
+					<a href="<?php echo CHAMPION_ADMIN_URL; ?>/index.php?p=logout"><?php echo \htmlentities($GLOBALS['lang_nav_logout']); ?></a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+<?php } ?>

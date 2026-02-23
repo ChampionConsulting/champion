@@ -1,0 +1,4 @@
+JSON_START{"html":"<h1 class=\"mb-3\">Coming Sooner!<\/h1>\n<p class=\"mb-5\">We're working hard to finish the development of this site. Our target launch date is <strong>January 2030<\/strong>! Sign up for updates using the form below!<\/p>","meta_searchable":"yes","title":"coming-soon"}JSON_END
+
+<h1 class="mb-3">Coming Sooner!</h1>
+<p class="mb-5">We're working hard to finish the development of this site. Our target launch date is <strong>January 2030</strong>! Sign up for updates using the form below!</p>

@@ -1,0 +1,28 @@
+
+<!-- bread crumbs -->
+<div class="breadcrumb">
+	<?php include (CHAMPION_ADMIN_DIR . '/inc/breadcrumbs.php'); ?>
+</div>
+
+<div class="championcore">
+	<!-- h1><?php echo \htmlentities($GLOBALS['lang_blog_import']); ?></h1 -->
+	
+	<?php if (isset($view_model->message) and \is_string($view_model->message) and (\strlen(\trim($view_model->message)) > 0) ) { ?>
+		<p><?php echo \htmlentities($view_model->message); ?></p>
+	<?php } ?>
+	
+	<form class="create-form" name="textfile" method="post" action="index.php?p=create_folder&method=post&folder=<?php echo $view_model->param_folder; ?>" style="min-width: auto;">
+		
+		<input type="hidden" name="field[folder]" value="<?php echo $view_model->param_folder; ?>" />
+		
+		<input type="text"   name="field[new_name]" value="<?php echo $view_model->new_name; ?>" placeholder="<?php echo $GLOBALS['lang_create_file_or_folder_media']; ?>" autofocus required />
+		
+		<span class="comment"></span>
+		
+		<button class="btn" type="submit" name="import"><?php echo \htmlentities($GLOBALS['lang_create_button']); ?></button>
+		<a href="#" class="tooltip" alt="<?php echo \htmlentities($GLOBALS['lang_create_tool_tip']); ?>">?</a>
+		
+		<input type="hidden" name="csrf_token" value="<?php echo \championcore\session\csrf\create(); ?>" />
+	</form>
+	
+</div>

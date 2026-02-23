@@ -1,0 +1,95 @@
+/*@component-begin @name Default @type Accordion{*/
+.ui-accordion  {
+	border: 1px solid black
+}
+.ui-accordion a {
+	cursor:pointer;
+	display:block;
+	/*border-top: 1px solid #FFFFFF;*/
+	BORDER-RIGHT: #fff 2px outset; 
+	BORDER-TOP: #fff 2px outset; 
+    BORDER-LEFT: #fff 2px outset; 
+	BORDER-BOTTOM: #fff 2px outset
+}
+.ui-accordion a.selected {
+	/*border-bottom: 1px solid black;*/
+	BORDER-RIGHT: #fff 2px inset;
+	BORDER-LEFT: #fff 2px inset;	
+	BORDER-BOTTOM: #fff 2px inset;
+	BORDER-TOP: #fff 2px inset
+}
+
+.TogglePaneFancyHeader {
+	BORDER-RIGHT: #fff 2px inset;
+	BORDER-LEFT: #fff 2px inset;	
+	BORDER-BOTTOM: #fff 2px inset;
+	BORDER-TOP: #fff 2px inset
+}
+.TogglePaneFancyHeaderClosed {
+	BORDER-RIGHT: #fff 2px outset; 
+	BORDER-TOP: #fff 2px outset; 
+    BORDER-LEFT: #fff 2px outset; 
+	BORDER-BOTTOM: #fff 2px outset
+}
+.ui-tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 4px
+}
+.ui-tabs-nav:after {
+    display: block;
+    clear: both;
+	content: " "
+}
+.ui-tabs-nav li {
+    float: left;
+    min-width: 84px /* be nice to Opera */
+}
+.ui-tabs-nav a{
+    padding: 0 10px
+}
+ .ui-tabs-nav a span   {
+    padding: 0 10px
+}
+.ui-tabs-nav a {
+    margin: 1px 0 0; /* position: relative makes opacity fail for disabled tab in IE */
+    padding-left: 0;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap; /* required in IE 6 */    
+    outline: 0 /* prevent dotted border in Firefox */
+}
+.ui-tabs-nav .ui-tabs-selected a {
+    position: relative;
+    top: 1px;
+    z-index: 2;
+    margin-top: 0;
+    color: #000
+}
+.ui-tabs-nav a span   {
+    width: 64px; /* IE 6 treats width as min-width */
+    min-width: 64px;
+    height: 18px; /* IE 6 treats height as min-height */
+    min-height: 18px;
+    padding-right: 0;
+    cursor: pointer
+}
+.ui-tabs-hide {
+        display: none
+}
+.ui-tabs-nav * > a span   { /* hide from IE 6 */
+    width: auto;
+    height: auto
+}
+/* Additional IE specific bug fixes... */
+* html .ui-tabs-nav { /* auto clear, @ IE 6 & IE 7 Quirks Mode */
+    display: inline-block
+}
+
+.ui-tabs-nav *:first-child + html { /* @ IE 7 Standards Mode - do not group selectors, otherwise IE 6 will ignore complete rule (because of the unknown + combinator)... */
+    display: inline-block
+}
+/*@component-end}*/BODY{	font-family : Verdana;
+	font-size : 12px
+}

@@ -1,0 +1,549 @@
+
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Panel Cookie</title>
+
+<link href="jqeasypanel.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="jquery.jqEasyPanel.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#jqeasypanel').jqEasyPanel();
+});
+</script>
+</head>
+
+<body>
+<!--#
+<div id="jqeasypanel">
+	
+	<ul class="panelbuttons">
+    
+    </ul>
+    <div id="copy">
+	
+	
+    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius odio ac nibh fringilla cursus. Fusce euismod commodo ipsum eget vehicula. Cras et mauris in enim porta fermentum. Morbi cursus orci in turpis fringilla feugiat. Vestibulum ut libero non libero pretium ornare eget nec ante.</p>	
+		
+		
+    </div>
+	<div id="jqeasypaneloptions">
+    	<p><label for="keepopen">Keep panel open?</label> <input name="keepopen" id="keepopen" type="checkbox" value="" /></p>
+    </div>
+</div>
+
+<div id="jqeasytrigger">
+    <a href="#" class="open">open</a>
+    <a href="#" class="close">close</a>
+</div>
+
+<div id="container">
+	<img src="fakesite.gif" width="194" height="43" alt="" />
+    <ul class="fakenav">
+    	<li><a href="index.html">demo top one</a></li><li><a href="top.html">demo top two</a></li><li><a href="bottom1.html">demo bottom three</a></li><li><a href="bottom2.html">demo bottom four</a></li>
+    </ul>
+	<p>This is the first line of DEMO TOP TWO.</p>
+    <p><a href="/jquery-sliding-info-panel-plugin">&laquo; Back to article</a></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius odio ac nibh fringilla cursus. Fusce euismod commodo ipsum eget vehicula. Cras et mauris in enim porta fermentum. Morbi cursus orci in turpis fringilla feugiat. Vestibulum ut libero non libero pretium ornare eget nec ante. Proin nec ante leo, a viverra diam. Proin porta leo sed diam consectetur non pharetra augue pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer hendrerit metus quis risus vestibulum sodales eu eget velit. Aenean eleifend, erat sed tempor porta, nulla tellus lacinia felis, eget aliquam ipsum nisl eget nunc. Aliquam cursus felis ac quam rutrum placerat. Donec in tortor leo. Vivamus iaculis mi nec ipsum molestie semper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec sagittis lorem dui, a semper arcu. Mauris tristique, sem quis consequat fermentum, elit est molestie est, mollis adipiscing velit purus a eros. In hac habitasse platea dictumst. Morbi tempor porttitor nunc, ac consequat neque euismod vel.</p>
+    
+    <p>Click <a href="#" class="openpanel">here</a> to open the panel.</p>
+  <p>Click <a href="#" class="closepanel">here</a> to close the panel.</p>
+    
+    <p>Pellentesque et sapien purus. Nullam blandit, libero eu sagittis aliquam, quam felis fermentum sapien, ac volutpat libero tortor sed turpis. Duis elementum porta eleifend. Aenean pharetra, turpis et suscipit vulputate, magna diam dapibus diam, id mollis nunc diam sit amet nunc. Cras sed tempus eros. Aliquam vitae massa quis elit ornare molestie ut eget erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lacus nulla. Pellentesque eu purus ac eros sollicitudin pulvinar. Quisque in erat a neque condimentum vestibulum. In vel nisl nec lacus scelerisque mattis. Sed consectetur justo vitae nibh porta id imperdiet nulla malesuada. Etiam dapibus arcu sit amet ante rhoncus tincidunt ac porta metus. Etiam pharetra enim id felis hendrerit convallis. Cras dolor purus, feugiat sit amet tempus sit amet, tristique vitae libero. Quisque vel lacus vel felis mollis molestie. Sed lectus nulla, gravida a ultricies ac, hendrerit nec urna. Aenean arcu nunc, porttitor vel tempor commodo, aliquam a massa. Aenean aliquet, elit sed blandit eleifend, erat libero facilisis ante, congue dapibus metus ipsum eu elit.</p>
+    
+    <p>Click <a href="#" class="openpanel">here</a> to open the panel.</p>
+    <p>Click <a href="#" class="closepanel">here</a> to close the panel.</p>
+   </div>
+-->
+
+<link href="panel.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="login/css/slide.css" type="text/css" media="screen" />
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+	<!-- PNG FIX for IE6 -->
+  	<!-- http://24ways.org/2007/supersleight-transparent-png-in-ie6 -->
+	<!--[if lte IE 6]>
+		<script type="text/javascript" src="login/js/pngfix/supersleight-min.js"></script>
+	<![endif]-->
+	<!-- jQuery - the core-->
+	<!-- Sliding effect -->
+	<script src="login/js/slide.js" type="text/javascript"></script>
+	
+  <script type="text/javascript">
+$(document).ready(function() {
+    $('#jqeasypanel').jqEasyPanel();
+});
+</script>
+    <!-- Header and tabs begin. -->  
+<!-- Panel -->
+</head>
+
+<body>
+<!-- top bar--> 
+ <div id="top-bar" style="min-width:980px; ">
+ <div style="width:980px; margin:0 auto; margin-right:auto; margin-left:auto; ">
+ <!-- insert back flag here -->
+    
+ <div style="float:left; margin:10px 0 0 5px">
+ <a href="http://twitter.com/myhosting" target="_blank">
+ <img src="images/twitter.png" alt="Follow us on Twitter!" width="16" height="16" style="margin-right:7px"/></a>
+ <a href="http://youtube.com/myhosting" target="_blank">
+ <img src="images/youtube.png" alt="Visit  us on YouTube!" width="16" height="16" style="margin-right:7px"/></a>
+ <a href="http://facebook.com/myhosting" target="_blank">
+ <img src="images/facebook.png" alt="Join us on Facebook!" width="16" height="16" /></a></div>
+ <div style="float:left;  margin:8px 0 0 12px; width:72px">
+ 
+ <!--Place this tag where you want the +1 button to render  Place this render call where appropriate -->
+<g:plusone size="medium"></g:plusone>
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script></div>
+<!-- facebook like button -->
+ <div style="float:left; width:350px; margin:6px 0 0 0; ">
+<script>     
+ (function (d) {
+ var js, id = 'facebook-jssdk'; if (d.getElementById(id)) { return; }
+ js = d.createElement('script'); js.id = id; js.async = true;
+ js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
+ d.getElementsByTagName('head')[0].appendChild(js);
+ } (document));</script>
+<fb:like href="http://facebook.com/myhosting" send="false" layout="standard" width="350" show_faces="false"></fb:like>
+</div>
+ <!-- end div left-->
+ <!-- end div left-->
+  
+<div style="float:right; padding-right:10px; ">
+<div id="phone-topbar" style="width:90px;">
+<a href="javascript:start_chat();" style="text-decoration:none">
+<img src="images/ico-chat.png" alt="hosted exchange email" width="22" height="20" />
+<span style="vertical-align: top; ">LIVE CHAT</span></a>
+</div>
+<div id="chat-topbar">
+<a href="/help/phone-support.aspx" style="text-decoration:none">&nbsp;&nbsp;&nbsp;
+<img src="images/ico-phone.png" alt="web hosting" width="41" height="20" />
+<span style="vertical-align: top;">SALES&nbsp;/&nbsp;SUPPORT 1 (866) 289-5091</span></a>
+</div>
+</div><!--end right div --></div>
+</div><!--end top bar -->
+
+<div id="toppanel">
+    <div id="panel">
+        <div class="content clearfix">
+            <div class="left" id='div_login_classic_container' style="border-left: 0;">
+                <!-- Classic -->
+                
+                <!--classic-->
+                <form name="form_login" id="form_classic" method="post" action="https://support.myhosting.com/logon_check.aspx">
+                <input type="hidden" name="LoginType" value="1" />
+                
+                <input type="hidden" name="filename" value="" />
+                <input type="hidden" name="env" value="classic" />
+                <table width="250" border="0" align="center" cellpadding="0" cellspacing="0" class="tbl-help">
+                    <tr>
+                        <td colspan="2">
+                            <h1>
+                                Cpanel Control Panel</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" colspan="2" valign="top">
+                            Log in to manage your Cpanel account
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="80" height="30">
+                            Domain Name
+                        </td>
+                        <td width="170">
+                            <input type="text" name="UserName" value=""
+                                size="14" maxlength="100" tabindex="1" style="width: 150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="30">
+                            Password
+                        </td>
+                        <td>
+                            <input name="Password" type="password" autocomplete="off" size="14" maxlength="15"
+                                tabindex="2" style="width: 150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Reseller ID
+                            <div style="font-size: 9px">
+                                (Optional)</div>
+                        </td>
+                        <td height="30">
+                            <input name="ResellerID" value="" type="text" autocomplete="off"
+                                size="14" maxlength="8" tabindex="3" style="width: 150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td height="30">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="submit" name="button" id="Submit1" value="Log In" tabindex="4" style="padding: 3px" />
+                                    </td>
+                                    <!--<td><input type="submit" name="button" id="Submit2" value="Ticket" tabindex="4" style="padding:3px" /></td>-->
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding-top: 10px">
+                            Forgot your <a href="ForgotPassword.asp">password</a>
+                            or <a href="ForgotResellerID.asp">Reseller ID</a>?
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="30" colspan="2">
+                            <a id='a_tosharepointaccount' href="#">Manage your Reseller or Domain Reseller account</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="30" colspan="2" align="left">
+                            <a class="cl_notthatcustomer" href="#">Not a Cpanel customer?</a>
+                        </td>
+                    </tr>
+                </table>
+                </form>
+				
+                <!-- SharePoint Exchange -->
+                <form name="form2" id="form_sharepoint" method="post" style='display: none' action="https://support.myhosting.com/">
+                <input type="hidden" name="LoginType" value="2" />
+                <input type="hidden" name="env" value="classic" />
+                <input type="hidden" name="filename" value="" />
+                <table width="270" border="0" cellpadding="0" cellspacing="0" class="tbl-help">
+                    <tr>
+                        <td colspan="2">
+                            <h1>
+                                Reseller Account</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Log in here if you are not an account administrator and want to manage your Exchange
+                            or SharePoint account only.
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td height="30" width="80" style="padding-top: 10px">
+                            Exchange or SharePoint Email
+                        </td>
+                        <td width="170" style="padding-top: 10px">
+                            <input type="text" name="UserName" id="logname_sharepoint" value=""
+                                size="14" maxlength="100" tabindex="5" style="width: 150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" width="80">
+                            Password
+                        </td>
+                        <td width="170">
+                            <input name="Password" id="pwd_sharepoing" autocomplete="off" type="password" size="14"
+                                maxlength="15" tabindex="6" style="width: 150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="70">
+                        </td>
+                        <td width="170" style="padding: 10px 0 10px 0">
+                            <input type="submit" name="submit_sharepoint" id="submit_sharepoint" value="Login"
+                                tabindex="7" style="padding: 3px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a id='a_tohostingaccount' href="#">Manage your Hosting account</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="30" colspan="2" align="left">
+                            <a class="cl_notthatcustomer" href="#">Not a classic customer?</a>
+                        </td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+            <div class="left" id='div_login_oncloud_container' style="height: 340px">
+                <!-- onCloud -->
+                
+                <form target="_self" name="form_login" id="form_oncloud" method="post" action="https://support.myhosting.com/logon_check.aspx">
+                
+                <input type="hidden" name="env" value="oncloud" />
+                <table width="250" border="0" align="center" cellpadding="0" cellspacing="0" class="tbl-help">
+                    <tr>
+                        <td colspan="2">
+                            <h1>
+                                onCloud Control Panel</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" colspan="2" valign="top">
+                            Log in to manage your onCloud account
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="80" height="30">
+                            Username
+                        </td>
+                        <td width="170">
+                            <input type="text" name="username" value=""
+                                autocomplete="off" size="14" maxlength="100" tabindex="8" style="width: 150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="30">
+                            Password
+                        </td>
+                        <td>
+                            <input name="Password" type="password" autocomplete="off" size="14" maxlength="30"
+                                tabindex="9" style="width: 150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td height="30">
+                            <input type="submit" name="button" id="button" value="Log In" tabindex="10" style="padding: 3px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="50" colspan="2">
+                            Forgot your <a href="https://manage.myhosting.com/"> password</a> ?
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding-top: 20px" align="left">
+                            <a class="cl_notthatcustomer" href="#">Not an onCloud customer ?</a>
+                        </td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+            <div class="left right" id='div_login_uncknown_container' style="height: 340px">
+                <!-- Not Sure -->
+                <form name="form_login" id="form_undefined" method="post" action="https://support.myhosting.com/logon_check.aspx">
+                <input type="hidden" name="filename" value="" />
+                <input type="hidden" name="env" value="undefined" />
+                <table width="250" border="0" align="center" cellpadding="0" cellspacing="0" class="tbl-help">
+                    <tr>
+                        <td colspan="2" style="padding-bottom: 20px">
+                            <h1>
+                                Not sure? Log in here.</h1>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="80" height="30">
+                            UserName/<br />
+                            Domain Name
+                        </td>
+                        <td width="170">
+                            <input type="text" name="UserName" value=""
+                                size="14" maxlength="100" tabindex="11" style="width: 150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="30">
+                            Password
+                        </td>
+                        <td>
+                            <input name="Password" type="password" autocomplete="off" size="14" maxlength="15"
+                                tabindex="12" style="width: 150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Reseller ID <div style="font-size: 9px">(Optional)</div>
+                        </td>
+                        <td height="30">
+                            <input name="ResellerID" value="" type="text" autocomplete="off"
+                                size="14" maxlength="8" tabindex="13" style="width: 150px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td height="30">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="submit" name="button" id="Submit_undefined" value="Log In" tabindex="14"
+                                            style="padding: 3px" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /login -->
+    <!-- The tab on top -->
+    <div class="tab">
+        <ul class="login">
+            <li class="left">&nbsp;</li>
+            <li id="toggle"><a id="open" class="open" href="#" style="width: 100px">Account&nbsp;Log&nbsp;In</a>
+			<a id="close" style="display: none;" class="close" href="#">Close</a> </li>
+				
+            <li><a href="http://mail2web.com/" onclick="_gaq.push(['_trackPageview', '/outgoing/mail2web']);" style="margin-right: 5px">Webmail</a></li>
+				
+            <li><a href="/owa/" rel="nofollow" onclick="_gaq.push(['_trackPageview', '/outgoing/owa']);"> OWA</a></li>
+            <li class="right">&nbsp;</li>
+        </ul>
+    </div>
+    <!-- / top -->
+</div>
+<!--panel -->
+<script type="text/javascript">
+    jQuery("#a_tosharepointaccount").click(function () {
+    jQuery('#form_classic').hide('slow');
+    jQuery('#form_sharepoint').show('slow');
+    });
+    
+	jQuery("#a_tohostingaccount").click(function () {
+    jQuery('#form_sharepoint').hide('slow');
+    jQuery('#form_classic').show('slow');
+    });
+
+    jQuery(".cl_notthatcustomer").click(function () {
+    setCookie('');
+    setLoginPanel();
+    });
+
+    // Helper function, parse param from request string
+    function getParam(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regexS = "[\\?&]" + name + "=([^&#]*)";
+        var regex = new RegExp(regexS);
+        var results = regex.exec(window.location.href);
+        if (results == null)
+            return "";
+        else
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+   
+
+    function setCookie(value) {
+        var c_name = 'NewOldCustomer';
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + 730);
+        var c_value = escape(value) + ";expires=" + exdate.toUTCString() + ";path=/";
+        document.cookie = c_name + "=" + c_value;
+    }
+
+    function getCookie(c_name) {
+        var i, x, y, ARRcookies = document.cookie.split(";");
+        for (i = 0; i < ARRcookies.length; i++) {
+            x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+            y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+            x = x.replace(/^\s+|\s+$/g, "");
+            if (x == c_name) {
+                return unescape(y);
+            }
+        }
+        return '';
+    }
+
+    jQuery(document).ready(function () {
+
+        var loginType = getParam("logintype")
+
+        if (loginType == "2") { // sharepointaccount
+            jQuery('#form_classic').hide();
+            jQuery('#form_sharepoint').show();
+        }
+        else {
+            jQuery('#form_classic').show();
+            jQuery('#form_sharepoint').hide();
+        }
+
+        jQuery("#a_tosharepointaccount").click(function () {
+            jQuery('#form_classic').hide('slow');
+            jQuery('#form_sharepoint').show('slow');
+        });
+        jQuery("#a_tohostingaccount").click(function () {
+            jQuery('#form_sharepoint').hide('slow');
+            jQuery('#form_classic').show('slow');
+        });
+
+        jQuery(".cl_notthatcustomer").click(function () {
+            setCookie('');
+            setLoginPanel();
+        });
+        jQuery('#form_classic').submit(function () {
+            setCookie('old');
+            setLoginPanel();
+        });
+        jQuery('#form_sharepoint').submit(function () {
+            setCookie('old');
+            setLoginPanel();
+        });
+        jQuery('#form_oncloud').submit(function () {
+            setCookie('new');
+            setLoginPanel();
+        });
+        jQuery('#form_uncknown').submit(function () {
+            setCookie('');
+            setLoginPanel();
+        });
+        setLoginPanel();
+
+        var ParamE = getParam("e")
+        if (ParamE != "") { // last login attempt was filed.
+            jQuery("div#panel").slideDown("slow");
+            jQuery("#toggle a").toggle();
+        }
+        
+
+    });
+
+    function setLoginPanel() {
+        jQuery(".cl_notthatcustomer").show();
+        var custstate = getCookie('NewOldCustomer');
+        switch (custstate) {
+            case '':
+                jQuery('#div_login_classic_container').show().css('float', '');
+                jQuery('#div_login_oncloud_container').show().css('float', '').css('border-left', '');
+                jQuery('#div_login_uncknown_container').show();
+                jQuery(".cl_notthatcustomer").hide();
+                break;
+            case 'new':
+                jQuery('#div_login_classic_container').hide().css('float', 'right').css('border-left', '0');
+                jQuery('#div_login_oncloud_container').show().css('border-left', '0').css('float', 'right'); ;
+                jQuery('#div_login_uncknown_container').hide();
+                break;
+            case 'old':
+                jQuery('#div_login_classic_container').show().css('border-left', '0').css('float', 'right');
+                jQuery('#div_login_oncloud_container').hide().css('float', 'right').css('border-left', '0');
+                jQuery('#div_login_uncknown_container').hide();
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>

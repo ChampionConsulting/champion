@@ -1,0 +1,312 @@
+{
+    "user_group_list": {},
+    "user_list": {},
+    "cache_html_enable": false,
+    "path": "\/champion-core-230525",
+    "admin": "admin",
+    "password": "$2y$10$y1OxlJMDaxuPQGM.0fZy6.Sc2q19VR5i3CxJGz9d7ncUl9bqqtDdi",
+    "password_cleartext": "demo",
+    "password_otp": "",
+    "home_page": "home",
+    "autobackup": true,
+    "autobackup_email": "",
+    "date_default_timezone_set": "America\/New_York",
+    "language": "english",
+    "anonymize_ip": false,
+    "front_page_display": "dashboard",
+    "admin_front_page_display": "dashboard",
+    "administrator_name": "SysAdmin",
+    "openai": {
+        "chatgpt": {
+            "api_token": ""
+        }
+    },
+    "stable_diffusion": {
+        "api_token": ""
+    },
+    "gdpr": {
+        "enable_in_form": false,
+        "enable_in_tag": false,
+        "tag_text": "GDPR text"
+    },
+    "inline": {
+        "css": "",
+        "js": ""
+    },
+    "wysiwyg": true,
+    "allow": [
+        "txt",
+        "jpeg",
+        "gif",
+        "jpg",
+        "svg",
+        "png",
+        "pdf",
+        "zip",
+        "csv",
+        "xls",
+        "xlsx"
+    ],
+    "wysiwyg_on_page": false,
+    "integrate_rapidweaver": false,
+    "editor_name": "",
+    "editor_user_enable": false,
+    "editor_user_password": "",
+    "editor_user_password_cleartext": "",
+    "editor_acl_resource_block": {
+        "blocks\/about-timeline.txt": "false",
+        "blocks\/calendar-test.txt": "false",
+        "blocks\/clients.txt": "false",
+        "blocks\/copyright.txt": "false",
+        "blocks\/dashboard-notes.txt": "false",
+        "blocks\/footer.txt": "false",
+        "blocks\/footer1.txt": "false",
+        "blocks\/index.html.txt": "false",
+        "blocks\/instructions.txt": "false",
+        "blocks\/intro-alt.txt": "false",
+        "blocks\/main-title.txt": "false",
+        "blocks\/masterhead-subtitle1.txt": "false",
+        "blocks\/masthead-heading1.txt": "false",
+        "blocks\/new_footer.txt": "false",
+        "blocks\/social-icons.txt": "false",
+        "blocks\/team-roster.txt": "false",
+        "blocks\/team_member1.txt": "false",
+        "blocks\/team_member2.txt": "false",
+        "blocks\/team_member3.txt": "false",
+        "blocks\/test_block.txt": "false",
+        "blocks\/textimg.txt": "false",
+        "blocks\/about\/about.txt": "false",
+        "blocks\/coming-soon\/coming-soon.txt": "false",
+        "blocks\/coming-soon\/social-icons.txt": "false",
+        "blocks\/contact\/contact-left.txt": "true",
+        "blocks\/contact\/contact-right.txt": "true",
+        "blocks\/home\/features.txt": "false",
+        "blocks\/home\/title.txt": "false",
+        "blocks\/onepage-creative\/about.txt": "false",
+        "blocks\/onepage-creative\/banner.txt": "false",
+        "blocks\/onepage-creative\/contact.txt": "false",
+        "blocks\/onepage-creative\/download.txt": "false",
+        "blocks\/onepage-creative\/header.txt": "false",
+        "blocks\/onepage-creative\/portfolio.txt": "false",
+        "blocks\/onepage-creative\/services.txt": "false"
+    },
+    "editor_acl_resource_page": {
+        "pages\/New-Page.txt": "false",
+        "pages\/Slider.txt": "false",
+        "pages\/about.txt": "true",
+        "pages\/blog.txt": "true",
+        "pages\/contact.txt": "true",
+        "pages\/content-page.txt": "false",
+        "pages\/home.txt": "true",
+        "pages\/home-marketing.txt": "false",
+        "pages\/justforms.txt": "false",
+        "pages\/portfolio.txt": "false",
+        "pages\/privacy.txt": "false",
+        "pages\/shop.txt": "false",
+        "pages\/team.txt": "false",
+        "pages\/work.txt": "true",
+        "pages\/404.txt": "true",
+        "pages\/coming-soon\/home.txt": "false",
+        "pages\/onepage-creative\/home.txt": "false"
+    },
+    "editor_user_otp_activate": false,
+    "editor_user_otp_shared_secret": "",
+    "geoip_enable": true,
+    "geoip": {
+        "api_key": "",
+        "service": "ipstack"
+    },
+    "google_analytics": "",
+    "export_html": {
+        "api_key": "zpaHJtvkGzis5pZLHVzAAxfgPNUa9m",
+        "path": ""
+    },
+    "jpeg_quality": "85",
+    "jpeg_resampling_off": false,
+    "jpeg_size": "1200",
+    "thumbnail_height": "120",
+    "create_thumbnails": true,
+    "navigation_options": {
+        "logged_in_menu": "admin and editor"
+    },
+    "made_in_champion": true,
+    "mail_inputs": {
+        "Name": "text",
+        "Email": "email",
+        "Phone": "text"
+    },
+    "lang_form_comment": "Comment",
+    "lang_form_email": "Email",
+    "lang_form_gdpr": "GDPR",
+    "lang_form_name": "Name",
+    "lang_form_phone": "Phone",
+    "mail_textarea": {
+        "Comment": "7"
+    },
+    "email_contact": [
+        "you@mail.com"
+    ],
+    "config_contact_form_auto_thank": false,
+    "config_contact_form_subject_line": "Contact",
+    "contact_form_redirect": "",
+    "result_per_page": "5",
+    "disqus_comments": true,
+    "disqus_shortname": "sample-name",
+    "date_format": "M j, Y",
+    "blog_flag_reverse": false,
+    "blog_page_masonry": true,
+    "blog_flag_show_link": true,
+    "blog_flag_show_teaser_image": true,
+    "blog_title": "My Blog",
+    "blog_description": "This is my blog.",
+    "blog_url": "http:\/\/example.com\/blog",
+    "rss_lang": "en-us",
+    "url_prefix": "blog",
+    "smtp_username": "",
+    "smtp_password": "",
+    "smtp_host": "",
+    "smtp_port": "465",
+    "sweetalert": {
+        "active": true,
+        "timeout": "3000"
+    },
+    "otp_activate": false,
+    "otp_shared_secret": "",
+    "ogp_default_image": "\/foo\/bar.jpg",
+    "ogp_facebook_admin": "",
+    "ogp_facebook_id": "",
+    "ogp_twitter_creator": "",
+    "ogp_twitter_username": "",
+    "theme_selected": "default",
+    "theme_meta_author_show": true,
+    "recapcha_site_key": "",
+    "recapcha_secret_key": "",
+    "template": {
+        "admin_login_welcome": "<span>Hi!<\/span> User"
+    },
+    "pagination_page_links_to_show": "3",
+    "pagination_admin_results_per_page": "10",
+    "navigation": {
+        "all": {
+            "home": {
+                "url": "\/home",
+                "active": true
+            },
+            "about": {
+                "url": "\/about",
+                "active": true
+            },
+            "portfolio": {
+                "url": "\/portfolio",
+                "active": true
+            },
+            "blog": {
+                "url": "\/blog",
+                "active": true
+            },
+            "test": {
+                "content-page": {
+                    "url": "\/content-page",
+                    "active": true
+                },
+                "team": {
+                    "url": "\/team",
+                    "active": true
+                },
+                "test1": {
+                    "portfolio": {
+                        "url": "\/portfolio",
+                        "active": true
+                    },
+                    "privacy": {
+                        "url": "\/privacy",
+                        "active": true
+                    }
+                }
+            }
+        },
+        "pending": {
+            "0": {
+                "url": "\/404",
+                "active": true
+            },
+            "New-Page": {
+                "url": "\/New-Page",
+                "active": true
+            },
+            "home-marketing": {
+                "url": "\/home-marketing",
+                "active": true
+            },
+            "coming-soon\/home": {
+                "url": "\/coming-soon\/home",
+                "active": true
+            },
+            "Portfolio": {
+                "url": "\/Portfolio",
+                "active": true
+            },
+            "onepage-creative\/home": {
+                "url": "\/onepage-creative\/home",
+                "active": true
+            },
+            "shop": {
+                "url": "\/shop",
+                "active": true
+            },
+            "work": {
+                "url": "\/work",
+                "active": true
+            },
+            "contact": {
+                "url": "\/contact",
+                "active": true
+            },
+            "si-test": {
+                "url": "https:\/\/google.com\/",
+                "active": true
+            },
+            "photos": {
+                "url": "\/photos",
+                "active": true
+            },
+            "tempdel-dec2": {
+                "url": "\/tempdel-dec2",
+                "active": true
+            },
+            "portfolio_2020_12_30_19_20_56": {
+                "url": "\/portfolio_2020_12_30_19_20_56",
+                "active": true
+            },
+            "Port2": {
+                "url": "\/Port2",
+                "active": true
+            },
+            "external": {
+                "url": "https:\/\/google.com\/",
+                "active": true
+            },
+            "Services2": {
+                "url": "\/services",
+                "active": true
+            },
+            "tempdel-newpage": {
+                "url": "\/tempdel-newpage",
+                "active": true
+            },
+            "Services": {
+                "url": "\/services",
+                "active": true
+            },
+            "justforms": {
+                "url": "\/justforms",
+                "active": true
+            }
+        },
+        "Slider": {
+            "url": "\/Slider",
+            "active": true
+        }
+    },
+    "integrate_ecommerce": true
+}
